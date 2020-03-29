@@ -18,33 +18,34 @@
 buildscript {
     repositories {
         jcenter()
+        google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.2.3'
+        classpath 'com.android.tools.build:gradle:3.5.3'
     }
 }
 apply plugin: 'com.android.library'
 
 repositories {
     jcenter()
+    google()
 }
 
 dependencies {
-    compile 'com.android.support:support-v4:21.+'
-    compile 'com.google.protobuf:protobuf-java:3.0.0'
-    compile 'com.madgag.spongycastle:core:1.51.0.0'
+    api 'com.google.protobuf:protobuf-java:3.4.0'
+    api 'com.madgag.spongycastle:core:1.51.0.0'
 
     // Custom PKCS12 keybag parse modifications to support Mumble unencrypted certificates
     // Source: https://github.com/Morlunk/spongycastle/tree/pkcs12-keybag-fixes
-    compile files('libs/sc-morlunk-prov-1.51.0.0.jar', 'libs/sc-morlunk-pkix-1.51.0.0.jar')
+    api files('libs/sc-morlunk-prov-1.51.0.0.jar', 'libs/sc-morlunk-pkix-1.51.0.0.jar')
 
-    compile 'com.googlecode.javacpp:javacpp:0.7'
-    compile 'com.intellij:annotations:+@jar'
+    implementation 'com.googlecode.javacpp:javacpp:0.7'
+    implementation 'org.jetbrains:annotations:18.0.0'
 }
 
 android {
-    compileSdkVersion 21
-    buildToolsVersion "21.1.1"
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
 
     sourceSets.main.jniLibs.srcDir 'src/main/libs/'
     sourceSets.main.jni.srcDirs = [] // Disable NDK build support until it supports multiple modules.
@@ -52,8 +53,8 @@ android {
     defaultConfig {
         testApplicationId "com.morlunk.jumble.test"
         testInstrumentationRunner "android.test.InstrumentationTestRunner"
-        minSdkVersion 9
-        targetSdkVersion 19
+        minSdkVersion 14
+        targetSdkVersion 28
 
 //        ndk {
 //            abiFilters "armeabi", "armeabi-v7a", "x86"
@@ -64,7 +65,7 @@ android {
 
     // Trigger NDK build on java compilation task.
     task ndkBuild(type: Exec) {
-        commandLine 'ndk-build', '-C', file('src/main/jni/').absolutePath
+        commandLine "$project.android.ndkDirectory/ndk-build", '-C', file('src/main/jni/').absolutePath
     }
 
     tasks.withType(JavaCompile) {
