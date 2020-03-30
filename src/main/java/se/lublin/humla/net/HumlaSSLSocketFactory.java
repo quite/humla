@@ -19,8 +19,6 @@ package se.lublin.humla.net;
 
 import android.util.Log;
 
-import se.lublin.humla.Constants;
-
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.InetAddress;
@@ -42,6 +40,8 @@ import javax.net.ssl.SSLSocket;
 import javax.net.ssl.TrustManager;
 import javax.net.ssl.TrustManagerFactory;
 import javax.net.ssl.X509TrustManager;
+
+import se.lublin.humla.Constants;
 
 public class HumlaSSLSocketFactory {
     private SSLContext mContext;

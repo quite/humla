@@ -1,13 +1,13 @@
 package se.lublin.humla;
 
+import java.util.List;
+
 import se.lublin.humla.model.IChannel;
 import se.lublin.humla.model.IUser;
 import se.lublin.humla.model.Message;
 import se.lublin.humla.model.WhisperTarget;
 import se.lublin.humla.net.HumlaUDPMessageType;
 import se.lublin.humla.util.VoiceTargetMode;
-
-import java.util.List;
 
 /**
  * An interface representing a live connection to the server.

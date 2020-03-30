@@ -18,6 +18,15 @@
 package se.lublin.humla.audio;
 
 import com.googlecode.javacpp.IntPointer;
+
+import java.nio.BufferOverflowException;
+import java.nio.BufferUnderflowException;
+import java.nio.ByteBuffer;
+import java.util.Arrays;
+import java.util.Queue;
+import java.util.concurrent.Callable;
+import java.util.concurrent.ConcurrentLinkedQueue;
+
 import se.lublin.humla.audio.javacpp.CELT11;
 import se.lublin.humla.audio.javacpp.CELT7;
 import se.lublin.humla.audio.javacpp.Opus;
@@ -28,14 +37,6 @@ import se.lublin.humla.model.User;
 import se.lublin.humla.net.HumlaUDPMessageType;
 import se.lublin.humla.net.PacketBuffer;
 import se.lublin.humla.protocol.AudioHandler;
-
-import java.nio.BufferOverflowException;
-import java.nio.BufferUnderflowException;
-import java.nio.ByteBuffer;
-import java.util.Arrays;
-import java.util.Queue;
-import java.util.concurrent.Callable;
-import java.util.concurrent.ConcurrentLinkedQueue;
 
 /**
  * Created by andrew on 16/07/13.

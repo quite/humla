@@ -22,8 +22,6 @@ import android.os.Build;
 import android.util.Log;
 
 import com.google.protobuf.Message;
-import se.lublin.humla.Constants;
-import se.lublin.humla.util.HumlaException;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -35,6 +33,9 @@ import java.security.cert.X509Certificate;
 
 import javax.net.ssl.SSLHandshakeException;
 import javax.net.ssl.SSLSocket;
+
+import se.lublin.humla.Constants;
+import se.lublin.humla.util.HumlaException;
 
 /**
  * Class to maintain and interface with the TCP connection to a Mumble server.

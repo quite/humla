@@ -20,6 +20,7 @@ package se.lublin.humla.test;
 import android.test.AndroidTestCase;
 
 import com.googlecode.javacpp.Loader;
+
 import se.lublin.humla.audio.encoder.CELT7Encoder;
 import se.lublin.humla.audio.encoder.IEncoder;
 import se.lublin.humla.audio.encoder.OpusEncoder;

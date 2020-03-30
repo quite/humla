@@ -20,16 +20,6 @@ package se.lublin.humla.protocol;
 import android.content.Context;
 import android.util.Log;
 
-import se.lublin.humla.Constants;
-import se.lublin.humla.R;
-import se.lublin.humla.model.Channel;
-import se.lublin.humla.model.Message;
-import se.lublin.humla.model.User;
-import se.lublin.humla.protobuf.Mumble;
-import se.lublin.humla.util.IHumlaObserver;
-import se.lublin.humla.util.HumlaLogger;
-import se.lublin.humla.util.MessageFormatter;
-
 import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
@@ -37,6 +27,16 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import se.lublin.humla.Constants;
+import se.lublin.humla.R;
+import se.lublin.humla.model.Channel;
+import se.lublin.humla.model.Message;
+import se.lublin.humla.model.User;
+import se.lublin.humla.protobuf.Mumble;
+import se.lublin.humla.util.HumlaLogger;
+import se.lublin.humla.util.IHumlaObserver;
+import se.lublin.humla.util.MessageFormatter;
 
 /**
  * Handles network messages related to the user-channel tree model.

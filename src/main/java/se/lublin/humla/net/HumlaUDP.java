@@ -20,8 +20,6 @@ package se.lublin.humla.net;
 import android.os.Handler;
 import android.util.Log;
 
-import se.lublin.humla.Constants;
-
 import org.jetbrains.annotations.NotNull;
 
 import java.io.IOException;
@@ -34,6 +32,8 @@ import java.util.concurrent.LinkedBlockingQueue;
 import javax.crypto.BadPaddingException;
 import javax.crypto.IllegalBlockSizeException;
 import javax.crypto.ShortBufferException;
+
+import se.lublin.humla.Constants;
 
 /**
  * Class to maintain and receive packets from the UDP connection to a Mumble server.

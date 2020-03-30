@@ -17,9 +17,9 @@
 
 package se.lublin.humla.audio;
 
-import se.lublin.humla.exception.NativeAudioException;
-
 import java.nio.ByteBuffer;
+
+import se.lublin.humla.exception.NativeAudioException;
 
 /**
  * Created by andrew on 07/03/14.

@@ -19,11 +19,11 @@ package se.lublin.humla.audio.inputmode;
 
 import android.util.Log;
 
-import se.lublin.humla.Constants;
-
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
+
+import se.lublin.humla.Constants;
 
 /**
  * An input mode that depends on a toggle, such as push to talk.

@@ -17,10 +17,10 @@
 
 package se.lublin.humla.test;
 
+import junit.framework.TestCase;
+
 import se.lublin.humla.model.Channel;
 import se.lublin.humla.model.User;
-
-import junit.framework.TestCase;
 
 /**
  * Tests the Channel-User tree model.

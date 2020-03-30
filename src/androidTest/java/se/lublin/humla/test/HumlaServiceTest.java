@@ -21,8 +21,8 @@ import android.content.Intent;
 import android.os.RemoteException;
 import android.test.ServiceTestCase;
 
-import se.lublin.humla.IHumlaService;
 import se.lublin.humla.HumlaService;
+import se.lublin.humla.IHumlaService;
 import se.lublin.humla.model.Server;
 
 /**

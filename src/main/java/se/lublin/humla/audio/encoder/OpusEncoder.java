@@ -19,13 +19,14 @@ package se.lublin.humla.audio.encoder;
 
 import com.googlecode.javacpp.IntPointer;
 import com.googlecode.javacpp.Pointer;
-import se.lublin.humla.audio.javacpp.Opus;
-import se.lublin.humla.exception.NativeAudioException;
-import se.lublin.humla.net.PacketBuffer;
 
 import java.nio.BufferOverflowException;
 import java.nio.BufferUnderflowException;
 import java.util.Arrays;
+
+import se.lublin.humla.audio.javacpp.Opus;
+import se.lublin.humla.exception.NativeAudioException;
+import se.lublin.humla.net.PacketBuffer;
 
 /**
 * Created by andrew on 08/12/14.

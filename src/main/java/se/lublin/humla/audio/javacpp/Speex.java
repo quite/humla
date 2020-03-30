@@ -25,10 +25,11 @@ import com.googlecode.javacpp.annotation.MemberGetter;
 import com.googlecode.javacpp.annotation.MemberSetter;
 import com.googlecode.javacpp.annotation.Name;
 import com.googlecode.javacpp.annotation.Platform;
-import se.lublin.humla.audio.IDecoder;
-import se.lublin.humla.exception.NativeAudioException;
 
 import java.nio.ByteBuffer;
+
+import se.lublin.humla.audio.IDecoder;
+import se.lublin.humla.exception.NativeAudioException;
 
 /**
  * JavaCPP interface for Speex JNI.

@@ -22,11 +22,12 @@ import com.googlecode.javacpp.Loader;
 import com.googlecode.javacpp.Pointer;
 import com.googlecode.javacpp.annotation.Cast;
 import com.googlecode.javacpp.annotation.Platform;
+
+import java.nio.ByteBuffer;
+
 import se.lublin.humla.audio.IDecoder;
 import se.lublin.humla.exception.NativeAudioException;
 import se.lublin.humla.protocol.AudioHandler;
-
-import java.nio.ByteBuffer;
 
 /**
  * Created by andrew on 20/10/13.

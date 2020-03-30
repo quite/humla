@@ -17,13 +17,13 @@
 
 package se.lublin.humla.test;
 
-import se.lublin.humla.Constants;
-import se.lublin.humla.model.Server;
-import se.lublin.humla.util.MumbleURLParser;
-
 import junit.framework.TestCase;
 
 import java.net.MalformedURLException;
+
+import se.lublin.humla.Constants;
+import se.lublin.humla.model.Server;
+import se.lublin.humla.util.MumbleURLParser;
 
 /**
  * Tests the Mumble URL parser.

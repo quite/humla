@@ -24,13 +24,6 @@ import android.util.Log;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.InvalidProtocolBufferException;
 import com.google.protobuf.Message;
-import se.lublin.humla.Constants;
-import se.lublin.humla.exception.NotConnectedException;
-import se.lublin.humla.exception.NotSynchronizedException;
-import se.lublin.humla.protobuf.Mumble;
-import se.lublin.humla.protocol.HumlaTCPMessageListener;
-import se.lublin.humla.protocol.HumlaUDPMessageListener;
-import se.lublin.humla.util.HumlaException;
 
 import org.spongycastle.jce.provider.BouncyCastleProvider;
 
@@ -56,6 +49,14 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
+
+import se.lublin.humla.Constants;
+import se.lublin.humla.exception.NotConnectedException;
+import se.lublin.humla.exception.NotSynchronizedException;
+import se.lublin.humla.protobuf.Mumble;
+import se.lublin.humla.protocol.HumlaTCPMessageListener;
+import se.lublin.humla.protocol.HumlaUDPMessageListener;
+import se.lublin.humla.util.HumlaException;
 
 public class HumlaConnection implements HumlaTCP.TCPConnectionListener, HumlaUDP.UDPConnectionListener {
 

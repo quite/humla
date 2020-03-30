@@ -17,14 +17,14 @@
 
 package se.lublin.humla.util;
 
-import se.lublin.humla.model.IChannel;
-import se.lublin.humla.model.IMessage;
-import se.lublin.humla.model.IUser;
-
 import java.security.cert.X509Certificate;
 import java.util.Collections;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
+
+import se.lublin.humla.model.IChannel;
+import se.lublin.humla.model.IMessage;
+import se.lublin.humla.model.IUser;
 
 /**
  * A composite wrapper around Humla observers to easily broadcast to each observer.

@@ -17,10 +17,10 @@
 
 package se.lublin.humla.audio.encoder;
 
+import java.nio.BufferUnderflowException;
+
 import se.lublin.humla.exception.NativeAudioException;
 import se.lublin.humla.net.PacketBuffer;
-
-import java.nio.BufferUnderflowException;
 
 /**
  * IEncoder provides an interface for native audio encoders to buffer and serve encoded audio

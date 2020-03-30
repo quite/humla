@@ -17,12 +17,12 @@
 
 package se.lublin.humla.util;
 
-import se.lublin.humla.Constants;
-import se.lublin.humla.model.Server;
-
 import java.net.MalformedURLException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import se.lublin.humla.Constants;
+import se.lublin.humla.model.Server;
 
 /**
  * An implementation of the Mumble URL scheme.

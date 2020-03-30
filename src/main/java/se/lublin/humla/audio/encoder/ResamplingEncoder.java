@@ -17,11 +17,11 @@
 
 package se.lublin.humla.audio.encoder;
 
+import java.nio.BufferUnderflowException;
+
 import se.lublin.humla.audio.javacpp.Speex;
 import se.lublin.humla.exception.NativeAudioException;
 import se.lublin.humla.net.PacketBuffer;
-
-import java.nio.BufferUnderflowException;
 
 /**
  * Wraps around another encoder, resampling up/down all input using the Speex resampler.

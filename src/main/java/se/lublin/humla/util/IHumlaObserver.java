@@ -17,11 +17,11 @@
 
 package se.lublin.humla.util;
 
+import java.security.cert.X509Certificate;
+
 import se.lublin.humla.model.IChannel;
 import se.lublin.humla.model.IMessage;
 import se.lublin.humla.model.IUser;
-
-import java.security.cert.X509Certificate;
 
 /**
  * Created by andrew on 18/10/15.

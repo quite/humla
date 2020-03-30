@@ -33,6 +33,11 @@ import android.os.IBinder;
 import android.os.PowerManager;
 import android.util.Log;
 
+import java.security.Security;
+import java.security.cert.X509Certificate;
+import java.util.ArrayList;
+import java.util.List;
+
 import se.lublin.humla.audio.AudioOutput;
 import se.lublin.humla.audio.BluetoothScoReceiver;
 import se.lublin.humla.audio.inputmode.ActivityInputMode;
@@ -58,17 +63,12 @@ import se.lublin.humla.net.HumlaUDPMessageType;
 import se.lublin.humla.protobuf.Mumble;
 import se.lublin.humla.protocol.AudioHandler;
 import se.lublin.humla.protocol.ModelHandler;
-import se.lublin.humla.util.IHumlaObserver;
 import se.lublin.humla.util.HumlaCallbacks;
 import se.lublin.humla.util.HumlaDisconnectedException;
 import se.lublin.humla.util.HumlaException;
 import se.lublin.humla.util.HumlaLogger;
+import se.lublin.humla.util.IHumlaObserver;
 import se.lublin.humla.util.VoiceTargetMode;
-
-import java.security.Security;
-import java.security.cert.X509Certificate;
-import java.util.ArrayList;
-import java.util.List;
 
 public class HumlaService extends Service implements IHumlaService, IHumlaSession, HumlaConnection.HumlaConnectionListener, HumlaLogger, BluetoothScoReceiver.Listener {
 

@@ -24,15 +24,6 @@ import android.os.Looper;
 import android.os.Process;
 import android.util.Log;
 
-import se.lublin.humla.Constants;
-import se.lublin.humla.exception.AudioInitializationException;
-import se.lublin.humla.exception.NativeAudioException;
-import se.lublin.humla.model.TalkState;
-import se.lublin.humla.model.User;
-import se.lublin.humla.net.HumlaUDPMessageType;
-import se.lublin.humla.net.PacketBuffer;
-import se.lublin.humla.protocol.AudioHandler;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -44,6 +35,15 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
+
+import se.lublin.humla.Constants;
+import se.lublin.humla.exception.AudioInitializationException;
+import se.lublin.humla.exception.NativeAudioException;
+import se.lublin.humla.model.TalkState;
+import se.lublin.humla.model.User;
+import se.lublin.humla.net.HumlaUDPMessageType;
+import se.lublin.humla.net.PacketBuffer;
+import se.lublin.humla.protocol.AudioHandler;
 
 /**
  * Created by andrew on 16/07/13.

@@ -18,9 +18,9 @@
 package se.lublin.humla;
 
 import se.lublin.humla.model.Server;
-import se.lublin.humla.util.IHumlaObserver;
 import se.lublin.humla.util.HumlaDisconnectedException;
 import se.lublin.humla.util.HumlaException;
+import se.lublin.humla.util.IHumlaObserver;
 
 /**
  * A public interface for clients to communicate with a {@link HumlaService}.

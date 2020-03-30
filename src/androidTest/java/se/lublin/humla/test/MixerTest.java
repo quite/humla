@@ -1,13 +1,13 @@
 package se.lublin.humla.test;
 
-import se.lublin.humla.audio.BasicClippingShortMixer;
-import se.lublin.humla.audio.IAudioMixer;
-import se.lublin.humla.audio.IAudioMixerSource;
-
 import junit.framework.TestCase;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import se.lublin.humla.audio.BasicClippingShortMixer;
+import se.lublin.humla.audio.IAudioMixer;
+import se.lublin.humla.audio.IAudioMixerSource;
 
 /**
  * Created by andrew on 16/07/15.
