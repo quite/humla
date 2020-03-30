@@ -51,7 +51,7 @@ android {
     sourceSets.main.jni.srcDirs = [] // Disable NDK build support until it supports multiple modules.
 
     defaultConfig {
-        testApplicationId "com.morlunk.jumble.test"
+        testApplicationId "se.lublin.humla.test"
         testInstrumentationRunner "android.test.InstrumentationTestRunner"
         minSdkVersion 14
         targetSdkVersion 28

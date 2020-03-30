@@ -16,7 +16,7 @@
   -->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.morlunk.jumble"
+    package="se.lublin.humla"
     android:versionCode="1"
     android:versionName="1.0">
 
@@ -24,11 +24,11 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application android:allowBackup="true">
-        <service android:name=".JumbleService"
+        <service android:name=".HumlaService"
                  android:exported="true">
             <intent-filter>
-                <action android:name="com.morlunk.jumble.ACTION_CONNECT"/>
-                <action android:name="com.morlunk.jumble.ACTION_DISCONNECT"/>
+                <action android:name="se.lublin.humla.ACTION_CONNECT"/>
+                <action android:name="se.lublin.humla.ACTION_DISCONNECT"/>
             </intent-filter>
         </service>
     </application>
