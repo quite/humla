@@ -21,11 +21,9 @@ import android.media.AudioFormat;
 import android.media.AudioRecord;
 import android.util.Log;
 
-import com.morlunk.jumble.BuildConfig;
 import com.morlunk.jumble.Constants;
 import com.morlunk.jumble.exception.AudioInitializationException;
 import com.morlunk.jumble.exception.NativeAudioException;
-import com.morlunk.jumble.model.TalkState;
 import com.morlunk.jumble.protocol.AudioHandler;
 
 /**

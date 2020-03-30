@@ -18,9 +18,6 @@
 package com.morlunk.jumble.protocol;
 
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.os.RemoteException;
 import android.util.Log;
 
 import com.morlunk.jumble.Constants;
@@ -29,7 +26,6 @@ import com.morlunk.jumble.model.Channel;
 import com.morlunk.jumble.model.Message;
 import com.morlunk.jumble.model.User;
 import com.morlunk.jumble.protobuf.Mumble;
-import com.morlunk.jumble.protocol.JumbleTCPMessageListener;
 import com.morlunk.jumble.util.IJumbleObserver;
 import com.morlunk.jumble.util.JumbleLogger;
 import com.morlunk.jumble.util.MessageFormatter;
@@ -38,7 +34,6 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;

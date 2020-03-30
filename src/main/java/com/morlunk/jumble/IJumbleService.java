@@ -17,18 +17,10 @@
 
 package com.morlunk.jumble;
 
-import com.morlunk.jumble.model.IChannel;
-import com.morlunk.jumble.model.IUser;
-import com.morlunk.jumble.model.Message;
 import com.morlunk.jumble.model.Server;
-import com.morlunk.jumble.model.WhisperTarget;
-import com.morlunk.jumble.net.JumbleUDPMessageType;
 import com.morlunk.jumble.util.IJumbleObserver;
 import com.morlunk.jumble.util.JumbleDisconnectedException;
 import com.morlunk.jumble.util.JumbleException;
-import com.morlunk.jumble.util.VoiceTargetMode;
-
-import java.util.List;
 
 /**
  * A public interface for clients to communicate with a {@link JumbleService}.

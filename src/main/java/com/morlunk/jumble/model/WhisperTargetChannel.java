@@ -17,12 +17,7 @@
 
 package com.morlunk.jumble.model;
 
-import android.os.Parcel;
-import android.os.Parcelable;
-
 import com.morlunk.jumble.protobuf.Mumble;
-
-import java.util.List;
 
 /**
  * An abstraction around a channel whisper target.

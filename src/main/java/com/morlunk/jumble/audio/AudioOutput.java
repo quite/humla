@@ -18,7 +18,6 @@
 package com.morlunk.jumble.audio;
 
 import android.media.AudioFormat;
-import android.media.AudioManager;
 import android.media.AudioTrack;
 import android.os.Handler;
 import android.os.Looper;

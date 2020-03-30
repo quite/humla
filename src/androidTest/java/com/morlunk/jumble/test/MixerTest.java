@@ -7,7 +7,6 @@ import com.morlunk.jumble.audio.IAudioMixerSource;
 import junit.framework.TestCase;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 /**

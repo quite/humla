@@ -21,11 +21,8 @@ import com.morlunk.jumble.model.IChannel;
 import com.morlunk.jumble.model.IMessage;
 import com.morlunk.jumble.model.IUser;
 
-import org.spongycastle.jcajce.provider.asymmetric.X509;
-
 import java.security.cert.X509Certificate;
 import java.util.Collections;
-import java.util.HashSet;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 

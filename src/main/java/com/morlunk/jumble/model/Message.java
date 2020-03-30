@@ -17,10 +17,6 @@
 
 package com.morlunk.jumble.model;
 
-import android.os.Parcel;
-import android.os.Parcelable;
-import android.text.format.Time;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;

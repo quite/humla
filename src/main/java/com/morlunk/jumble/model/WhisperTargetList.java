@@ -17,8 +17,6 @@
 
 package com.morlunk.jumble.model;
 
-import java.util.List;
-
 /**
  * A simple implementation of a fixed-size whisper target list using a bit vector.
  * Created by andrew on 29/04/16.
