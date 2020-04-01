@@ -44,8 +44,8 @@ dependencies {
 }
 
 android {
-    compileSdkVersion 28
-    buildToolsVersion '28.0.3'
+    compileSdkVersion 29
+    buildToolsVersion '29.0.3'
 
     sourceSets.main.jniLibs.srcDir 'src/main/libs/'
     sourceSets.main.jni.srcDirs = [] // Disable NDK build support until it supports multiple modules.
@@ -54,7 +54,7 @@ android {
         testApplicationId "se.lublin.humla.test"
         testInstrumentationRunner "android.test.InstrumentationTestRunner"
         minSdkVersion 14
-        targetSdkVersion 28
+        targetSdkVersion 29
 
 //        ndk {
 //            abiFilters "armeabi", "armeabi-v7a", "x86"
