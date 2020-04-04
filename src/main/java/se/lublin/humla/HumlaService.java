@@ -345,6 +345,10 @@ public class HumlaService extends Service implements IHumlaService, IHumlaSessio
 
     @Override
     public void onConnectionSynchronized() {
+        // early disconned?
+        if (!mConnection.isConnected() {
+            return;
+        }
         mConnectionState = ConnectionState.CONNECTED;
 
         Log.v(Constants.TAG, "Connected");
