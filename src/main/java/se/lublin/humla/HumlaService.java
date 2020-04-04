@@ -248,7 +248,7 @@ public class HumlaService extends Service implements IHumlaService, IHumlaSessio
     public void onCreate() {
         super.onCreate();
         PowerManager powerManager = (PowerManager) getSystemService(POWER_SERVICE);
-        mWakeLock = powerManager.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, "Humla");
+        mWakeLock = powerManager.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, "Humla:HumlaService");
         mHandler = new Handler(getMainLooper());
         mCallbacks = new HumlaCallbacks();
         mAudioBuilder = new AudioHandler.Builder()
@@ -258,7 +258,7 @@ public class HumlaService extends Service implements IHumlaService, IHumlaSessio
                 .setTalkingListener(mAudioOutputListener);
         mConnectionState = ConnectionState.DISCONNECTED;
         mBluetoothReceiver = new BluetoothScoReceiver(this, this);
-        registerReceiver(mBluetoothReceiver, new IntentFilter(AudioManager.ACTION_SCO_AUDIO_STATE_CHANGED));
+        registerReceiver(mBluetoothReceiver, new IntentFilter(AudioManager.ACTION_SCO_AUDIO_STATE_UPDATED));
         mToggleInputMode = new ToggleInputMode();
         mActivityInputMode = new ActivityInputMode(0); // FIXME: reasonable default
         mContinuousInputMode = new ContinuousInputMode();
