@@ -46,7 +46,6 @@ dependencies {
 android {
     compileSdkVersion 29
     buildToolsVersion '29.0.3'
-    ndkVersion '21.0.6113669'
 
     sourceSets.main.jniLibs.srcDir 'src/main/libs/'
     sourceSets.main.jni.srcDirs = [] // Disable NDK build support until it supports multiple modules.
