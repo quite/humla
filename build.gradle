@@ -75,6 +75,7 @@ android {
     lintOptions {
         quiet false
 
+        // spongycastle-related
         disable "InvalidPackage"
 
         disable "MissingTranslation"
