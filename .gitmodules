@@ -10,3 +10,7 @@
 [submodule "src/main/jni/speex"]
 	path = src/main/jni/speex
 	url = https://git.xiph.org/speex.git
+[submodule "libs/humla-spongycastle"]
+	path = libs/humla-spongycastle
+	url = https://gitlab.com/quite/humla-spongycastle.git
+	branch = pkcs12-keybag-fixes
