@@ -71,4 +71,15 @@ android {
     tasks.withType(JavaCompile) {
         compileTask -> compileTask.dependsOn ndkBuild
     }
+
+    lintOptions {
+        quiet false
+
+        disable "InvalidPackage"
+
+        disable "MissingTranslation"
+
+        ignoreWarnings false
+        abortOnError true
+    }
 }

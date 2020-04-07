@@ -270,11 +270,11 @@ public class ModelHandler extends HumlaTCPMessageListener.Stub {
                     mLogger.logInfo(mContext.getString(R.string.chat_notify_now_unmuted, MessageFormatter.highlightString(user.getName())));
             } else if(self != null && user.getSession() == self.getSession()) {
                 if(user.isSelfMuted() && user.isSelfDeafened())
-                    mLogger.logInfo(mContext.getString(R.string.chat_notify_muted_deafened, MessageFormatter.highlightString(user.getName())));
+                    mLogger.logInfo(mContext.getString(R.string.chat_notify_muted_deafened));
                 else if(user.isSelfMuted())
-                    mLogger.logInfo(mContext.getString(R.string.chat_notify_muted, MessageFormatter.highlightString(user.getName())));
+                    mLogger.logInfo(mContext.getString(R.string.chat_notify_muted));
                 else
-                    mLogger.logInfo(mContext.getString(R.string.chat_notify_unmuted, MessageFormatter.highlightString(user.getName())));
+                    mLogger.logInfo(mContext.getString(R.string.chat_notify_unmuted));
             }
         }
 
