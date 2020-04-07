@@ -37,7 +37,8 @@ dependencies {
 
     // Custom PKCS12 keybag parse modifications to support Mumble unencrypted certificates
     // Source: https://github.com/Morlunk/spongycastle/tree/pkcs12-keybag-fixes
-    api files('libs/sc-morlunk-prov-1.51.0.0.jar', 'libs/sc-morlunk-pkix-1.51.0.0.jar')
+    api files('libs/humla-spongycastle/prov/build/libs/prov-1.51.0.0.jar',
+              'libs/humla-spongycastle/pkix/build/libs/pkix-1.51.0.0.jar')
 
     implementation 'com.googlecode.javacpp:javacpp:0.7'
     implementation 'org.jetbrains:annotations:18.0.0'
