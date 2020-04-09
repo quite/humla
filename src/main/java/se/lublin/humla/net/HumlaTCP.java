@@ -76,14 +76,12 @@ public class HumlaTCP extends HumlaNetworkThread {
     public void run() {
         mRunning = true;
         try {
-            InetAddress address = InetAddress.getByName(mHost);
-
             Log.i(Constants.TAG, "HumlaTCP: Connecting");
 
             if(mUseTor)
-                mTCPSocket = mSocketFactory.createTorSocket(address, mPort, HumlaConnection.TOR_HOST, HumlaConnection.TOR_PORT);
+                mTCPSocket = mSocketFactory.createTorSocket(mHost, mPort, HumlaConnection.TOR_HOST, HumlaConnection.TOR_PORT);
             else
-                mTCPSocket = mSocketFactory.createSocket(address, mPort);
+                mTCPSocket = mSocketFactory.createSocket(mHost, mPort);
 
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) { // SNI support requires at least API 17
                 SSLCertificateSocketFactory scsf = (SSLCertificateSocketFactory) SSLCertificateSocketFactory.getDefault(0);

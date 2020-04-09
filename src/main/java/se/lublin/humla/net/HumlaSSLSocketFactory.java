@@ -73,15 +73,15 @@ public class HumlaSSLSocketFactory {
     /**
      * Creates a new SSLSocket that runs through a SOCKS5 proxy to reach its destination.
      */
-    public SSLSocket createTorSocket(InetAddress host, int port, String proxyHost, int proxyPort) throws IOException {
+    public SSLSocket createTorSocket(String host, int port, String proxyHost, int proxyPort) throws IOException {
         Proxy proxy = new Proxy(Proxy.Type.SOCKS, new InetSocketAddress(proxyHost, proxyPort));
         Socket socket = new Socket(proxy);
-        socket.connect(new InetSocketAddress(host, port));
-        return (SSLSocket) mContext.getSocketFactory().createSocket(socket, host.getHostName(), port, true);
+        socket.connect(InetSocketAddress.createUnresolved(host, port));
+        return (SSLSocket) mContext.getSocketFactory().createSocket(socket, host, port, true);
     }
 
-    public SSLSocket createSocket(InetAddress host, int port) throws IOException {
-        return (SSLSocket) mContext.getSocketFactory().createSocket(host, port);
+    public SSLSocket createSocket(String host, int port) throws IOException {
+        return (SSLSocket) mContext.getSocketFactory().createSocket(InetAddress.getByName(host), port);
     }
 
     /**
