@@ -32,7 +32,7 @@ repositories {
 }
 
 dependencies {
-    api 'com.google.protobuf:protobuf-java:3.4.0'
+    api 'com.google.protobuf:protobuf-java:3.11.4'
     api 'com.madgag.spongycastle:core:1.51.0.0'
 
     // Custom PKCS12 keybag parse modifications to support Mumble unencrypted certificates
