@@ -296,7 +296,8 @@ public class HumlaService extends Service implements IHumlaService, IHumlaSessio
 
             mCallbacks.onConnecting();
 
-            mConnection.connect(mServer.getHost(), mServer.getPort());
+            mConnection.connect(mServer.getHost(),
+                                mServer.getPort() == 0 ? Constants.DEFAULT_PORT : mServer.getPort());
         } catch (HumlaException e) {
             e.printStackTrace();
             mCallbacks.onDisconnected(e);
