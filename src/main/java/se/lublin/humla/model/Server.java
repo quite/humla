@@ -192,19 +192,20 @@ public class Server implements Parcelable {
                 @Override
                 public void run() {
                     try {
-                        SrvResolverResult res = ResolverApi.INSTANCE.resolveSrv("_mumble._tcp." + host.get());
+                        final String lookup = "_mumble._tcp." + host.get();
+                        SrvResolverResult res = ResolverApi.INSTANCE.resolveSrv(lookup);
                         if (!res.wasSuccessful()) {
-                            Log.d(Constants.TAG, "resolveSrv " + res.getResponseCode());
+                            Log.d(Constants.TAG, "resolveSrv " + lookup + ": " + res.getResponseCode());
                             return;
                         }
                         Set<SRV> answers = res.getAnswersOrEmptySet();
                         if (answers.isEmpty()) {
-                            Log.d(Constants.TAG, "resolveSrv " + res.getResponseCode() + " but 0 answers");
+                            Log.d(Constants.TAG, "resolveSrv " + lookup + ": empty answer");
                             return;
                         }
                         List<SRV> srvs = SrvUtil.sortSrvRecords(answers);
                         for (SRV srv : srvs) {
-                            Log.d(Constants.TAG, "SRV resolved: " + srv.toString());
+                            Log.d(Constants.TAG, "resolved " + lookup + " SRV: " + srv.toString());
                             host.set(srv.target.toString());
                             port.set(srv.port);
                             // TODO SRV just picking the first record.
