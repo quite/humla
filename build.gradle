@@ -42,6 +42,7 @@ dependencies {
 
     implementation 'com.googlecode.javacpp:javacpp:0.7'
     implementation 'org.jetbrains:annotations:18.0.0'
+    implementation 'org.minidns:minidns-hla:0.3.4'
 }
 
 android {

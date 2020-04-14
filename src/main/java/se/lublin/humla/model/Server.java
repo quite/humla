@@ -19,6 +19,21 @@ package se.lublin.humla.model;
 
 import android.os.Parcel;
 import android.os.Parcelable;
+import android.util.Log;
+import android.util.Patterns;
+
+import org.minidns.hla.ResolverApi;
+import org.minidns.hla.SrvResolverResult;
+import org.minidns.record.SRV;
+import org.minidns.util.SrvUtil;
+
+import java.io.IOException;
+import java.util.List;
+import java.util.Set;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.atomic.AtomicReference;
+
+import se.lublin.humla.Constants;
 
 public class Server implements Parcelable {
 
@@ -28,6 +43,10 @@ public class Server implements Parcelable {
     private int mPort;
     private String mUsername;
     private String mPassword;
+
+    // TODO SRV should we remove the cache when disconnecting? maybe
+    private String mResolvedHost = null;
+    private int mResolvedPort;
 
     public static final Parcelable.Creator<Server> CREATOR = new Parcelable.Creator<Server>() {
 
@@ -49,11 +68,11 @@ public class Server implements Parcelable {
         mPort = port;
         mUsername = username;
         mPassword = password;
+        mResolvedHost = null;
     }
 
     private Server(Parcel in) {
         readFromParcel(in);
-
     }
 
     @Override
@@ -73,6 +92,7 @@ public class Server implements Parcelable {
         mPort = in.readInt();
         mUsername = in.readString();
         mPassword = in.readString();
+        mResolvedHost = null;
     }
 
     @Override
@@ -106,6 +126,7 @@ public class Server implements Parcelable {
 
     public void setHost(String mHost) {
         this.mHost = mHost;
+        this.mResolvedHost = null;
     }
 
     public int getPort() {
@@ -114,6 +135,7 @@ public class Server implements Parcelable {
 
     public void setPort(int mPort) {
         this.mPort = mPort;
+        this.mResolvedHost = null;
     }
 
     public String getUsername() {
@@ -139,4 +161,68 @@ public class Server implements Parcelable {
     public boolean isSaved() {
         return mId != -1;
     }
+
+    public String getResolvedHost() {
+        resolveSRV();
+        return mResolvedHost;
+    }
+
+    public int getResolvedPort() {
+        resolveSRV();
+        return mResolvedPort;
+    }
+
+    private void resolveSRV() {
+        if (mResolvedHost != null) {
+            return;
+        }
+        mResolvedHost = mHost;
+        mResolvedPort = mPort;
+        if (mResolvedPort != 0) {
+            return;
+        }
+        mResolvedPort = Constants.DEFAULT_PORT;
+        if (Patterns.IP_ADDRESS.matcher(mResolvedHost).matches()) {
+            return;
+        }
+        final AtomicReference<String> host = new AtomicReference<>(mResolvedHost);
+        final AtomicInteger port = new AtomicInteger(mResolvedPort);
+        try {
+            Thread t = new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    try {
+                        SrvResolverResult res = ResolverApi.INSTANCE.resolveSrv("_mumble._tcp." + host.get());
+                        if (!res.wasSuccessful()) {
+                            Log.d(Constants.TAG, "resolveSrv " + res.getResponseCode());
+                            return;
+                        }
+                        Set<SRV> answers = res.getAnswersOrEmptySet();
+                        if (answers.isEmpty()) {
+                            Log.d(Constants.TAG, "resolveSrv " + res.getResponseCode() + " but 0 answers");
+                            return;
+                        }
+                        List<SRV> srvs = SrvUtil.sortSrvRecords(answers);
+                        for (SRV srv : srvs) {
+                            Log.d(Constants.TAG, "SRV resolved: " + srv.toString());
+                            host.set(srv.target.toString());
+                            port.set(srv.port);
+                            // TODO SRV just picking the first record.
+                            return;
+                        }
+                    } catch (IOException e) {
+                        Log.d(Constants.TAG, "resolveSRV() run() " + e);
+                    }
+                }
+            });
+            t.start();
+            t.join();
+        }
+        catch (Exception e) {
+            Log.d(Constants.TAG, "resolveSRV() " + e);
+        }
+        mResolvedHost = host.get();
+        mResolvedPort = port.get();
+    }
+
 }
