@@ -20,7 +20,8 @@ package se.lublin.humla.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.util.Log;
-import android.util.Patterns;
+
+import com.google.common.net.InetAddresses;
 
 import org.minidns.hla.ResolverApi;
 import org.minidns.hla.SrvResolverResult;
@@ -36,7 +37,6 @@ import java.util.concurrent.atomic.AtomicReference;
 import se.lublin.humla.Constants;
 
 public class Server implements Parcelable {
-
     private long mId;
     private String mName;
     private String mHost;
@@ -44,7 +44,6 @@ public class Server implements Parcelable {
     private String mUsername;
     private String mPassword;
 
-    // TODO SRV should we remove the cache when disconnecting? maybe
     private String mResolvedHost = null;
     private int mResolvedPort;
 
@@ -85,7 +84,7 @@ public class Server implements Parcelable {
         parcel.writeString(mPassword);
     }
 
-    public void readFromParcel(Parcel in) {
+    private void readFromParcel(Parcel in) {
         mId = in.readLong();
         mName = in.readString();
         mHost = in.readString();
@@ -162,37 +161,40 @@ public class Server implements Parcelable {
         return mId != -1;
     }
 
-    public String getResolvedHost() {
-        resolveSRV();
+    public String getSrvHost() {
+        srvResolve();
         return mResolvedHost;
     }
 
-    public int getResolvedPort() {
-        resolveSRV();
+    public int getSrvPort() {
+        srvResolve();
         return mResolvedPort;
     }
 
-    private void resolveSRV() {
+    private synchronized void srvResolve() {
         if (mResolvedHost != null) {
             return;
         }
-        mResolvedHost = mHost;
-        mResolvedPort = mPort;
-        if (mResolvedPort != 0) {
+        // if we have a port then don't bother with SRV
+        if (mPort != 0) {
+            mResolvedHost = mHost;
+            mResolvedPort = mPort;
             return;
         }
-        mResolvedPort = Constants.DEFAULT_PORT;
-        if (Patterns.IP_ADDRESS.matcher(mResolvedHost).matches()) {
+        if (InetAddresses.isInetAddress(mHost)) {
+            mResolvedHost = mHost;
+            mResolvedPort = Constants.DEFAULT_PORT;
             return;
         }
-        final AtomicReference<String> host = new AtomicReference<>(mResolvedHost);
-        final AtomicInteger port = new AtomicInteger(mResolvedPort);
+        // set to our fallback values in case of no SRV or resolve fail
+        final AtomicReference<String> srvHost = new AtomicReference<>(mHost);
+        final AtomicInteger srvPort = new AtomicInteger(Constants.DEFAULT_PORT);
         try {
             Thread t = new Thread(new Runnable() {
                 @Override
                 public void run() {
                     try {
-                        final String lookup = "_mumble._tcp." + host.get();
+                        final String lookup = "_mumble._tcp." + srvHost.get();
                         SrvResolverResult res = ResolverApi.INSTANCE.resolveSrv(lookup);
                         if (!res.wasSuccessful()) {
                             Log.d(Constants.TAG, "resolveSrv " + lookup + ": " + res.getResponseCode());
@@ -206,8 +208,8 @@ public class Server implements Parcelable {
                         List<SRV> srvs = SrvUtil.sortSrvRecords(answers);
                         for (SRV srv : srvs) {
                             Log.d(Constants.TAG, "resolved " + lookup + " SRV: " + srv.toString());
-                            host.set(srv.target.toString());
-                            port.set(srv.port);
+                            srvHost.set(srv.target.toString());
+                            srvPort.set(srv.port);
                             // TODO SRV just picking the first record.
                             return;
                         }
@@ -222,8 +224,7 @@ public class Server implements Parcelable {
         catch (Exception e) {
             Log.d(Constants.TAG, "resolveSRV() " + e);
         }
-        mResolvedHost = host.get();
-        mResolvedPort = port.get();
+        mResolvedHost = srvHost.get();
+        mResolvedPort = srvPort.get();
     }
-
 }
