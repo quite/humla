@@ -19,6 +19,10 @@ package se.lublin.humla.audio;
 
 import android.media.AudioFormat;
 import android.media.AudioRecord;
+import android.media.audiofx.AcousticEchoCanceler;
+import android.media.audiofx.AutomaticGainControl;
+import android.media.audiofx.NoiseSuppressor;
+import android.os.Build;
 import android.util.Log;
 
 import se.lublin.humla.Constants;
@@ -84,6 +88,19 @@ public class AudioInput implements Runnable {
         if(audioRecord.getState() == AudioRecord.STATE_UNINITIALIZED) {
             audioRecord.release();
             throw new AudioInitializationException("AudioRecord failed to initialize!");
+        }
+
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+            int audioSessionId = audioRecord.getAudioSessionId();
+            if(AcousticEchoCanceler.isAvailable()) {
+                AcousticEchoCanceler.create(audioSessionId);
+            }
+            if(AutomaticGainControl.isAvailable()) {
+                AutomaticGainControl.create(audioSessionId);
+            }
+            if(NoiseSuppressor.isAvailable()) {
+                NoiseSuppressor.create(audioSessionId);
+            }
         }
 
         return audioRecord;
