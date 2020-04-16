@@ -91,6 +91,18 @@ public class AudioInput implements Runnable {
         }
 
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+
+            // TODO "On some devices, an AEC can be inserted by default in the
+            //  capture path by the platform according to the
+            //  MediaRecorder.AudioSource used. The application should call
+            //  AcousticEchoCanceler.getEnable() after creating the AEC to
+            //  check the default AEC activation state on a particular
+            //  AudioRecord session."
+            //  https://developer.android.com/reference/android/media/audiofx/AcousticEchoCanceler.html
+            //  vv same for AGC and NS
+
+            //  https://source.android.com/devices/audio/implement-pre-processing
+
             int audioSessionId = audioRecord.getAudioSessionId();
             if(AcousticEchoCanceler.isAvailable()) {
                 AcousticEchoCanceler.create(audioSessionId);
