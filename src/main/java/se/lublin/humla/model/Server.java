@@ -181,7 +181,9 @@ public class Server implements Parcelable {
             mResolvedPort = mPort;
             return;
         }
-        if (InetAddresses.isInetAddress(mHost)) {
+        // skip also IP addresses and Tor Onion Services (a pseudo-TLD)
+        if (InetAddresses.isInetAddress(mHost)
+                || mHost.endsWith(".onion")) {
             mResolvedHost = mHost;
             mResolvedPort = Constants.DEFAULT_PORT;
             return;
