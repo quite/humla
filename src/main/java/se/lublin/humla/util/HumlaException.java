@@ -61,7 +61,7 @@ public class HumlaException extends Exception implements Parcelable {
     }
 
     public HumlaException(Mumble.Reject reject) {
-        super("Reject: "+reject.getReason());
+        super("Rejected: " + reject.getReason());
         mReject = reject;
         mReason = HumlaDisconnectReason.REJECT;
     }
