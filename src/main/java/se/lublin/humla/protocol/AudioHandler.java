@@ -206,6 +206,11 @@ public class AudioHandler extends HumlaNetworkListener implements AudioInput.Aud
             mEncoder = null;
         }
 
+        if (codec == null) {
+            Log.w(Constants.TAG, "AudioHandler setCodec(null) Input disabled.");
+            return;
+        }
+
         IEncoder encoder;
         switch (codec) {
             case UDPVoiceCELTAlpha:

@@ -46,6 +46,7 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.Executors;
+import java.util.concurrent.RejectedExecutionException;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
@@ -136,7 +137,11 @@ public class HumlaConnection implements HumlaTCP.TCPConnectionListener, HumlaUDP
             }
 
             // Start TCP/UDP ping thread. FIXME is this the right place?
-            mPingTask = mPingExecutorService.scheduleAtFixedRate(mPingRunnable, 0, 5, TimeUnit.SECONDS);
+            try {
+                mPingTask = mPingExecutorService.scheduleAtFixedRate(mPingRunnable, 0, 5, TimeUnit.SECONDS);
+            } catch(RejectedExecutionException e) {
+                Log.w(Constants.TAG, "HumlaConnection fail to start ping thread, in \"shutdown\"? ", e);
+            }
 
             mSession = msg.getSession();
             mMaxBandwidth = msg.hasMaxBandwidth() ? msg.getMaxBandwidth() : -1;
