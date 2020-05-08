@@ -92,7 +92,7 @@ public class HumlaConnection implements HumlaTCP.TCPConnectionListener, HumlaUDP
     // Networking and protocols
     private HumlaTCP mTCP;
     private HumlaUDP mUDP;
-    private ScheduledFuture mPingTask;
+    private ScheduledFuture<?> mPingTask;
     private boolean mUsingUDP = true;
     private boolean mForceTCP;
     private boolean mUseTor;

@@ -25,6 +25,7 @@ import se.lublin.humla.protobuf.Mumble;
 /**
  * Created by andrew on 14/07/13.
  */
+@SuppressWarnings("serial")
 public class HumlaException extends Exception implements Parcelable {
 
     public static final Creator<HumlaException> CREATOR = new Creator<HumlaException>() {

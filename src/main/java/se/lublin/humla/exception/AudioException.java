@@ -20,6 +20,7 @@ package se.lublin.humla.exception;
 /**
  * Created by andrew on 28/04/14.
  */
+@SuppressWarnings("serial")
 public class AudioException extends Exception {
     public AudioException(String message) {
         super(message);

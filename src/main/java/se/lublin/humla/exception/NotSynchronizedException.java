@@ -21,6 +21,7 @@ package se.lublin.humla.exception;
  * Called when Humla has not yet received the ServerSync message from the server.
  * Created by andrew on 24/10/15.
  */
+@SuppressWarnings("serial")
 public class NotSynchronizedException extends Exception {
     public NotSynchronizedException() {
         super("Not yet synchronized");
