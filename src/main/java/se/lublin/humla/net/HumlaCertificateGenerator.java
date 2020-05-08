@@ -43,40 +43,40 @@ import java.util.Calendar;
 import java.util.Date;
 
 public class HumlaCertificateGenerator {
-	private static final String ISSUER = "CN=Humla Client";
-	private static final Integer YEARS_VALID = 20;
+    private static final String ISSUER = "CN=Humla Client";
+    private static final Integer YEARS_VALID = 20;
 
-	public static X509Certificate generateCertificate(OutputStream output) throws NoSuchAlgorithmException, OperatorCreationException, CertificateException, KeyStoreException, NoSuchProviderException, IOException {
-		BouncyCastleProvider provider = new BouncyCastleProvider(); // Use SpongyCastle provider, supports creating X509 certs
-		KeyPairGenerator generator = KeyPairGenerator.getInstance("RSA");
-		generator.initialize(2048, new SecureRandom());
-		
-		KeyPair keyPair = generator.generateKeyPair();
-		
-		SubjectPublicKeyInfo publicKeyInfo = SubjectPublicKeyInfo.getInstance(keyPair.getPublic().getEncoded());
-		ContentSigner signer = new JcaContentSignerBuilder("SHA1withRSA").setProvider(provider).build(keyPair.getPrivate());
-		
-		Date startDate = new Date();
-		Calendar calendar = Calendar.getInstance();
-		calendar.setTime(startDate);
-		calendar.add(Calendar.YEAR, YEARS_VALID);
-	    Date endDate = calendar.getTime();
-		
-		X509v3CertificateBuilder certBuilder = new X509v3CertificateBuilder(new X500Name(ISSUER),
-				BigInteger.ONE, 
-				startDate, endDate, new X500Name(ISSUER),
-				publicKeyInfo);
+    public static X509Certificate generateCertificate(OutputStream output) throws NoSuchAlgorithmException, OperatorCreationException, CertificateException, KeyStoreException, NoSuchProviderException, IOException {
+        BouncyCastleProvider provider = new BouncyCastleProvider(); // Use SpongyCastle provider, supports creating X509 certs
+        KeyPairGenerator generator = KeyPairGenerator.getInstance("RSA");
+        generator.initialize(2048, new SecureRandom());
 
-		X509CertificateHolder certificateHolder = certBuilder.build(signer);
-		
-		X509Certificate certificate = new JcaX509CertificateConverter().setProvider(provider).getCertificate(certificateHolder);
-		
-		KeyStore keyStore = KeyStore.getInstance("PKCS12", provider);
-		keyStore.load(null, null);
-		keyStore.setKeyEntry("Humla Key", keyPair.getPrivate(), null, new X509Certificate[] { certificate });
-		
-		keyStore.store(output, "".toCharArray());
-		
-		return certificate;
-	}
+        KeyPair keyPair = generator.generateKeyPair();
+
+        SubjectPublicKeyInfo publicKeyInfo = SubjectPublicKeyInfo.getInstance(keyPair.getPublic().getEncoded());
+        ContentSigner signer = new JcaContentSignerBuilder("SHA1withRSA").setProvider(provider).build(keyPair.getPrivate());
+
+        Date startDate = new Date();
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(startDate);
+        calendar.add(Calendar.YEAR, YEARS_VALID);
+        Date endDate = calendar.getTime();
+
+        X509v3CertificateBuilder certBuilder = new X509v3CertificateBuilder(new X500Name(ISSUER),
+                BigInteger.ONE,
+                startDate, endDate, new X500Name(ISSUER),
+                publicKeyInfo);
+
+        X509CertificateHolder certificateHolder = certBuilder.build(signer);
+
+        X509Certificate certificate = new JcaX509CertificateConverter().setProvider(provider).getCertificate(certificateHolder);
+
+        KeyStore keyStore = KeyStore.getInstance("PKCS12", provider);
+        keyStore.load(null, null);
+        keyStore.setKeyEntry("Humla Key", keyPair.getPrivate(), null, new X509Certificate[] { certificate });
+
+        keyStore.store(output, "".toCharArray());
+
+        return certificate;
+    }
 }
