@@ -137,11 +137,15 @@ public class ModelHandler extends HumlaTCPMessageListener.Stub {
             }
         }
 
-        if(msg.hasDescriptionHash())
+        if(msg.hasDescriptionHash()) {
             channel.setDescriptionHash(msg.getDescriptionHash().toByteArray());
+            channel.setDescription(null);
+        }
 
-        if(msg.hasDescription())
+        if(msg.hasDescription()) {
             channel.setDescription(msg.getDescription());
+            channel.setDescriptionHash(null);
+        }
 
         if(msg.getLinksCount() > 0) {
             channel.clearLinks();
@@ -382,13 +386,18 @@ public class ModelHandler extends HumlaTCPMessageListener.Stub {
         if (msg.hasTexture()) {
             // FIXME: is it reasonable to create a bitmap here? How expensive?
             user.setTexture(msg.getTexture());
+            user.setTextureHash(null);
         }
 
-        if(msg.hasCommentHash())
+        if(msg.hasCommentHash()) {
             user.setCommentHash(msg.getCommentHash());
+            user.setComment(null);
+        }
 
-        if(msg.hasComment())
+        if(msg.hasComment()) {
             user.setComment(msg.getComment());
+            user.setCommentHash(null);
+        }
 
         if (newUser)
             mObserver.onUserConnected(user);
