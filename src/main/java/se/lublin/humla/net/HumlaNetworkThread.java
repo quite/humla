@@ -19,9 +19,12 @@ package se.lublin.humla.net;
 
 import android.os.Handler;
 import android.os.Looper;
+import android.util.Log;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+
+import se.lublin.humla.Constants;
 
 /**
  * Base class for TCP/UDP protocol implementations.
@@ -54,7 +57,9 @@ public abstract class HumlaNetworkThread implements Runnable {
 
     protected void stopThreads() {
         if (!mInitialized) {
-            throw new IllegalArgumentException("Threads already shutdown.");
+            // TODO? Used throw, like startThreads()
+            Log.e(Constants.TAG, "Error in stopThreads: Threads already shutdown");
+            return;
         }
         mSendExecutor.shutdown();
         mReceiveExecutor.shutdownNow();
