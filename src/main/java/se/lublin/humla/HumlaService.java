@@ -192,6 +192,9 @@ public class HumlaService extends Service implements IHumlaService, IHumlaSessio
                                 if (!isSynchronized())
                                     return;
 
+                                if (mModelHandler == null || mConnection == null) {
+                                    return;
+                                }
                                 final User currentUser = mModelHandler.getUser(mConnection.getSession());
                                 if (currentUser == null) return;
 
@@ -349,6 +352,13 @@ public class HumlaService extends Service implements IHumlaService, IHumlaSessio
         if (!mConnection.isConnected()) {
             return;
         }
+
+        // TODO hackish, but this seems to happen?!
+        if (mModelHandler == null) {
+            Log.e(Constants.TAG, "Error in HumlaService.onConnectionSynchronized: mAudioHandler is null");
+            return;
+        }
+
         mConnectionState = ConnectionState.CONNECTED;
 
         Log.v(Constants.TAG, "Connected");
