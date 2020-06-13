@@ -411,14 +411,21 @@ public class ModelHandler extends HumlaTCPMessageListener.Stub {
         final User actor = mUsers.get(msg.getActor());
         final String reason = msg.getReason();
 
+        // TODO? hackish fix of crash that was happening. The original logic
+        // here is possible flawed, regarding presence of session, actor etc.
+        // Consult Mumble.proto and official client?
+        final String userName = user != null ? user.getName() : "unknown";
+        final String actorName = actor != null ? actor.getName() : "unknown";
         if(msg.getSession() == mSession)
-            mLogger.logWarning(mContext.getString(msg.getBan() ? R.string.chat_notify_kick_ban_self : R.string.chat_notify_kick_self, MessageFormatter.highlightString(actor.getName()), reason));
+            mLogger.logWarning(mContext.getString(msg.getBan() ? R.string.chat_notify_kick_ban_self : R.string.chat_notify_kick_self, MessageFormatter.highlightString(actorName), reason));
         else if(actor != null)
-            mLogger.logWarning(mContext.getString(msg.getBan() ? R.string.chat_notify_kick_ban : R.string.chat_notify_kick, MessageFormatter.highlightString(actor.getName()), reason, MessageFormatter.highlightString(user.getName())));
+            mLogger.logWarning(mContext.getString(msg.getBan() ? R.string.chat_notify_kick_ban : R.string.chat_notify_kick, MessageFormatter.highlightString(actorName), reason, MessageFormatter.highlightString(userName)));
         else
-            mLogger.logInfo(mContext.getString(R.string.chat_notify_disconnected, MessageFormatter.highlightString(user.getName())));
+            mLogger.logInfo(mContext.getString(R.string.chat_notify_disconnected, MessageFormatter.highlightString(userName)));
 
-        user.setChannel(null);
+        if (user != null) {
+            user.setChannel(null);
+        }
         mObserver.onUserRemoved(user, reason);
     }
 
