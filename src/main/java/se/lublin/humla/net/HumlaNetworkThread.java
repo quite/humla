@@ -66,10 +66,16 @@ public abstract class HumlaNetworkThread implements Runnable {
     }
 
     protected void executeOnSendThread(Runnable r) {
+        if (mSendExecutor == null) {
+            return;
+        }
         mSendExecutor.execute(r);
     }
 
     protected void executeOnReceiveThread(Runnable r) {
+        if (mSendExecutor == null) {
+            return;
+        }
         mSendExecutor.execute(r);
     }
 
