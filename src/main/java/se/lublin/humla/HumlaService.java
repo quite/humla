@@ -164,7 +164,7 @@ public class HumlaService extends Service implements IHumlaService, IHumlaSessio
                 return;
             }
 
-            ConnectivityManager cm = (ConnectivityManager) getSystemService(CONNECTIVITY_SERVICE);
+            ConnectivityManager cm = (ConnectivityManager) context.getSystemService(CONNECTIVITY_SERVICE);
             NetworkInfo info = cm.getActiveNetworkInfo();
             if (info != null && info.isConnected()) {
                 Log.v(Constants.TAG, "Connectivity restored, attempting reconnect.");
