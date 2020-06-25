@@ -38,6 +38,8 @@ import java.security.cert.X509Certificate;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.minidns.dnsserverlookup.android21.AndroidUsingLinkProperties;
+
 import se.lublin.humla.audio.AudioOutput;
 import se.lublin.humla.audio.BluetoothScoReceiver;
 import se.lublin.humla.audio.inputmode.ActivityInputMode;
@@ -267,6 +269,9 @@ public class HumlaService extends Service implements IHumlaService, IHumlaSessio
         mActivityInputMode = new ActivityInputMode(0); // FIXME: reasonable default
         mContinuousInputMode = new ContinuousInputMode();
         mWhisperTargetList = new WhisperTargetList();
+
+        // initialize minidns dns lookup mechanisms
+        AndroidUsingLinkProperties.setup(this);
     }
 
     @Override
