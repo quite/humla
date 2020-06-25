@@ -215,8 +215,10 @@ public class Server implements Parcelable {
                             // TODO SRV just picking the first record.
                             return;
                         }
-                    } catch (IOException e) {
-                        Log.d(Constants.TAG, "resolveSRV() run() " + e);
+                    } catch (IOException | IllegalArgumentException e) {
+                        // java.net.IDN.toASCII down in resolveSrv() happens to throw IAE
+                        // https://github.com/MiniDNS/minidns/issues/104
+                        Log.d(Constants.TAG, "Server, exception in srvResolve: " + e);
                     }
                 }
             });
