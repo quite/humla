@@ -737,9 +737,10 @@ public class HumlaService extends Service implements IHumlaService, IHumlaSessio
     }
 
     @Override
-    public IHumlaSession getSession() throws HumlaDisconnectedException {
-        if (mConnectionState != ConnectionState.CONNECTED)
+    public IHumlaSession HumlaSession() throws HumlaDisconnectedException {
+        if (mConnectionState != ConnectionState.CONNECTED) {
             throw new HumlaDisconnectedException();
+        }
         return this;
     }
 
