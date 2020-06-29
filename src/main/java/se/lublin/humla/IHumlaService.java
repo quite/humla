@@ -84,5 +84,5 @@ public interface IHumlaService {
      * @return the active session.
      * @throws HumlaDisconnectedException if the connection state is not CONNECTED.
      */
-    IHumlaSession getSession() throws HumlaDisconnectedException;
+    IHumlaSession HumlaSession() throws HumlaDisconnectedException;
 }
