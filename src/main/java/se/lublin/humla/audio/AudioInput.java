@@ -119,7 +119,8 @@ public class AudioInput implements Runnable {
             mAEC = AcousticEchoCanceler.create(audioSessionId);
         }
 
-        // TODO?
+mAEC.setEnabled(true);
+// TODO?
         // if (aec != null) {
 // ￼            int ret = aec.setEnabled(enable);
 // ￼            if (ret != AudioEffect.SUCCESS) {
