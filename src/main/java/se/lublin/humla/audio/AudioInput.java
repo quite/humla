@@ -40,6 +40,7 @@ public class AudioInput implements Runnable {
     private AudioInputListener mListener;
     private AudioRecord mAudioRecord;
     private final int mFrameSize;
+    private AcousticEchoCanceler mAEC = null;
 
     private Thread mRecordThread;
     private boolean mRecording;
@@ -66,6 +67,8 @@ public class AudioInput implements Runnable {
             throw new AudioInitializationException("Unable to initialize AudioInput.");
         }
 
+        setupAEC();
+
         int sampleRate = getSampleRate();
         // FIXME: does not work properly if 10ms frames cannot be represented as integers
         mFrameSize = (sampleRate * AudioHandler.FRAME_SIZE) / AudioHandler.SAMPLE_RATE;
@@ -90,35 +93,49 @@ public class AudioInput implements Runnable {
             throw new AudioInitializationException("AudioRecord failed to initialize!");
         }
 
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
-
-            // TODO "On some devices, an AEC can be inserted by default in the
-            //  capture path by the platform according to the
-            //  MediaRecorder.AudioSource used. The application should call
-            //  AcousticEchoCanceler.getEnable() after creating the AEC to
-            //  check the default AEC activation state on a particular
-            //  AudioRecord session."
-            //  https://developer.android.com/reference/android/media/audiofx/AcousticEchoCanceler.html
-            //  vv same for AGC and NS
-
-            //  https://source.android.com/devices/audio/implement-pre-processing
-
-            int audioSessionId = audioRecord.getAudioSessionId();
-            if(AcousticEchoCanceler.isAvailable()) {
-                AcousticEchoCanceler.create(audioSessionId);
-            }
-            if(AutomaticGainControl.isAvailable()) {
-                AutomaticGainControl.create(audioSessionId);
-            }
-            if(NoiseSuppressor.isAvailable()) {
-                NoiseSuppressor.create(audioSessionId);
-            }
-        }
-
         return audioRecord;
     }
 
-    /**
+    private void setupAEC() {
+        if (mAudioRecord == null) {
+            return;
+        }
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.JELLY_BEAN) {
+            return;
+        }
+        // TODO "On some devices, an AEC can be inserted by default in the
+        //  capture path by the platform according to the
+        //  MediaRecorder.AudioSource used. The application should call
+        //  AcousticEchoCanceler.getEnable() after creating the AEC to
+        //  check the default AEC activation state on a particular
+        //  AudioRecord session."
+        //  https://developer.android.com/reference/android/media/audiofx/AcousticEchoCanceler.html
+        //  vv same for AGC and NS
+    
+        //  Read https://source.android.com/devices/audio/implement-pre-processing
+    
+        int audioSessionId = mAudioRecord.getAudioSessionId();
+        if (AcousticEchoCanceler.isAvailable()) {
+            mAEC = AcousticEchoCanceler.create(audioSessionId);
+        }
+
+        // TODO?
+        // if (aec != null) {
+// ￼            int ret = aec.setEnabled(enable);
+// ￼            if (ret != AudioEffect.SUCCESS) {
+// ￼                return false;
+// ￼            }
+// ￼        }
+
+        return;
+        // if(AutomaticGainControl.isAvailable()) {
+        //     AutomaticGainControl.create(audioSessionId);
+        // }
+        // if(NoiseSuppressor.isAvailable()) {
+        //     NoiseSuppressor.create(audioSessionId);
+        // }
+    }
+     /**
      * Starts the recording thread.
      * Not thread-safe.
      */
@@ -154,6 +171,10 @@ public class AudioInput implements Runnable {
         if(mAudioRecord != null) {
             mAudioRecord.release();
             mAudioRecord = null;
+            if (mAEC != null) {
+                mAEC.release();
+                mAEC = null;
+            }
         }
     }
 
