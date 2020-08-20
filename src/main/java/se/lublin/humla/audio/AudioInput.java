@@ -111,22 +111,23 @@ public class AudioInput implements Runnable {
         //  AudioRecord session."
         //  https://developer.android.com/reference/android/media/audiofx/AcousticEchoCanceler.html
         //  vv same for AGC and NS
-    
+
         //  Read https://source.android.com/devices/audio/implement-pre-processing
-    
+
         int audioSessionId = mAudioRecord.getAudioSessionId();
         if (AcousticEchoCanceler.isAvailable()) {
             mAEC = AcousticEchoCanceler.create(audioSessionId);
+            // TODO is this even needed?
+            mAEC.setEnabled(true);
         }
 
-mAEC.setEnabled(true);
-// TODO?
+        // TODO?
         // if (aec != null) {
-// ￼            int ret = aec.setEnabled(enable);
-// ￼            if (ret != AudioEffect.SUCCESS) {
-// ￼                return false;
-// ￼            }
-// ￼        }
+        // ￼            int ret = aec.setEnabled(enable);
+        // ￼            if (ret != AudioEffect.SUCCESS) {
+        // ￼                return false;
+        // ￼            }
+        // ￼        }
 
         return;
         // if(AutomaticGainControl.isAvailable()) {
