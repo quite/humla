@@ -1,2 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="chat_notify_kick_self">Sinut on potkittu palvelimelta %1$s:%2$s toimesta.</string>
+    <string name="chat_notify_moved">%1$s siirtyi kanavalta %2$s käyttäjän %3$s toimesta.</string>
+    <string name="the_server">palvelin</string>
+    <string name="server">Palvelin</string>
+    <string name="perm_denied">Käyttöoikeus evätty.</string>
+    <string name="deny_reason_other">Syy: %s</string>
+    <string name="deny_reason_channel_nesting">Alikanavien maksimimäärä saavutettu.</string>
+    <string name="deny_reason_channel_full">Kanava on täynnä.</string>
+    <string name="deny_reason_invalid_username">Väärä käyttäjätunnus.</string>
+    <string name="deny_reason_no_certificate">Tarvitset sertifikaatin käyttääksesi tätä toimintoa.</string>
+    <string name="deny_reason_no_operation_temp">Estetty: Toiminto ei ole sallittu väliaikaisella kanavalla.</string>
+    <string name="deny_reason_text_too_long">Estetty: Tekstiviesti on liian pitkä.</string>
+    <string name="deny_reason_channel_name">Estetty: Vääränlainen kanavannimi.</string>
+    <string name="bluetooth_disconnected">Bluetooth yhteys katkennut</string>
+    <string name="bluetooth_connected">Bluetooth yhdistetty</string>
+    <string name="chat_notify_user_left_channel_by">%1$s on siirretty kanavalle %2$s käyttäjän %3$s toimesta.</string>
+    <string name="chat_notify_user_joined_channel_by">%1$s siirtyi kanavalta %2$s käyttäjän %3$s toimesta.</string>
+    <string name="chat_notify_user_left_channel">%1$s siirtyi kanavalle %2$s.</string>
+    <string name="chat_notify_user_joined_channel">%s liittyi kanavalle.</string>
+    <string name="chat_notify_user_recording_stopped">%s pysäytti nauhoituksen.</string>
+    <string name="chat_notify_user_recording_started">%s aloitti nauhoituksen.</string>
+    <string name="chat_notify_self_recording_stopped">Nauhoitus pysäytetty</string>
+    <string name="chat_notify_self_recording_started">Nauhoitus aloitettu</string>
+    <string name="chat_notify_kick">%3$s on potkittu palvelimelta %1$s:%2$s toimesta.</string>
+    <string name="chat_notify_kick_ban">%3$s on potkittu ja asetettu porttikieltoon palvelimelle %1$s%2$s toimesta.</string>
+    <string name="chat_notify_kick_ban_self">Sinut on potkittu ja asetettu porttikieltoon serverille %1$s:%2$s.</string>
+    <string name="chat_notify_disconnected">%s poistui.</string>
+    <string name="chat_notify_connected">%s liittyi.</string>
+    <string name="chat_notify_unsuppressed_self_by_actor">Et ole enää vaimennettu %s toimesta.</string>
+    <string name="chat_notify_unsuppressed_self">Et ole enää vaimennettu.</string>
+    <string name="chat_notify_suppressed_self">Sinut on vaimennettu.</string>
+    <string name="chat_notify_undeafened_self_by_actor">Et ole enää hiljennetty %s toimesta.</string>
+    <string name="chat_notify_unmuted_self_by_actor">Et ole enää mykistetty %s toimesta.</string>
+    <string name="chat_notify_muted_self_by_actor">Sinut on mykistetty %s toimesta.</string>
+    <string name="chat_notify_unmuted_undeafened_self_by_actor">Et ole enää mykistetty tai hiljennetty %s toimesta.</string>
+    <string name="chat_notify_muted_deafened_self_by_actor">Sinut on mykistetty ja hiljennetty %s toimesta.</string>
+    <string name="chat_notify_now_unmuted_undeafened">%s ei ole enää mykistetty tai hiljennetty.</string>
+    <string name="chat_notify_now_unmuted">%s ei ole enää mykistetty.</string>
+    <string name="chat_notify_now_muted">%s on nyt mykistetty.</string>
+    <string name="chat_notify_now_muted_deafened">%s on nyt mykistetty ja hiljennetty.</string>
+    <string name="chat_notify_unmuted_undeafened">Mykistys ja hiljennys poistettu.</string>
+    <string name="chat_notify_unmuted">Mykistys poistettu.</string>
+    <string name="chat_notify_muted">Mykistetty.</string>
+    <string name="chat_notify_muted_deafened">Mykistetty ja hiljennetty.</string>
+    <string name="audio_max_bandwidth">Palvelimen maksimi kaistanleveys on vain %1$d kbit/s. Mukautetaan äänen laatua %2$d kbit/s (%3$d ms).</string>
+</resources>
