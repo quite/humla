@@ -1,2 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="chat_notify_disconnected">%s s\'ha desconnectat.</string>
+    <string name="chat_notify_muted">Silenciat.</string>
+    <string name="server">Servidor</string>
+</resources>
