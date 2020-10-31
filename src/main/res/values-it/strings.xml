@@ -1,2 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="deny_reason_channel_nesting">Raggiunto il limite di nesting dei canali.</string>
+    <string name="chat_notify_unsuppressed_self_by_actor">Non sei più inibito per mano di \"%s\".</string>
+    <string name="chat_notify_unsuppressed_self">Non sei più inibito.</string>
+    <string name="chat_notify_suppressed_self">Sei stato inibito.</string>
+    <string name="chat_notify_disconnected">%s disconnesso.</string>
+    <string name="the_server">il server</string>
+    <string name="perm_denied">Permesso negato.</string>
+    <string name="deny_reason_other">Motivo: %s</string>
+    <string name="deny_reason_channel_full">Il canale è pieno.</string>
+    <string name="deny_reason_invalid_username">Nome utente non valido.</string>
+    <string name="deny_reason_no_certificate">Per eseguire questa operazione è necessario un certificato.</string>
+    <string name="deny_reason_no_operation_temp">Negato: Operazione non consentita nei canali temporanei.</string>
+    <string name="deny_reason_text_too_long">Negato: Messaggio di testo troppo lungo.</string>
+    <string name="deny_reason_channel_name">Negato: Nome canale non valido.</string>
+    <string name="bluetooth_disconnected">Bluetooth disconnesso</string>
+    <string name="bluetooth_connected">Bluetooth connesso</string>
+    <string name="chat_notify_user_left_channel_by">\"%1$s\" è stato sposato in \"%2$s\" tramite \"%3$s\".</string>
+    <string name="chat_notify_user_joined_channel_by">\"%1$s\" è arrivato da \"%2$s\" tramite \"%3$s\".</string>
+    <string name="chat_notify_moved">\"%1$s\" è arrivato da \"%2$s\" tramite \"%3$s\".</string>
+    <string name="server">Server</string>
+    <string name="chat_notify_user_left_channel">\"%1$s\" si è spostato in \"%2$s\".</string>
+    <string name="chat_notify_user_joined_channel">\"%s\" è entrato nel canale.</string>
+    <string name="chat_notify_user_recording_stopped">\"%s\" ha fermato una registrazione.</string>
+    <string name="chat_notify_user_recording_started">\"%s\" ha avviato una registrazione.</string>
+    <string name="chat_notify_self_recording_stopped">Registrazione fermata</string>
+    <string name="chat_notify_self_recording_started">Registrazione avviata</string>
+    <string name="chat_notify_kick">\"%3$s\" è stato Cacciato dal server da \"%1$s\": \"%2$s\".</string>
+    <string name="chat_notify_kick_ban">\"%3$s\" è stato Cacciato e Bandito dal server da \"%1$s\": \"%2$s\".</string>
+    <string name="chat_notify_kick_self">Cacciato dal server da \"%1$s\": \"%2$s\".</string>
+    <string name="chat_notify_kick_ban_self">Cacciato e Bandito dal server da \"%1$s\": \"%2$s\".</string>
+    <string name="chat_notify_connected">\"%s\" connesso.</string>
+    <string name="chat_notify_undeafened_self_by_actor">Non Escluso da \"%s\".</string>
+    <string name="chat_notify_unmuted_self_by_actor">Non Muto da \"%s\".</string>
+    <string name="chat_notify_muted_self_by_actor">Muto da \"%s\".</string>
+    <string name="chat_notify_unmuted_undeafened_self_by_actor">Né Muto né Escluso da \"%s\".</string>
+    <string name="chat_notify_muted_deafened_self_by_actor">Muto ed Escluso da \"%s\".</string>
+    <string name="chat_notify_now_unmuted_undeafened">%s non è muto né escluso.</string>
+    <string name="chat_notify_now_unmuted">%s non è muto.</string>
+    <string name="chat_notify_now_muted">%s è muto.</string>
+    <string name="chat_notify_now_muted_deafened">%s è muto ed escluso.</string>
+    <string name="chat_notify_unmuted_undeafened">Né Muto né Escluso.</string>
+    <string name="chat_notify_unmuted">Non Muto.</string>
+    <string name="chat_notify_muted">Muto.</string>
+    <string name="chat_notify_muted_deafened">Muto ed Escluso.</string>
+    <string name="audio_max_bandwidth">La larghezza massima di banda del server è %1$d kbit/s. Regolazione della qualità audio a %2$d kbit/s (%3$d ms).</string>
+</resources>
