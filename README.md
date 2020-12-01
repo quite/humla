@@ -8,7 +8,7 @@ Humla is the backend of [Mumla](https://gitlab.com/quite/mumla).
 ## About Jumble
 
 The primary goal of the Jumble project is to encourage developers to embrace
-the Mumble protocol on Android through a free, complete, and stable
+the Mumble protocol on Android through a copylefted libre, complete, and stable
 implementation. At the moment, development is focused on improving stability
 and security.
 
@@ -20,7 +20,7 @@ that project.
 ## Including in your project
 
 Humla is a standard Android library project using the gradle build system.
-[See here for instructions on how to include it into your gradle project](http://tools.android.com/tech-docs/new-build-system/user-guide#TOC-Referencing-a-Library).
+[See here for instructions on how to include it into your Gradle project](http://tools.android.com/tech-docs/new-build-system/user-guide#TOC-Referencing-a-Library).
 
 Currently, there is no tutorial to integrate Humla with your project. In the
 mean time, please examine the exposed interface IHumlaService as well as
