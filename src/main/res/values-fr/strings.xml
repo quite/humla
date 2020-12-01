@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="audio_max_bandwidth">La bande passante réseau maximale du serveur est seulement de %1$d kbit/s. La qualité audio est ajustée à %2$d kbit/s (%3$d ms)</string>
+    <string name="audio_max_bandwidth">La bande passante réseau maximale du serveur est seulement de %1$d kbit/s. La qualité audio est ajustée à %2$d kbit/s (%3$d ms).</string>
     <string name="chat_notify_moved">%1$s a été déplacé de %2$s par %3$s.</string>
     <string name="chat_notify_muted_deafened">Muet et sourd.</string>
     <string name="chat_notify_muted">Muet.</string>
@@ -15,15 +15,15 @@
     <string name="chat_notify_muted_self_by_actor">Vous avez été rendu muet par %s.</string>
     <string name="chat_notify_unmuted_self_by_actor">Vous n\'êtes plus muet par %s.</string>
     <string name="chat_notify_undeafened_self_by_actor">Vous n\'êtes plus sourd par %s.</string>
-    <string name="chat_notify_suppressed_self">Vous avez été supprimé.</string>
-    <string name="chat_notify_unsuppressed_self">Vous avez été rétabli.</string>
-    <string name="chat_notify_unsuppressed_self_by_actor">Vous avez été rétabli par %s.</string>
+    <string name="chat_notify_suppressed_self">Vous avez été supprimé·e.</string>
+    <string name="chat_notify_unsuppressed_self">Vous avez été rétabli·e.</string>
+    <string name="chat_notify_unsuppressed_self_by_actor">Vous avez été rétabli·e par %s.</string>
     <string name="chat_notify_connected">%s connecté.</string>
     <string name="chat_notify_disconnected">%s déconnecté.</string>
-    <string name="chat_notify_kick_ban_self">Vous avez été éjecté et banni du serveur par %1$s: %2$s.</string>
-    <string name="chat_notify_kick_self">Vous avez été éjecté du serveur par %1$s: %2$s.</string>
-    <string name="chat_notify_kick_ban">%3$s a été éjecté et banni du serveur par %1$s: %2$s.</string>
-    <string name="chat_notify_kick">%3$s a été éjecté du serveur par %1$s: %2$s.</string>
+    <string name="chat_notify_kick_ban_self">Vous avez été éjecté·e et banni·e du serveur par %1$s : %2$s.</string>
+    <string name="chat_notify_kick_self">Vous avez été éjecté·e du serveur par %1$s : %2$s.</string>
+    <string name="chat_notify_kick_ban">%3$s a été éjecté·e et banni·e du serveur par %1$s : %2$s.</string>
+    <string name="chat_notify_kick">%3$s a été éjecté·e du serveur par %1$s : %2$s.</string>
     <string name="chat_notify_self_recording_started">Enregistrement démarré</string>
     <string name="chat_notify_self_recording_stopped">Enregistrement interrompu</string>
     <string name="chat_notify_user_recording_started">%s a commencé à enregistrer.</string>
@@ -34,15 +34,15 @@
     <string name="chat_notify_user_left_channel_by">%1$s a été déplacé dans %2$s par %3$s.</string>
     <string name="bluetooth_connected">Bluetooth connecté</string>
     <string name="bluetooth_disconnected">Bluetooth déconnecté</string>
-    <string name="deny_reason_channel_name">Refusé: Nom de canal invalide.</string>
+    <string name="deny_reason_channel_name">Refusé : nom de canal invalide.</string>
     <string name="deny_reason_text_too_long">Refusé : message texte trop long.</string>
-    <string name="deny_reason_no_operation_temp">Refusé: Opération non permise dans un canal temporaire.</string>
+    <string name="deny_reason_no_operation_temp">Refusé : opération non permise dans un canal temporaire.</string>
     <string name="deny_reason_no_certificate">Vous avez besoin d\'un certificat pour effectuer cette opération.</string>
     <string name="deny_reason_invalid_username">Nom d\'utilisateur invalide.</string>
     <string name="deny_reason_channel_full">Le canal est plein.</string>
     <string name="deny_reason_channel_nesting">Limite du nombre de canal enfant atteint.</string>
     <string name="deny_reason_other">Raison : %s</string>
-    <string name="perm_denied">Permission non accordée.</string>
+    <string name="perm_denied">Permission refusée.</string>
     <string name="server">Serveur</string>
     <string name="the_server">le serveur</string>
 </resources>
