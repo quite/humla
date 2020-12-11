@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="audio_max_bandwidth">Максимальная пропускная способность сервера %1$d Кбит/с. Качество звука изменено на %2$d Кбит/с (%3$d мс).</string>
     <string name="chat_notify_moved">%1$s перемещен(а) %3$s из %2$s.</string>
@@ -42,7 +42,7 @@
     <string name="deny_reason_channel_full">Канал переполнен.</string>
     <string name="deny_reason_channel_nesting">Достигнул предел вложенности канала.</string>
     <string name="deny_reason_other">Причина: %s</string>
-    <string name="perm_denied">Доступ запрещен.</string>
+    <string name="perm_denied">Доступ запрещён.</string>
     <string name="server">Сервер</string>
     <string name="the_server">сервер</string>
 </resources>
