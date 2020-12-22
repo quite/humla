@@ -265,7 +265,9 @@ public class ModelHandler extends HumlaTCPMessageListener.Stub {
             if(msg.hasSelfDeaf())
                 user.setSelfDeafened(msg.getSelfDeaf());
 
-            if(self != null && user.getSession() != self.getSession() && user.getChannel().equals(self.getChannel())) {
+            Channel selfChan = self.getChannel();
+            Channel userChan = user.getChannel();
+            if (self != null && user.getSession() != self.getSession() && userChan != null && selfChan != null && userChan.equals(selfChan)) {
                 if(user.isSelfMuted() && user.isSelfDeafened())
                     mLogger.logInfo(mContext.getString(R.string.chat_notify_now_muted_deafened, MessageFormatter.highlightString(user.getName())));
                 else if(user.isSelfMuted())
