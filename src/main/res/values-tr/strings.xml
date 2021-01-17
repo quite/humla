@@ -1,2 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="chat_notify_unsuppressed_self_by_actor">%s tarafından bastırılmanız kaldırıldı.</string>
+    <string name="chat_notify_unsuppressed_self">Bastırılmanız kaldırıldı.</string>
+    <string name="chat_notify_suppressed_self">Bastırıldınız.</string>
+    <string name="the_server">sunucu</string>
+    <string name="server">Sunucu</string>
+    <string name="perm_denied">İzin reddedildi.</string>
+    <string name="deny_reason_other">Neden: %s</string>
+    <string name="deny_reason_channel_nesting">Kanal iç içe geçme sınırına ulaşıldı.</string>
+    <string name="deny_reason_channel_full">Kanal dolu.</string>
+    <string name="deny_reason_invalid_username">Geçersiz kullanıcı adı.</string>
+    <string name="deny_reason_no_certificate">Bu işlemi gerçekleştirmek için bir sertifikaya ihtiyacınız var.</string>
+    <string name="deny_reason_no_operation_temp">Reddedildi: Geçici kanalda işleme izin verilmiyor.</string>
+    <string name="deny_reason_text_too_long">Reddedildi: Metin mesajı çok uzun.</string>
+    <string name="deny_reason_channel_name">Reddedildi: Geçersiz kanal adı.</string>
+    <string name="bluetooth_disconnected">Bluetooth bağlantısı kesildi</string>
+    <string name="bluetooth_connected">Bluetooth bağlandı</string>
+    <string name="chat_notify_user_left_channel_by">%1$s, %3$s tarafından %2$s konumuna taşındı.</string>
+    <string name="chat_notify_user_left_channel">%1$s, %2$s konumuna taşındı.</string>
+    <string name="chat_notify_user_joined_channel_by">%1$s, %3$s tarafından %2$s konumundan taşındı.</string>
+    <string name="chat_notify_user_joined_channel">%s kanala girdi.</string>
+    <string name="chat_notify_user_recording_stopped">%s kaydı durdurdu.</string>
+    <string name="chat_notify_user_recording_started">%s kaydı başlattı.</string>
+    <string name="chat_notify_self_recording_stopped">Kayıt durduruldu</string>
+    <string name="chat_notify_self_recording_started">Kayıt başlatıldı</string>
+    <string name="chat_notify_kick">%3$s, %1$s: %2$s tarafından sunucudan atıldı.</string>
+    <string name="chat_notify_kick_ban">%3$s, %1$s: %2$s tarafından sunucudan atıldı ve yasaklandı.</string>
+    <string name="chat_notify_kick_self">%1$s: %2$s tarafından sunucudan atıldınız.</string>
+    <string name="chat_notify_kick_ban_self">%1$s: %2$s tarafından sunucudan atıldınız ve yasaklandınız.</string>
+    <string name="chat_notify_disconnected">%s bağlantısı kesildi.</string>
+    <string name="chat_notify_connected">%s bağlandı.</string>
+    <string name="chat_notify_undeafened_self_by_actor">%s tarafından duyma engeliniz kaldırıldı.</string>
+    <string name="chat_notify_unmuted_self_by_actor">%s tarafından sesiniz açıldı.</string>
+    <string name="chat_notify_muted_self_by_actor">%s tarafından sesiniz kapatıldı.</string>
+    <string name="chat_notify_unmuted_undeafened_self_by_actor">%s tarafından sesiniz açıldı ve duyma engeliniz kaldırıldı.</string>
+    <string name="chat_notify_muted_deafened_self_by_actor">%s tarafından sesiniz kapatıldı ve duymanız engellendi.</string>
+    <string name="chat_notify_now_unmuted_undeafened">%s kişisinin sesi açıldı ve duyma engeli kaldırıldı.</string>
+    <string name="chat_notify_now_unmuted">%s kişisinin sesi açıldı.</string>
+    <string name="chat_notify_now_muted">%s kişisinin sesi kapatıldı.</string>
+    <string name="chat_notify_now_muted_deafened">%s kişisinin sesi kapatıldı ve duyması engellendi.</string>
+    <string name="chat_notify_unmuted_undeafened">Sesi açıldı ve duyma engeli kaldırıldı.</string>
+    <string name="chat_notify_unmuted">Sesi açıldı.</string>
+    <string name="chat_notify_muted">Sesi kapatıldı.</string>
+    <string name="chat_notify_muted_deafened">Sesi kapatıldı ve duyması engellendi.</string>
+    <string name="chat_notify_moved">%1$s, %3$s tarafından %2$s konumundan taşındı.</string>
+    <string name="audio_max_bandwidth">Azami sunucu ağ bant genişliği yalnızca %1$d kbit/s\'dir. Ses kalitesi %2$d kbit/s (%3$d ms) olarak ayarlanıyor.</string>
+</resources>
