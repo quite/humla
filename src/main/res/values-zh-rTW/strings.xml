@@ -1,2 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="deny_reason_no_certificate">需要憑證才能進行操作。</string>
+    <string name="deny_reason_no_operation_temp">禁止：此操作在暫時頻道不能進行。</string>
+    <string name="deny_reason_text_too_long">禁止：文字過長。</string>
+    <string name="deny_reason_channel_name">禁止：無此頻道名稱。</string>
+    <string name="bluetooth_disconnected">藍芽斷線</string>
+    <string name="bluetooth_connected">藍芽連線</string>
+    <string name="chat_notify_user_left_channel_by">%1$s 被%3$s 移到 %2$s。</string>
+    <string name="chat_notify_user_joined_channel_by">%3$s 由%2$s 把 %1$s 帶入此頻道。</string>
+    <string name="chat_notify_user_left_channel">%1$s 移動到 %2$s。</string>
+    <string name="chat_notify_user_joined_channel">%s 進入頻道。</string>
+    <string name="chat_notify_user_recording_stopped">%s 停止錄音。</string>
+    <string name="chat_notify_user_recording_started">%s 開始錄音。</string>
+    <string name="chat_notify_self_recording_started">錄音開始</string>
+    <string name="chat_notify_self_recording_stopped">錄音停止</string>
+    <string name="chat_notify_disconnected">%s 已離線。</string>
+    <string name="chat_notify_connected">%s 已連線。</string>
+    <string name="chat_notify_muted_deafened_self_by_actor">你現在被 %s 禁止與之語音通聯。</string>
+    <string name="chat_notify_undeafened_self_by_actor">%s 打開對你的通話。</string>
+    <string name="chat_notify_unmuted_self_by_actor">%s 現在接收你的通話。</string>
+    <string name="chat_notify_muted_self_by_actor">%s 不接收你的通話。</string>
+    <string name="chat_notify_unmuted_undeafened_self_by_actor">%s 打開與你的語音通聯。</string>
+    <string name="chat_notify_now_unmuted_undeafened">%s 現在打開語音收發。</string>
+    <string name="chat_notify_now_unmuted">%s 打開發聲。</string>
+    <string name="chat_notify_now_muted">%s 目前關閉發聲。</string>
+    <string name="chat_notify_now_muted_deafened">%s 目前關閉語音收發。</string>
+    <string name="chat_notify_unmuted_undeafened">開啟語音收發。</string>
+    <string name="chat_notify_unmuted">開啟發聲。</string>
+    <string name="chat_notify_muted">不發聲。</string>
+    <string name="chat_notify_muted_deafened">停止語音收發。</string>
+    <string name="audio_max_bandwidth">伺服器的最大網路頻寬只有 %1$d kbit/s。調整語音品質為 %2$d kbit/s (%3$d ms)。</string>
+</resources>
