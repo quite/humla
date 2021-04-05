@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="chat_notify_moved">%1$s verplaatst van %2$s door %3$s.</string>
     <string name="chat_notify_muted_deafened">Gedempt en doof gemaakt.</string>
@@ -14,8 +14,8 @@
     <string name="chat_notify_muted_self_by_actor">U bent gedempt door %s.</string>
     <string name="chat_notify_unmuted_self_by_actor">U bent niet meer gedempt door %s.</string>
     <string name="chat_notify_undeafened_self_by_actor">U bent horend gemaakt door %s.</string>
-    <string name="chat_notify_suppressed_self">U werd onderdrukt</string>
-    <string name="chat_notify_unsuppressed_self">U bent niet meer onderdrukt</string>
+    <string name="chat_notify_suppressed_self">U werd onderdrukt.</string>
+    <string name="chat_notify_unsuppressed_self">U bent niet meer onderdrukt.</string>
     <string name="chat_notify_unsuppressed_self_by_actor">U bent niet meer onderdrukt door %s.</string>
     <string name="chat_notify_connected">%s verbonden.</string>
     <string name="chat_notify_disconnected">%s verbinding verbroken.</string>
@@ -26,8 +26,8 @@
     <string name="chat_notify_self_recording_started">Opname gestart</string>
     <string name="chat_notify_self_recording_stopped">Opname gestopt</string>
     <string name="chat_notify_user_recording_started">%s heeft opname gestart.</string>
-    <string name="chat_notify_user_recording_stopped">%s heeft opname gestopt</string>
-    <string name="chat_notify_user_joined_channel">%s kanaal binnengekomen</string>
+    <string name="chat_notify_user_recording_stopped">%s heeft opname gestopt.</string>
+    <string name="chat_notify_user_joined_channel">%s kanaal binnengekomen.</string>
     <string name="chat_notify_user_left_channel">%1$s verplaatst naar %2$s.</string>
     <string name="chat_notify_user_joined_channel_by">%1$s verplaatst van %2$s door %3$s.</string>
     <string name="chat_notify_user_left_channel_by">%1$s verplaatst van %2$s door %3$s.</string>
@@ -38,10 +38,11 @@
     <string name="deny_reason_no_operation_temp">Geweigerd: Handeling niet toegestaan in tijdelijk kanaal.</string>
     <string name="deny_reason_no_certificate">U hebt een certificaat nodig om deze handeling te voltooien.</string>
     <string name="deny_reason_invalid_username">Ongeldige gebruikersnaam.</string>
-    <string name="deny_reason_channel_full">Kanaal is vol</string>
-    <string name="deny_reason_channel_nesting">Ingesloten kanaal limiet bereikt</string>
+    <string name="deny_reason_channel_full">Kanaal is vol.</string>
+    <string name="deny_reason_channel_nesting">Ingesloten kanaal limiet bereikt.</string>
     <string name="deny_reason_other">Reden: %s</string>
-    <string name="perm_denied">Geen toelating</string>
+    <string name="perm_denied">Geen toelating.</string>
     <string name="server">Server</string>
     <string name="the_server">de server</string>
+    <string name="audio_max_bandwidth">De maximale netwerkbandbreedte van het server is slechts %1$d kbit/s. Geluidskwaliteit automatisch versteld naar %2$d kbit/s (%3$d ms).</string>
 </resources>
