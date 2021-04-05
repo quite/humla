@@ -1,8 +1,8 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="audio_max_bandwidth">サーバーの最大ネットワーク帯域幅は %1$d kbit/s のみです。オーディオ品質は %2$d kbit/s (%3$d ms) に自動調整されました</string>
+    <string name="audio_max_bandwidth">サーバーの最大ネットワーク帯域幅は %1$d kbit/s のみです。オーディオ品質は %2$d kbit/s (%3$d ms) に自動調整されました。</string>
     <string name="chat_notify_moved">%1$s は %2$s から %3$s で移動しました。</string>
-    <string name="chat_notify_muted_deafened">ミュートおよび防音</string>
+    <string name="chat_notify_muted_deafened">ミュートおよび防音。</string>
     <string name="chat_notify_muted">ミュートしました。</string>
     <string name="chat_notify_unmuted">ミュートを解除しました。</string>
     <string name="chat_notify_unmuted_undeafened">ミュート解除および防音解除しました。</string>
