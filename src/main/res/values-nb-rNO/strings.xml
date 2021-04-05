@@ -4,7 +4,7 @@
     <string name="chat_notify_unsuppressed_self_by_actor">%s fjernet din undertrykkelse.</string>
     <string name="chat_notify_unsuppressed_self">Du er ikke lenger undertrykt.</string>
     <string name="chat_notify_suppressed_self">Du ble undertrykt.</string>
-    <string name="audio_max_bandwidth">Maksimal tjenernettverksbåndbredde er kun %1$s kbit/s. Justerer lydkvalitet til %2$d kbit/s (%3$d ms).</string>
+    <string name="audio_max_bandwidth">Maksimal tjenernettverksbåndbredde er kun %1$d kbit/s. Justerer lydkvalitet til %2$d kbit/s (%3$d ms).</string>
     <string name="the_server">tjeneren</string>
     <string name="server">Tjener</string>
     <string name="perm_denied">Tilgang nektet.</string>
