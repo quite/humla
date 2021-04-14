@@ -23,11 +23,11 @@
     <string name="deny_reason_channel_full">El canal està ple.</string>
     <string name="chat_notify_user_left_channel">%1$s s\'ha mogut a %2$s.</string>
     <string name="chat_notify_user_joined_channel">%s ha entrat al canal.</string>
-    <string name="chat_notify_user_recording_stopped">%s ha aturat la gravació.</string>
-    <string name="chat_notify_user_recording_started">%s ha començat a gravar.</string>
-    <string name="chat_notify_self_recording_stopped">S\'ha aturat la gravació</string>
+    <string name="chat_notify_user_recording_stopped">%s ha aturat l\'enregistrament.</string>
+    <string name="chat_notify_user_recording_started">%s ha començat a enregistrar.</string>
+    <string name="chat_notify_self_recording_stopped">S\'ha aturat l\'enregistrament</string>
     <string name="chat_notify_suppressed_self">T\'han suprimit.</string>
-    <string name="chat_notify_self_recording_started">S\'ha iniciat la gravació</string>
+    <string name="chat_notify_self_recording_started">S\'ha iniciat l\'enregistrament</string>
     <string name="chat_notify_connected">%s s\'ha connectat.</string>
     <string name="chat_notify_muted_self_by_actor">%s t\'ha silenciat.</string>
     <string name="chat_notify_muted_deafened_self_by_actor">%s t\'ha silenciat i ensordit.</string>
@@ -40,4 +40,9 @@
     <string name="chat_notify_muted_deafened">Silenciat i ensordit.</string>
     <string name="chat_notify_moved">%1$s s\'ha mogut de %2$s per part de %3$s.</string>
     <string name="audio_max_bandwidth">L\'amplada de banda máxima de la xarxa del servidor és només de %1$d kbit/s. Ajustament de la qualitat del so a %2$d kbit/s (%3$d ms).</string>
+    <string name="deny_reason_channel_nesting">S\'ha arribat al límit d\' imbricació de canals.</string>
+    <string name="chat_notify_user_left_channel_by">%3$s ha mogut %1$s a %2$s .</string>
+    <string name="chat_notify_user_joined_channel_by">%3$s ha mogut %1$s des de %2$s.</string>
+    <string name="chat_notify_unsuppressed_self_by_actor">%s ha desactivat la vostra supressió.</string>
+    <string name="chat_notify_unsuppressed_self">S\'ha desactivat la vostra supressió.</string>
 </resources>
