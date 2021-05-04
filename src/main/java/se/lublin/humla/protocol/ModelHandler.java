@@ -265,22 +265,23 @@ public class ModelHandler extends HumlaTCPMessageListener.Stub {
             if(msg.hasSelfDeaf())
                 user.setSelfDeafened(msg.getSelfDeaf());
 
-            Channel selfChan = self.getChannel();
-            Channel userChan = user.getChannel();
-            if (self != null && user.getSession() != self.getSession() && userChan != null && selfChan != null && userChan.equals(selfChan)) {
-                if(user.isSelfMuted() && user.isSelfDeafened())
-                    mLogger.logInfo(mContext.getString(R.string.chat_notify_now_muted_deafened, MessageFormatter.highlightString(user.getName())));
-                else if(user.isSelfMuted())
-                    mLogger.logInfo(mContext.getString(R.string.chat_notify_now_muted, MessageFormatter.highlightString(user.getName())));
-                else
-                    mLogger.logInfo(mContext.getString(R.string.chat_notify_now_unmuted, MessageFormatter.highlightString(user.getName())));
-            } else if(self != null && user.getSession() == self.getSession()) {
-                if(user.isSelfMuted() && user.isSelfDeafened())
-                    mLogger.logInfo(mContext.getString(R.string.chat_notify_muted_deafened));
-                else if(user.isSelfMuted())
-                    mLogger.logInfo(mContext.getString(R.string.chat_notify_muted));
-                else
-                    mLogger.logInfo(mContext.getString(R.string.chat_notify_unmuted));
+            if (self != null) {
+                Channel userChan = user.getChannel();
+                if (user.getSession() != self.getSession() && userChan != null && userChan.equals(self.getChannel())) {
+                    if (user.isSelfMuted() && user.isSelfDeafened())
+                        mLogger.logInfo(mContext.getString(R.string.chat_notify_now_muted_deafened, MessageFormatter.highlightString(user.getName())));
+                    else if (user.isSelfMuted())
+                        mLogger.logInfo(mContext.getString(R.string.chat_notify_now_muted, MessageFormatter.highlightString(user.getName())));
+                    else
+                        mLogger.logInfo(mContext.getString(R.string.chat_notify_now_unmuted, MessageFormatter.highlightString(user.getName())));
+                } else if (user.getSession() == self.getSession()) {
+                    if (user.isSelfMuted() && user.isSelfDeafened())
+                        mLogger.logInfo(mContext.getString(R.string.chat_notify_muted_deafened));
+                    else if (user.isSelfMuted())
+                        mLogger.logInfo(mContext.getString(R.string.chat_notify_muted));
+                    else
+                        mLogger.logInfo(mContext.getString(R.string.chat_notify_unmuted));
+                }
             }
         }
 
