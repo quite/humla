@@ -41,7 +41,7 @@
     <string name="chat_notify_now_muted">%s è muto.</string>
     <string name="chat_notify_now_muted_deafened">%s è muto ed escluso.</string>
     <string name="chat_notify_unmuted_undeafened">Né muto né escluso.</string>
-    <string name="chat_notify_unmuted">Non Muto.</string>
+    <string name="chat_notify_unmuted">Non muto.</string>
     <string name="chat_notify_muted">Muto.</string>
     <string name="chat_notify_muted_deafened">Muto ed escluso.</string>
     <string name="audio_max_bandwidth">La larghezza massima di banda del server è %1$d kbit/s. Regolazione della qualità audio a %2$d kbit/s (%3$d ms).</string>
