@@ -1,2 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="the_server">server</string>
+    <string name="deny_reason_other">Důvod: %s</string>
+    <string name="deny_reason_channel_nesting">Dosaženo limitu vnoření kanálu.</string>
+    <string name="deny_reason_channel_full">Kanál je plný.</string>
+    <string name="deny_reason_invalid_username">Neplatné uživatelské jméno.</string>
+    <string name="deny_reason_no_certificate">K provedení této operace potřebujete certifikát.</string>
+    <string name="deny_reason_no_operation_temp">Zamítnuto: Operace není v dočasném kanálu povolena.</string>
+    <string name="deny_reason_text_too_long">Zamítnuto: Textová zpráva je příliš dlouhá.</string>
+    <string name="deny_reason_channel_name">Zamítnuto: Neplatné jméno kanálu.</string>
+    <string name="bluetooth_disconnected">Bluetooth odpojeno</string>
+    <string name="bluetooth_connected">Bluetooth připojeno</string>
+    <string name="chat_notify_user_left_channel_by">%1$s přesunut do %2$s uživatelem %3$s.</string>
+    <string name="chat_notify_user_joined_channel_by">%1$s přesunut z %2$s uživatelem %3$s.</string>
+    <string name="chat_notify_user_left_channel">%1$s přesunut do %2$s.</string>
+    <string name="chat_notify_user_joined_channel">%s vstoupil do kanálu.</string>
+    <string name="chat_notify_user_recording_stopped">%s přestal nahrávat.</string>
+    <string name="chat_notify_user_recording_started">%s začal nahrávat.</string>
+    <string name="chat_notify_self_recording_stopped">Nahrávání zastaveno</string>
+    <string name="chat_notify_self_recording_started">Nahrávání spuštěno</string>
+    <string name="chat_notify_kick_ban">%3$s byl vyhozen a zabanován uživatelem %1$s: %2$s.</string>
+    <string name="chat_notify_kick">%3$s byl vyhozen ze serveru uživatelem %1$s: %2$s.</string>
+    <string name="chat_notify_kick_self">Byli jste vyhozeni ze serveru uživatelem %1$s: %2$s.</string>
+    <string name="chat_notify_kick_ban_self">Byli jste vyhozeni a zabanováni uživatelem %1$s: %2$s.</string>
+    <string name="chat_notify_unsuppressed_self_by_actor">Vaše potlačení bylo zrušeno uživatelem %s.</string>
+    <string name="chat_notify_unsuppressed_self">Vaše potlačení bylo zrušeno.</string>
+    <string name="chat_notify_suppressed_self">Byli jste potlačeni.</string>
+    <string name="chat_notify_undeafened_self_by_actor">%s zrušil vaše ohlušení.</string>
+    <string name="chat_notify_unmuted_self_by_actor">%s vás zesílil.</string>
+    <string name="chat_notify_unmuted_undeafened_self_by_actor">%s vás zesílil a zrušil vaše ohlušení.</string>
+    <string name="chat_notify_muted_deafened_self_by_actor">%s vás zeslabil a ohlušil.</string>
+    <string name="chat_notify_muted_self_by_actor">%s vás zeslabil.</string>
+    <string name="audio_max_bandwidth">Maximální propustnost sítě serveru je pouze %1$d kbit/s. Nastavení kvality zvuku upraveno na %2$d kbit/s (%3$d ms).</string>
+    <string name="chat_notify_disconnected">%s se odpojil.</string>
+    <string name="chat_notify_connected">%s se připojil.</string>
+    <string name="chat_notify_now_unmuted_undeafened">%s zrušil ohlušení a je nyní zesílen.</string>
+    <string name="chat_notify_now_unmuted">%s je nyní zesílen.</string>
+    <string name="chat_notify_now_muted">%s je nyní zeslaben.</string>
+    <string name="chat_notify_now_muted_deafened">%s je nyní zeslaben a ohlušen.</string>
+    <string name="chat_notify_unmuted_undeafened">Zrušeno ohlušení a zesílen.</string>
+    <string name="chat_notify_unmuted">Zesílen.</string>
+    <string name="chat_notify_muted">Ztlumen.</string>
+    <string name="chat_notify_muted_deafened">Ztlumen a ohlušen.</string>
+    <string name="chat_notify_moved">%1$s přesunut z %2$s uživatelem %3$s.</string>
+    <string name="server">Server</string>
+    <string name="perm_denied">Přístup zamítnut.</string>
+</resources>
