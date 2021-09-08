@@ -39,7 +39,7 @@
     <string name="chat_notify_unmuted">Sense silenciar.</string>
     <string name="chat_notify_muted_deafened">Silenciat i ensordit.</string>
     <string name="chat_notify_moved">%1$s s\'ha mogut de %2$s per part de %3$s.</string>
-    <string name="audio_max_bandwidth">L\'amplada de banda màxima de la xarxa del servidor és només de %1$d kbit/s. Ajustament de la qualitat del so a %2$d kbit/s (%3$d ms).</string>
+    <string name="audio_max_bandwidth">L\'amplada de banda màxima de la xarxa del servidor és només de %1$d kbit/s. Ajustant la qualitat del so a %2$d kbit/s (%3$d ms).</string>
     <string name="deny_reason_channel_nesting">S\'ha arribat al límit d\' imbricació de canals.</string>
     <string name="chat_notify_user_left_channel_by">%3$s ha mogut %1$s a %2$s .</string>
     <string name="chat_notify_user_joined_channel_by">%3$s ha mogut %1$s des de %2$s.</string>
