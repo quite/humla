@@ -1,2 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="chat_notify_now_unmuted_undeafened">%s agora está dessilenciado e desensurdecido.</string>
+    <string name="chat_notify_now_unmuted">%s agora está dessilenciado.</string>
+    <string name="chat_notify_now_muted_deafened">%s agora está mudo e ensurdecido.</string>
+    <string name="chat_notify_unmuted_undeafened">Dessilenciado e desensurdecido.</string>
+    <string name="chat_notify_unmuted">Dessilenciado.</string>
+    <string name="chat_notify_muted_deafened">Silenciado e ensurdecido.</string>
+    <string name="chat_notify_disconnected">%s desconectou.</string>
+    <string name="chat_notify_connected">%s conectou.</string>
+    <string name="chat_notify_now_muted">%s agora está silenciado.</string>
+    <string name="chat_notify_muted">Silenciado.</string>
+    <string name="server">Servidor</string>
+    <string name="perm_denied">Permissão negada.</string>
+</resources>
