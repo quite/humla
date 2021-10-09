@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="perm_denied">رُفض الإذن.</string>
+    <string name="chat_notify_unmuted">فُك كتمه.</string>
+    <string name="chat_notify_connected">%s متصل.</string>
+    <string name="chat_notify_disconnected">%s غير متصل.</string>
+    <string name="server">خادم</string>
+    <string name="chat_notify_muted">كُتم.</string>
+    <string name="chat_notify_muted_deafened">كُتم وأُصمّ</string>
+    <string name="chat_notify_moved">%3$s نَقل %1$s من %2$s</string>
 </resources>
