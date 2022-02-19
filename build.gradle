@@ -15,19 +15,21 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+import org.gradle.nativeplatform.platform.internal.DefaultNativePlatform
+
 buildscript {
     repositories {
-        jcenter()
+        mavenCentral()
         google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.5.3'
+        classpath 'com.android.tools.build:gradle:7.0.4'
     }
 }
 apply plugin: 'com.android.library'
 
 repositories {
-    jcenter()
+    mavenCentral()
     google()
 }
 
@@ -56,7 +58,8 @@ allprojects {
 
 android {
     compileSdkVersion 29
-    buildToolsVersion '29.0.3'
+    //ndkVersion '23.1.7779620'
+    //buildToolsVersion '29.0.3'
 
     sourceSets.main.jniLibs.srcDir 'src/main/libs/'
     sourceSets.main.jni.srcDirs = [] // Disable NDK build support until it supports multiple modules.
@@ -76,7 +79,11 @@ android {
 
     // Trigger NDK build on java compilation task.
     task ndkBuild(type: Exec) {
-        commandLine "$project.android.ndkDirectory/ndk-build", '-C', file('src/main/jni/').absolutePath
+        def ndkExe = "$project.android.ndkDirectory/ndk-build"
+        if (DefaultNativePlatform.getCurrentOperatingSystem().isWindows()) {
+          ndkExe += '.cmd'
+        }
+        commandLine ndkExe, '-C', file('src/main/jni/').absolutePath
     }
 
     tasks.withType(JavaCompile) {
