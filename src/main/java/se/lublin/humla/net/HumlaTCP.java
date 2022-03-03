@@ -27,14 +27,12 @@ import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.ConnectException;
-import java.net.InetAddress;
 import java.net.SocketException;
 import java.security.cert.X509Certificate;
 
 import javax.net.ssl.SSLHandshakeException;
 import javax.net.ssl.SSLSocket;
 
-import se.lublin.humla.Constants;
 import se.lublin.humla.util.HumlaException;
 
 /**
@@ -42,6 +40,7 @@ import se.lublin.humla.util.HumlaException;
  * Parses Mumble protobuf packets according to the Mumble protocol specification.
  */
 public class HumlaTCP extends HumlaNetworkThread {
+    private final static String TAG = HumlaTCP.class.getName();
     private final HumlaSSLSocketFactory mSocketFactory;
     private String mHost;
     private int mPort;
@@ -76,7 +75,7 @@ public class HumlaTCP extends HumlaNetworkThread {
     public void run() {
         mRunning = true;
         try {
-            Log.i(Constants.TAG, "HumlaTCP: Connecting");
+            Log.i(TAG, "Connecting");
 
             if(mUseTor)
                 mTCPSocket = mSocketFactory.createTorSocket(mHost, mPort, HumlaConnection.TOR_HOST, HumlaConnection.TOR_PORT);
@@ -91,12 +90,12 @@ public class HumlaTCP extends HumlaNetworkThread {
             mTCPSocket.setKeepAlive(true);
             mTCPSocket.startHandshake();
 
-            Log.v(Constants.TAG, "HumlaTCP: Started handshake");
+            Log.v(TAG, "Started handshake");
 
             mDataInput = new DataInputStream(mTCPSocket.getInputStream());
             mDataOutput = new DataOutputStream(mTCPSocket.getOutputStream());
 
-            Log.v(Constants.TAG, "HumlaTCP: Now listening");
+            Log.v(TAG, "Now listening");
             mConnected = true;
 
             if(mListener != null) {
@@ -113,6 +112,11 @@ public class HumlaTCP extends HumlaNetworkThread {
                 final int messageLength = mDataInput.readInt();
                 final byte[] data = new byte[messageLength];
                 mDataInput.readFully(data);
+
+                if (messageType > (HumlaTCPMessageType.values().length - 1)) {
+                    Log.w(TAG, "Got unsupported messageType: " + messageType);
+                    continue;
+                }
 
                 final HumlaTCPMessageType tcpMessageType = HumlaTCPMessageType.values()[messageType];
                 if (mListener != null) {
@@ -172,7 +176,7 @@ public class HumlaTCP extends HumlaNetworkThread {
             @Override
             public void run() {
                 if (!HumlaConnection.UNLOGGED_MESSAGES.contains(messageType))
-                    Log.v(Constants.TAG, "OUT: " + messageType);
+                    Log.v(TAG, "OUT: " + messageType);
                 try {
                     mDataOutput.writeShort(messageType.ordinal());
                     mDataOutput.writeInt(message.getSerializedSize());
@@ -195,7 +199,7 @@ public class HumlaTCP extends HumlaNetworkThread {
             @Override
             public void run() {
                 if (!HumlaConnection.UNLOGGED_MESSAGES.contains(messageType))
-                    Log.v(Constants.TAG, "OUT: " + messageType);
+                    Log.v(TAG, "OUT: " + messageType);
                 try {
                     mDataOutput.writeShort(messageType.ordinal());
                     mDataOutput.writeInt(length);
