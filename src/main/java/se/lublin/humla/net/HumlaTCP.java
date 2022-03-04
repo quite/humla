@@ -113,7 +113,7 @@ public class HumlaTCP extends HumlaNetworkThread {
                 final byte[] data = new byte[messageLength];
                 mDataInput.readFully(data);
 
-                if (messageType > (HumlaTCPMessageType.values().length - 1)) {
+                if (messageType < 0 || messageType > (HumlaTCPMessageType.values().length - 1)) {
                     Log.w(TAG, "Got unsupported messageType: " + messageType);
                     continue;
                 }
