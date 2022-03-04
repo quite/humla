@@ -24,8 +24,6 @@ import android.util.Log;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-import se.lublin.humla.Constants;
-
 /**
  * Base class for TCP/UDP protocol implementations.
  * Provides a common threading model (single threaded queue for write)
@@ -33,6 +31,7 @@ import se.lublin.humla.Constants;
  * @deprecated This shouldn't be needed. Redundant inheritance with limited shared code.
  */
 public abstract class HumlaNetworkThread implements Runnable {
+    private static final String TAG = HumlaNetworkThread.class.getName();
 
     private ExecutorService mExecutor;
     private ExecutorService mSendExecutor;
@@ -58,7 +57,7 @@ public abstract class HumlaNetworkThread implements Runnable {
     protected void stopThreads() {
         if (!mInitialized) {
             // TODO? Used throw, like startThreads()
-            Log.e(Constants.TAG, "Error in stopThreads: Threads already shutdown");
+            Log.e(TAG, "Error in stopThreads: Threads already shutdown");
             return;
         }
         mSendExecutor.shutdown();

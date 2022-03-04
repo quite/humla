@@ -37,6 +37,8 @@ import java.util.concurrent.atomic.AtomicReference;
 import se.lublin.humla.Constants;
 
 public class Server implements Parcelable {
+    private static final String TAG = Server.class.getName();
+
     private long mId;
     private String mName;
     private String mHost;
@@ -199,17 +201,17 @@ public class Server implements Parcelable {
                         final String lookup = "_mumble._tcp." + srvHost.get();
                         SrvResolverResult res = ResolverApi.INSTANCE.resolveSrv(lookup);
                         if (!res.wasSuccessful()) {
-                            Log.d(Constants.TAG, "resolveSrv " + lookup + ": " + res.getResponseCode());
+                            Log.d(TAG, "resolveSrv " + lookup + ": " + res.getResponseCode());
                             return;
                         }
                         Set<SRV> answers = res.getAnswersOrEmptySet();
                         if (answers.isEmpty()) {
-                            Log.d(Constants.TAG, "resolveSrv " + lookup + ": empty answer");
+                            Log.d(TAG, "resolveSrv " + lookup + ": empty answer");
                             return;
                         }
                         List<SRV> srvs = SrvUtil.sortSrvRecords(answers);
                         for (SRV srv : srvs) {
-                            Log.d(Constants.TAG, "resolved " + lookup + " SRV: " + srv.toString());
+                            Log.d(TAG, "resolved " + lookup + " SRV: " + srv.toString());
                             srvHost.set(srv.target.toString());
                             srvPort.set(srv.port);
                             // TODO SRV just picking the first record.
@@ -218,7 +220,7 @@ public class Server implements Parcelable {
                     } catch (IOException | IllegalArgumentException e) {
                         // java.net.IDN.toASCII down in resolveSrv() happens to throw IAE
                         // https://github.com/MiniDNS/minidns/issues/104
-                        Log.d(Constants.TAG, "Server, exception in srvResolve: " + e);
+                        Log.d(TAG, "exception in srvResolve: " + e);
                     }
                 }
             });
@@ -226,7 +228,7 @@ public class Server implements Parcelable {
             t.join();
         }
         catch (Exception e) {
-            Log.d(Constants.TAG, "resolveSRV() " + e);
+            Log.d(TAG, "resolveSRV() " + e);
         }
         mResolvedHost = srvHost.get();
         mResolvedPort = srvPort.get();

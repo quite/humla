@@ -41,9 +41,9 @@ import javax.net.ssl.TrustManager;
 import javax.net.ssl.TrustManagerFactory;
 import javax.net.ssl.X509TrustManager;
 
-import se.lublin.humla.Constants;
-
 public class HumlaSSLSocketFactory {
+    private static final String TAG = HumlaSSLSocketFactory.class.getName();
+
     private SSLContext mContext;
     private HumlaTrustManagerWrapper mTrustWrapper;
 
@@ -61,10 +61,10 @@ public class HumlaSSLSocketFactory {
             TrustManagerFactory tmf = TrustManagerFactory.getInstance(TrustManagerFactory.getDefaultAlgorithm());
             tmf.init(trustStore);
             mTrustWrapper = new HumlaTrustManagerWrapper((X509TrustManager) tmf.getTrustManagers()[0]);
-            Log.i(Constants.TAG, "Using custom trust store " + trustStorePath + " with system trust store");
+            Log.i(TAG, "Using custom trust store " + trustStorePath + " with system trust store");
         } else {
             mTrustWrapper = new HumlaTrustManagerWrapper(null);
-            Log.i(Constants.TAG, "Using system trust store");
+            Log.i(TAG, "Using system trust store");
         }
 
         mContext.init(kmf.getKeyManagers(), new TrustManager[] { mTrustWrapper }, null);

@@ -51,7 +51,6 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 
-import se.lublin.humla.Constants;
 import se.lublin.humla.exception.NotConnectedException;
 import se.lublin.humla.exception.NotSynchronizedException;
 import se.lublin.humla.protobuf.Mumble;
@@ -60,6 +59,7 @@ import se.lublin.humla.protocol.HumlaUDPMessageListener;
 import se.lublin.humla.util.HumlaException;
 
 public class HumlaConnection implements HumlaTCP.TCPConnectionListener, HumlaUDP.UDPConnectionListener {
+    private static final String TAG = HumlaConnection.class.getName();
 
     /**
      * Message types that aren't shown in logcat.
@@ -140,7 +140,7 @@ public class HumlaConnection implements HumlaTCP.TCPConnectionListener, HumlaUDP
             try {
                 mPingTask = mPingExecutorService.scheduleAtFixedRate(mPingRunnable, 0, 5, TimeUnit.SECONDS);
             } catch(RejectedExecutionException e) {
-                Log.w(Constants.TAG, "HumlaConnection fail to start ping thread, in \"shutdown\"? ", e);
+                Log.w(TAG, "failed to start ping thread, in \"shutdown\"? ", e);
             }
 
             mSession = msg.getSession();
@@ -250,7 +250,7 @@ public class HumlaConnection implements HumlaTCP.TCPConnectionListener, HumlaUDP
 
         @Override
         public void messageUDPPing(byte[] data) {
-//            Log.v(Constants.TAG, "IN: UDP Ping");
+//            Log.v(TAG, "IN: UDP Ping");
             byte[] timedata = new byte[8];
             System.arraycopy(data, 1, timedata, 0, 8);
             ByteBuffer buffer = ByteBuffer.allocate(8);
@@ -277,7 +277,7 @@ public class HumlaConnection implements HumlaTCP.TCPConnectionListener, HumlaUDP
                 buffer.putLong(t);
 
                 sendUDPMessage(buffer.array(), 16, true);
-//                Log.v(Constants.TAG, "OUT: UDP Ping");
+//                Log.v(TAG, "OUT: UDP Ping");
             }
 
             Mumble.Ping.Builder pb = Mumble.Ping.newBuilder();
@@ -608,7 +608,7 @@ public class HumlaConnection implements HumlaTCP.TCPConnectionListener, HumlaUDP
     @Override
     public void onTCPMessageReceived(HumlaTCPMessageType type, int length, byte[] data) {
         if(!UNLOGGED_MESSAGES.contains(type))
-            Log.v(Constants.TAG, "IN: "+type);
+            Log.v(TAG, "IN: " + type);
 
         if(type == HumlaTCPMessageType.UDPTunnel) {
             onUDPDataReceived(data);

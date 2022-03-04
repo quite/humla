@@ -33,14 +33,12 @@ import javax.crypto.BadPaddingException;
 import javax.crypto.IllegalBlockSizeException;
 import javax.crypto.ShortBufferException;
 
-import se.lublin.humla.Constants;
-
 /**
  * Class to maintain and receive packets from the UDP connection to a Mumble server.
  * Public interface is not thread safe.
  */
 public class HumlaUDP implements Runnable {
-    private static final String TAG = "HumlaUDP";
+    private static final String TAG = HumlaUDP.class.getName();
 
     private static final int BUFFER_SIZE = 2048;
     private final CryptState mCryptState;
@@ -143,7 +141,7 @@ public class HumlaUDP implements Runnable {
                         }
                     }
                 } catch (BadPaddingException | IllegalBlockSizeException | ShortBufferException e) {
-                    Log.d(Constants.TAG, "Discarding packet", e);
+                    Log.d(TAG, "Discarding packet", e);
                 }
             }
         } catch (final IOException e) {

@@ -21,7 +21,6 @@ import android.media.AudioFormat;
 import android.media.AudioRecord;
 import android.util.Log;
 
-import se.lublin.humla.Constants;
 import se.lublin.humla.exception.AudioInitializationException;
 import se.lublin.humla.exception.NativeAudioException;
 import se.lublin.humla.protocol.AudioHandler;
@@ -30,7 +29,9 @@ import se.lublin.humla.protocol.AudioHandler;
  * Created by andrew on 23/08/13.
  */
 public class AudioInput implements Runnable {
-    public static final int[] SAMPLE_RATES = { 48000, 44100, 16000, 8000 };
+    private static final String TAG = AudioInput.class.getName();
+
+    public static final int[] SAMPLE_RATES = {48000, 44100, 16000, 8000};
 
     // AudioRecord state
     private AudioInputListener mListener;
@@ -150,7 +151,7 @@ public class AudioInput implements Runnable {
     public void run() {
         android.os.Process.setThreadPriority(android.os.Process.THREAD_PRIORITY_URGENT_AUDIO);
 
-        Log.i(Constants.TAG, "AudioInput: started");
+        Log.i(TAG, "started");
 
         mAudioRecord.startRecording();
 
@@ -164,13 +165,13 @@ public class AudioInput implements Runnable {
             if(shortsRead > 0) {
                 mListener.onAudioInputReceived(mAudioBuffer, mFrameSize);
             } else {
-                Log.e(Constants.TAG, "Error fetching audio! AudioRecord error " + shortsRead);
+                Log.e(TAG, "Error fetching audio! AudioRecord error " + shortsRead);
             }
         }
 
         mAudioRecord.stop();
 
-        Log.i(Constants.TAG, "AudioInput: stopped");
+        Log.i(TAG, "stopped");
     }
 
     public interface AudioInputListener {

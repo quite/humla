@@ -33,12 +33,12 @@ import android.os.IBinder;
 import android.os.PowerManager;
 import android.util.Log;
 
+import org.minidns.dnsserverlookup.android21.AndroidUsingLinkProperties;
+
 import java.security.Security;
 import java.security.cert.X509Certificate;
 import java.util.ArrayList;
 import java.util.List;
-
-import org.minidns.dnsserverlookup.android21.AndroidUsingLinkProperties;
 
 import se.lublin.humla.audio.AudioOutput;
 import se.lublin.humla.audio.BluetoothScoReceiver;
@@ -73,6 +73,7 @@ import se.lublin.humla.util.IHumlaObserver;
 import se.lublin.humla.util.VoiceTargetMode;
 
 public class HumlaService extends Service implements IHumlaService, IHumlaSession, HumlaConnection.HumlaConnectionListener, HumlaLogger, BluetoothScoReceiver.Listener {
+    private static final String TAG = HumlaService.class.getName();
 
     static {
         // Use Spongy Castle for crypto implementation so we can create and manage PKCS #12 (.p12) certificates.
@@ -169,7 +170,7 @@ public class HumlaService extends Service implements IHumlaService, IHumlaSessio
             ConnectivityManager cm = (ConnectivityManager) context.getSystemService(CONNECTIVITY_SERVICE);
             NetworkInfo info = cm.getActiveNetworkInfo();
             if (info != null && info.isConnected()) {
-                Log.v(Constants.TAG, "Connectivity restored, attempting reconnect.");
+                Log.v(TAG, "Connectivity restored, attempting reconnect.");
                 connect();
             }
         }
@@ -361,13 +362,13 @@ public class HumlaService extends Service implements IHumlaService, IHumlaSessio
 
         // TODO hackish, but this seems to happen?!
         if (mModelHandler == null) {
-            Log.e(Constants.TAG, "Error in HumlaService.onConnectionSynchronized: mAudioHandler is null");
+            Log.e(TAG, "onConnectionSynchronized: mAudioHandler is null");
             return;
         }
 
         mConnectionState = ConnectionState.CONNECTED;
 
-        Log.v(Constants.TAG, "Connected");
+        Log.v(TAG, "Connected");
         mWakeLock.acquire();
 
         try {
@@ -395,14 +396,13 @@ public class HumlaService extends Service implements IHumlaService, IHumlaSessio
     @Override
     public void onConnectionDisconnected(HumlaException e) {
         if (e != null) {
-            Log.e(Constants.TAG, "Error: " + e.getMessage() +
-                    " (reason: " + e.getReason().name() + ")");
+            Log.e(TAG, "Error: " + e.getMessage() + " (reason: " + e.getReason().name() + ")");
             mConnectionState = ConnectionState.CONNECTION_LOST;
 
             setReconnecting(mAutoReconnect
                     && e.getReason() == HumlaException.HumlaDisconnectReason.CONNECTION_ERROR);
         } else {
-            Log.v(Constants.TAG, "Disconnected");
+            Log.v(TAG, "Disconnected");
             mConnectionState = ConnectionState.DISCONNECTED;
         }
 
@@ -456,7 +456,7 @@ public class HumlaService extends Service implements IHumlaService, IHumlaSessio
             ConnectivityManager cm = (ConnectivityManager) getSystemService(CONNECTIVITY_SERVICE);
             NetworkInfo info = cm.getActiveNetworkInfo();
             if (info != null && info.isConnected()) {
-                Log.v(Constants.TAG, "Connection lost due to non-connectivity issue. Start reconnect polling.");
+                Log.v(TAG, "Connection lost due to non-connectivity issue. Start reconnect polling.");
                 Handler mainHandler = new Handler();
                 mainHandler.postDelayed(new Runnable() {
                     @Override
@@ -467,7 +467,7 @@ public class HumlaService extends Service implements IHumlaService, IHumlaSessio
             } else {
                 // In the event that we've lost connectivity, don't poll. Wait until network
                 // returns before we resume connection attempts.
-                Log.v(Constants.TAG, "Connection lost due to connectivity issue. Waiting until network returns.");
+                Log.v(TAG, "Connection lost due to connectivity issue. Waiting until network returns.");
                 try {
                     registerReceiver(mConnectivityReceiver,
                             new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION));
@@ -633,7 +633,7 @@ public class HumlaService extends Service implements IHumlaService, IHumlaSessio
         // Reload audio subsystem if initialized
         if (mAudioHandler != null && mAudioHandler.isInitialized()) {
             createAudioHandler();
-            Log.i(Constants.TAG, "Audio subsystem reloaded after settings change.");
+            Log.i(TAG, "Audio subsystem reloaded after settings change.");
         }
         return reconnectNeeded;
     }

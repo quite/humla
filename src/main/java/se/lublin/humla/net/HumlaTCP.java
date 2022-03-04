@@ -40,7 +40,7 @@ import se.lublin.humla.util.HumlaException;
  * Parses Mumble protobuf packets according to the Mumble protocol specification.
  */
 public class HumlaTCP extends HumlaNetworkThread {
-    private final static String TAG = HumlaTCP.class.getName();
+    private static final String TAG = HumlaTCP.class.getName();
     private final HumlaSSLSocketFactory mSocketFactory;
     private String mHost;
     private int mPort;

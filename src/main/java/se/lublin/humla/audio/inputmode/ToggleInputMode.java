@@ -23,13 +23,13 @@ import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-import se.lublin.humla.Constants;
-
 /**
  * An input mode that depends on a toggle, such as push to talk.
  * Created by andrew on 13/02/16.
  */
 public class ToggleInputMode implements IInputMode {
+    private static final String TAG = ToggleInputMode.class.getName();
+
     private boolean mInputOn;
     private final Lock mToggleLock;
     private final Condition mToggleCondition;
@@ -64,14 +64,14 @@ public class ToggleInputMode implements IInputMode {
     public void waitForInput() {
         mToggleLock.lock();
         if (!mInputOn) {
-            Log.v(Constants.TAG, "PTT: Suspending audio input.");
+            Log.v(TAG, "PTT: Suspending audio input.");
             long startTime = System.currentTimeMillis();
             try {
                 mToggleCondition.await();
             } catch (InterruptedException e) {
-                Log.w(Constants.TAG, "Blocking for PTT interrupted, likely due to input thread shutdown.");
+                Log.w(TAG, "Blocking for PTT interrupted, likely due to input thread shutdown.");
             }
-            Log.v(Constants.TAG, "PTT: Suspended audio input for " + (System.currentTimeMillis() - startTime) + "ms.");
+            Log.v(TAG, "PTT: Suspended audio input for " + (System.currentTimeMillis() - startTime) + "ms.");
         }
         mToggleLock.unlock();
     }

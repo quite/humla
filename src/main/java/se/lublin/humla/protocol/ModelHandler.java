@@ -28,7 +28,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import se.lublin.humla.Constants;
 import se.lublin.humla.R;
 import se.lublin.humla.model.Channel;
 import se.lublin.humla.model.Message;
@@ -44,6 +43,8 @@ import se.lublin.humla.util.MessageFormatter;
  * Created by andrew on 18/07/13.
  */
 public class ModelHandler extends HumlaTCPMessageListener.Stub {
+    private static final String TAG = ModelHandler.class.getName();
+
     private final Context mContext;
     private final Map<Integer, Channel> mChannels;
     private final Map<Integer, User> mUsers;
@@ -334,7 +335,7 @@ public class ModelHandler extends HumlaTCPMessageListener.Stub {
         if(msg.hasChannelId()) {
             final Channel channel = mChannels.get(msg.getChannelId());
             if(channel == null) {
-                Log.e(Constants.TAG, "Invalid channel for user!");
+                Log.e(TAG, "Invalid channel for user!");
                 return; // TODO handle better
             }
             final Channel old = user.getChannel();
