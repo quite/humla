@@ -1,6 +1,6 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="audio_max_bandwidth">Maksymalna przepustowość sieci serwera to tylko %1$d kbit/s. Dostosowywanie jakości dźwięku do %2$d kbit/s (%3$d ms).</string>
+    <string name="audio_max_bandwidth">Maksymalna przepustowość sieci serwera to tylko %1$d kbit/s. Dostosowywanie jakości audio do %2$d kbit/s (%3$d ms).</string>
     <string name="chat_notify_moved">%1$s przeniesiono z %2$s przez %3$s.</string>
     <string name="chat_notify_muted_deafened">Wyciszony i ogłuszony.</string>
     <string name="chat_notify_muted">Wyciszony.</string>
