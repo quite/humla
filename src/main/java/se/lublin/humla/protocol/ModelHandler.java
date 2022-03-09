@@ -30,7 +30,9 @@ import java.util.Map;
 
 import se.lublin.humla.R;
 import se.lublin.humla.model.Channel;
+import se.lublin.humla.model.IServerSettings;
 import se.lublin.humla.model.Message;
+import se.lublin.humla.model.ServerSettings;
 import se.lublin.humla.model.User;
 import se.lublin.humla.protobuf.Mumble;
 import se.lublin.humla.util.HumlaLogger;
@@ -52,6 +54,7 @@ public class ModelHandler extends HumlaTCPMessageListener.Stub {
     private final List<Integer> mLocalIgnoreHistory;
     private final IHumlaObserver mObserver;
     private final HumlaLogger mLogger;
+    private ServerSettings mServerSettings;
     private int mPermissions;
     private int mSession;
 
@@ -73,6 +76,10 @@ public class ModelHandler extends HumlaTCPMessageListener.Stub {
 
     public User getUser(int session) {
         return mUsers.get(session);
+    }
+
+    public ServerSettings getServerSettings() {
+        return mServerSettings;
     }
 
     /**
@@ -490,5 +497,10 @@ public class ModelHandler extends HumlaTCPMessageListener.Stub {
     public void messageServerSync(Mumble.ServerSync msg) {
         mSession = msg.getSession();
         mLogger.logInfo(msg.getWelcomeText());
+    }
+
+    @Override
+    public void messageServerConfig(Mumble.ServerConfig msg) {
+        mServerSettings = new ServerSettings(msg);
     }
 }

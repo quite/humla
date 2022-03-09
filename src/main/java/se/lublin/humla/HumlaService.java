@@ -55,6 +55,7 @@ import se.lublin.humla.model.IChannel;
 import se.lublin.humla.model.IUser;
 import se.lublin.humla.model.Message;
 import se.lublin.humla.model.Server;
+import se.lublin.humla.model.ServerSettings;
 import se.lublin.humla.model.TalkState;
 import se.lublin.humla.model.User;
 import se.lublin.humla.model.WhisperTarget;
@@ -1178,6 +1179,15 @@ public class HumlaService extends Service implements IHumlaService, IHumlaSessio
             return mWhisperTargetList.get(mVoiceTargetId);
         }
         return null;
+    }
+
+    @Override
+    public ServerSettings getServerSettings() {
+        try {
+            return getModelHandler().getServerSettings();
+        } catch (NotSynchronizedException e) {
+            throw new IllegalStateException(e);
+        }
     }
 
     /**

@@ -5,6 +5,7 @@ import java.util.List;
 import se.lublin.humla.model.IChannel;
 import se.lublin.humla.model.IUser;
 import se.lublin.humla.model.Message;
+import se.lublin.humla.model.ServerSettings;
 import se.lublin.humla.model.WhisperTarget;
 import se.lublin.humla.net.HumlaUDPMessageType;
 import se.lublin.humla.util.VoiceTargetMode;
@@ -208,4 +209,10 @@ public interface IHumlaSession {
      * @return the set whisper target, or null if the user is not whispering.
      */
     WhisperTarget getWhisperTarget();
+
+    /**
+     * Gets the current server settings.
+     * @return Settings of the current server.
+     */
+    ServerSettings getServerSettings();
 }
