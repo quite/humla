@@ -16,16 +16,9 @@
     <string name="chat_notify_self_recording_stopped">錄音停止</string>
     <string name="chat_notify_disconnected">%s 已離線。</string>
     <string name="chat_notify_connected">%s 已連線。</string>
-    <string name="chat_notify_muted_deafened_self_by_actor">你現在被 %s 禁止與之語音通聯。</string>
-    <string name="chat_notify_undeafened_self_by_actor">%s 打開對你的通話。</string>
-    <string name="chat_notify_unmuted_self_by_actor">%s 現在接收你的通話。</string>
-    <string name="chat_notify_muted_self_by_actor">%s 不接收你的通話。</string>
-    <string name="chat_notify_unmuted_undeafened_self_by_actor">%s 打開與你的語音通聯。</string>
-    <string name="chat_notify_now_unmuted_undeafened">%s 現在打開語音收發。</string>
     <string name="chat_notify_now_unmuted">%s 打開發聲。</string>
     <string name="chat_notify_now_muted">%s 目前關閉發聲。</string>
     <string name="chat_notify_now_muted_deafened">%s 目前關閉語音收發。</string>
-    <string name="chat_notify_unmuted_undeafened">開啟語音收發。</string>
     <string name="chat_notify_unmuted">開啟發聲。</string>
     <string name="chat_notify_muted">不發聲。</string>
     <string name="chat_notify_muted_deafened">停止語音收發。</string>

@@ -1,22 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="chat_notify_moved">%1$s verplaatst van %2$s door %3$s.</string>
     <string name="chat_notify_muted_deafened">Gedempt en doof gemaakt.</string>
     <string name="chat_notify_muted">Gedempt.</string>
     <string name="chat_notify_unmuted">Dempen opgeheven.</string>
-    <string name="chat_notify_unmuted_undeafened">Dempen opgeheven en horend gemaakt.</string>
     <string name="chat_notify_now_muted_deafened">%s is nu gedempt en doof gemaakt.</string>
     <string name="chat_notify_now_muted">%s is nu gedempt.</string>
     <string name="chat_notify_now_unmuted">%s is niet meer gedempt.</string>
-    <string name="chat_notify_now_unmuted_undeafened">%s is niet meer gedempt of doof.</string>
-    <string name="chat_notify_muted_deafened_self_by_actor">U bent gedempt en doof gemaakt door %s.</string>
-    <string name="chat_notify_unmuted_undeafened_self_by_actor">U bent niet meer gedempt en horend gemaakt door %s.</string>
-    <string name="chat_notify_muted_self_by_actor">U bent gedempt door %s.</string>
-    <string name="chat_notify_unmuted_self_by_actor">U bent niet meer gedempt door %s.</string>
-    <string name="chat_notify_undeafened_self_by_actor">U bent horend gemaakt door %s.</string>
-    <string name="chat_notify_suppressed_self">U werd onderdrukt.</string>
-    <string name="chat_notify_unsuppressed_self">U bent niet meer onderdrukt.</string>
-    <string name="chat_notify_unsuppressed_self_by_actor">U bent niet meer onderdrukt door %s.</string>
     <string name="chat_notify_connected">%s verbonden.</string>
     <string name="chat_notify_disconnected">%s verbinding verbroken.</string>
     <string name="chat_notify_kick_ban_self">U bent verbannnen van de server door %1$s: %2$s.</string>

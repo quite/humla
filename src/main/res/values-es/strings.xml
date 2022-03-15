@@ -1,23 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="audio_max_bandwidth">El ancho de banda máximo del servidor es solo de %1$d kbit/s. Calidad de audio ajustada a %2$d kbit/s (%3$d ms).</string>
-    <string name="chat_notify_moved">%1$s fue movido a este canal desde %2$s por %3$s.</string>
     <string name="chat_notify_muted_deafened">Mudo y sordo.</string>
     <string name="chat_notify_muted">Mudo.</string>
     <string name="chat_notify_unmuted">Con voz.</string>
-    <string name="chat_notify_unmuted_undeafened">Con voz y escucha.</string>
     <string name="chat_notify_now_muted_deafened">%s está ahora enmudecido y ensordecido.</string>
     <string name="chat_notify_now_muted">%s está ahora enmudecido.</string>
     <string name="chat_notify_now_unmuted">%s ahora tiene voz.</string>
-    <string name="chat_notify_now_unmuted_undeafened">%s ahora tiene voz y escucha.</string>
-    <string name="chat_notify_muted_deafened_self_by_actor">Has sido enmudecido y ensordecido por %s.</string>
-    <string name="chat_notify_unmuted_undeafened_self_by_actor">%s te ha desenmudecido y dado escucha.</string>
-    <string name="chat_notify_muted_self_by_actor">Has sido enmudecido por %s.</string>
-    <string name="chat_notify_unmuted_self_by_actor">Has sido desenmudecido por %s.</string>
-    <string name="chat_notify_undeafened_self_by_actor">%s te ha dado escucha.</string>
-    <string name="chat_notify_suppressed_self">Has sido suprimido.</string>
-    <string name="chat_notify_unsuppressed_self">Ya no estás suprimido.</string>
-    <string name="chat_notify_unsuppressed_self_by_actor">%s ha cesado tu supresión.</string>
     <string name="chat_notify_connected">%s se ha conectado.</string>
     <string name="chat_notify_disconnected">%s se ha desconectado.</string>
     <string name="chat_notify_kick_ban_self">Has sido expulsado y prohibido del servidor por %1$s: %2$s.</string>

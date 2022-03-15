@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="chat_notify_unmuted_undeafened_self_by_actor">Foi imutável e não foi ensurdecido por%s</string>
-    <string name="chat_notify_unmuted_undeafened">Sem alterações e sem ser ensurdecido.</string>
     <string name="chat_notify_unmuted">sem alterações.</string>
     <string name="chat_notify_muted">Mudo.</string>
     <string name="chat_notify_muted_deafened">Mudo e ensurdecido</string>

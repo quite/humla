@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="deny_reason_channel_nesting">Grensen for underkanaler er nådd.</string>
-    <string name="chat_notify_unsuppressed_self_by_actor">%s fjernet din undertrykkelse.</string>
-    <string name="chat_notify_unsuppressed_self">Du er ikke lenger undertrykt.</string>
-    <string name="chat_notify_suppressed_self">Du ble undertrykt.</string>
     <string name="audio_max_bandwidth">Maksimal tjenernettverksbåndbredde er kun %1$d kbit/s. Justerer lydkvalitet til %2$d kbit/s (%3$d ms).</string>
     <string name="the_server">tjeneren</string>
     <string name="server">Tjener</string>
@@ -31,18 +28,10 @@
     <string name="chat_notify_kick_ban_self">Du ble kastet ut og bannlyst fra tjeneren av %1$s: %2$s.</string>
     <string name="chat_notify_disconnected">%s koblet fra.</string>
     <string name="chat_notify_connected">%s koblet til.</string>
-    <string name="chat_notify_undeafened_self_by_actor">Du fikk din døvhet opphevet av %s.</string>
-    <string name="chat_notify_unmuted_self_by_actor">Du fikk din forstummelse opphevet av %s.</string>
-    <string name="chat_notify_muted_self_by_actor">Du ble forstummet av %s.</string>
-    <string name="chat_notify_unmuted_undeafened_self_by_actor">Du fikk din forstummelse og døvhet opphevet av %s.</string>
-    <string name="chat_notify_muted_deafened_self_by_actor">Du ble forstummet og gjort døv av %s.</string>
-    <string name="chat_notify_now_unmuted_undeafened">%s er nå hverken forstummet eller døv.</string>
     <string name="chat_notify_now_unmuted">%s har fått sin forstummelse opphevet.</string>
     <string name="chat_notify_now_muted">%s er nå forstummet.</string>
     <string name="chat_notify_now_muted_deafened">%s er nå forstummet og gjort døv.</string>
-    <string name="chat_notify_unmuted_undeafened">Forstummelse og døvhet opphevet.</string>
     <string name="chat_notify_unmuted">Forstummelse opphevet.</string>
     <string name="chat_notify_muted">Forstummet.</string>
     <string name="chat_notify_muted_deafened">Forstummet og gjort døv.</string>
-    <string name="chat_notify_moved">%1$s flyttet inn fra %2$s av %3$s.</string>
 </resources>

@@ -1,23 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="audio_max_bandwidth">サーバーの最大ネットワーク帯域幅は %1$d kbit/s のみです。オーディオ品質は %2$d kbit/s (%3$d ms) に自動調整されました。</string>
-    <string name="chat_notify_moved">%1$s は %2$s から %3$s で移動しました。</string>
     <string name="chat_notify_muted_deafened">ミュートおよび防音。</string>
     <string name="chat_notify_muted">ミュートしました。</string>
     <string name="chat_notify_unmuted">ミュートを解除しました。</string>
-    <string name="chat_notify_unmuted_undeafened">ミュート解除および防音解除しました。</string>
     <string name="chat_notify_now_muted_deafened">%s がミュートおよび防音されました。</string>
     <string name="chat_notify_now_muted">%s がミュートされました。</string>
     <string name="chat_notify_now_unmuted">%s がミュート解除されました。</string>
-    <string name="chat_notify_now_unmuted_undeafened">%s がミュート解除および防音解除されました。</string>
-    <string name="chat_notify_muted_deafened_self_by_actor">あなたは %s によってミュートおよび防音されました。</string>
-    <string name="chat_notify_unmuted_undeafened_self_by_actor">あなたは %s によってミュート解除および防音解除されました。</string>
-    <string name="chat_notify_muted_self_by_actor">あなたは %s によってミュートされました。</string>
-    <string name="chat_notify_unmuted_self_by_actor">あなたは %s によってミュート解除されました。</string>
-    <string name="chat_notify_undeafened_self_by_actor">あなたは %s によって防音解除されました。</string>
-    <string name="chat_notify_suppressed_self">あなたはサプレスされました。</string>
-    <string name="chat_notify_unsuppressed_self">あなたはサプレス解除されました。</string>
-    <string name="chat_notify_unsuppressed_self_by_actor">あなたは %s によってサプレス解除されました。</string>
     <string name="chat_notify_connected">%s が接続しました。</string>
     <string name="chat_notify_disconnected">%s が切断しました。</string>
     <string name="chat_notify_kick_ban_self">あなたは %1$s によって、サーバーからキックおよび禁止されました: %2$s.</string>

@@ -23,26 +23,15 @@
     <string name="chat_notify_kick_ban">%3$s ถูกเตะและแบนจากเซิฟเวอร์โดย %1$s: %2$s.</string>
     <string name="chat_notify_kick_self">คุณถูกเตะออกจากเซิฟเวอร์โดย %1$s: %2$s.</string>
     <string name="chat_notify_kick_ban_self">คุณถูกเตะและถูกแบนออกจากเซิฟเวอร์โดย %1$s: %2$s.</string>
-    <string name="chat_notify_unsuppressed_self_by_actor">คุณถูกยกเลิกระงับเสียงแล้วโดย %s.</string>
-    <string name="chat_notify_unsuppressed_self">เสียงของคุณยกเลิกการระงับแล้ว</string>
-    <string name="chat_notify_suppressed_self">เสียงของคุณถูกระงับ</string>
-    <string name="chat_notify_undeafened_self_by_actor">คุณถูกเปิดเสียงแล้วโดย %s.</string>
-    <string name="chat_notify_unmuted_self_by_actor">คุณถูกเปิดไมค์แล้วโดย %s.</string>
-    <string name="chat_notify_muted_self_by_actor">คุณถูกปิดไมค์โดย %s.</string>
-    <string name="chat_notify_unmuted_undeafened_self_by_actor">คุณถูดเปิดไมค์และเปิดเสียงแล้วโดย %s.</string>
-    <string name="chat_notify_muted_deafened_self_by_actor">คุณถูกปิดไมค์และปิดเสียงโดย %s.</string>
     <string name="audio_max_bandwidth">แบนด์วิธสูงสุดของเซิฟเวอร์ %1$d kbit/s. ปรับคุณภาพของเสียงไปสู่ %2$d kbit/s (%3$d ms).</string>
     <string name="chat_notify_disconnected">%s ออกจากระบบแล้ว</string>
     <string name="chat_notify_connected">%s เชื่อมต่อแล้ว</string>
-    <string name="chat_notify_now_unmuted_undeafened">%s เปิดไมค์และเปิดเสียงทั้งหมดแล้ว</string>
     <string name="chat_notify_now_unmuted">%s เปิดไมค์แล้ว</string>
     <string name="chat_notify_now_muted">%s ปิดไมค์แล้ว</string>
     <string name="chat_notify_now_muted_deafened">%s เงียบและปิดเสียงทั้งหมด</string>
-    <string name="chat_notify_unmuted_undeafened">เปิดเสียงทั้งหมด</string>
     <string name="chat_notify_unmuted">เปิดเสียง</string>
     <string name="chat_notify_muted">เงียบเสียงแล้ว</string>
     <string name="chat_notify_muted_deafened">เงียบและปิดเสียง</string>
-    <string name="chat_notify_moved">%1$s ย้ายมาจาก %2$s โดย %3$s.</string>
     <string name="server">เซิฟเวอร์</string>
     <string name="perm_denied">ไม่มีสิทธิ์</string>
 </resources>

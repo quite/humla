@@ -1,23 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="audio_max_bandwidth">Maksymalna przepustowość sieci serwera to tylko %1$d kbit/s. Dostosowywanie jakości audio do %2$d kbit/s (%3$d ms).</string>
-    <string name="chat_notify_moved">%1$s przeniesiono z %2$s przez %3$s.</string>
     <string name="chat_notify_muted_deafened">Wyciszony i ogłuszony.</string>
     <string name="chat_notify_muted">Wyciszony.</string>
     <string name="chat_notify_unmuted">Nie jest wyciszony.</string>
-    <string name="chat_notify_unmuted_undeafened">Nie jest wyciszony i ogłuszony.</string>
     <string name="chat_notify_now_muted_deafened">%s jest teraz wyciszony i ogłuszony.</string>
     <string name="chat_notify_now_muted">%s jest teraz wyciszony.</string>
     <string name="chat_notify_now_unmuted">%s nie jest teraz wyciszony.</string>
-    <string name="chat_notify_now_unmuted_undeafened">%s nie jest teraz wyciszony i ogłuszony.</string>
-    <string name="chat_notify_muted_deafened_self_by_actor">Zostałeś wyciszony i ogłuszony przez %s.</string>
-    <string name="chat_notify_unmuted_undeafened_self_by_actor">Przestałeś być wyciszonym i ogłuszonym przez %s.</string>
-    <string name="chat_notify_muted_self_by_actor">Zostałeś wyciszony przez %s.</string>
-    <string name="chat_notify_unmuted_self_by_actor">Przestałeś być wyciszonym przez %s.</string>
-    <string name="chat_notify_undeafened_self_by_actor">Przestałeś być ogłuszonym przez %s.</string>
-    <string name="chat_notify_suppressed_self">Zostałeś stłumiony.</string>
-    <string name="chat_notify_unsuppressed_self">Przestałeś być stłumionym.</string>
-    <string name="chat_notify_unsuppressed_self_by_actor">Przestałeś być stłumionym przez %s.</string>
     <string name="chat_notify_connected">%s podłączony.</string>
     <string name="chat_notify_disconnected">%s odłączony.</string>
     <string name="chat_notify_kick_ban_self">Zostałeś wyrzucony i zbanowany z serwera przez %1$s: %2$s.</string>

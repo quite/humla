@@ -1,23 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="audio_max_bandwidth">La bande passante réseau maximale du serveur est seulement de %1$d kbit/s. La qualité audio est ajustée à %2$d kbit/s (%3$d ms).</string>
-    <string name="chat_notify_moved">%1$s a été déplacé de %2$s par %3$s.</string>
     <string name="chat_notify_muted_deafened">Muet et sourd.</string>
     <string name="chat_notify_muted">Muet.</string>
     <string name="chat_notify_unmuted">Non muet.</string>
-    <string name="chat_notify_unmuted_undeafened">N\'est plus muet et sourd.</string>
     <string name="chat_notify_now_muted_deafened">%s et maintenant muet et sourd.</string>
     <string name="chat_notify_now_muted">%s est maintenant muet.</string>
     <string name="chat_notify_now_unmuted">%s n\'est maintenant plus muet.</string>
-    <string name="chat_notify_now_unmuted_undeafened">%s n\'est plus muet et sourd.</string>
-    <string name="chat_notify_muted_deafened_self_by_actor">Vous avez été rendu muet et sourd par %s.</string>
-    <string name="chat_notify_unmuted_undeafened_self_by_actor">Vous n\'êtes plus muet et sourd par %s.</string>
-    <string name="chat_notify_muted_self_by_actor">Vous avez été rendu muet par %s.</string>
-    <string name="chat_notify_unmuted_self_by_actor">Vous n\'êtes plus muet par %s.</string>
-    <string name="chat_notify_undeafened_self_by_actor">Vous n\'êtes plus sourd par %s.</string>
-    <string name="chat_notify_suppressed_self">Vous avez été supprimé·e.</string>
-    <string name="chat_notify_unsuppressed_self">Vous avez été rétabli·e.</string>
-    <string name="chat_notify_unsuppressed_self_by_actor">Vous avez été rétabli·e par %s.</string>
     <string name="chat_notify_connected">%s connecté.</string>
     <string name="chat_notify_disconnected">%s déconnecté.</string>
     <string name="chat_notify_kick_ban_self">Vous avez été éjecté·e et banni·e du serveur par %1$s : %2$s.</string>

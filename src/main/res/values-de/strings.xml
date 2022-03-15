@@ -1,23 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="audio_max_bandwidth">Die maximale Netzwerk-Bandbreite des Servers beträgt nur %1$d kbit/s. Die Audioqualität wird automatisch angepasst auf %2$d kbit/s (%3$d ms).</string>
-    <string name="chat_notify_moved">%1$s wurde von %3$s aus %2$s verschoben.</string>
     <string name="chat_notify_muted_deafened">Stumm und taub.</string>
     <string name="chat_notify_muted">Stumm.</string>
     <string name="chat_notify_unmuted">Nicht stumm.</string>
-    <string name="chat_notify_unmuted_undeafened">Nicht stumm und nicht taub.</string>
     <string name="chat_notify_now_muted_deafened">%s ist nun stumm und taub.</string>
     <string name="chat_notify_now_muted">%s ist jetzt stumm gestellt.</string>
     <string name="chat_notify_now_unmuted">%s ist jetzt nicht mehr stumm.</string>
-    <string name="chat_notify_now_unmuted_undeafened">%s ist jetzt nicht mehr stumm und nicht mehr taub.</string>
-    <string name="chat_notify_muted_deafened_self_by_actor">Sie wurden stumm und taub gestellt durch %s.</string>
-    <string name="chat_notify_unmuted_undeafened_self_by_actor">Sie wurden entstummt und enttaubt durch %s.</string>
-    <string name="chat_notify_muted_self_by_actor">Sie wurden stumm gestellt durch %s.</string>
-    <string name="chat_notify_unmuted_self_by_actor">Stummstellung wurde deaktiviert durch %s.</string>
-    <string name="chat_notify_undeafened_self_by_actor">Sie wurden enttaubt durch %s.</string>
-    <string name="chat_notify_suppressed_self">Ihre Sprachunterdrückung wurde aktiviert.</string>
-    <string name="chat_notify_unsuppressed_self">Ihre Sprachunterdrückung wurde entfernt.</string>
-    <string name="chat_notify_unsuppressed_self_by_actor">Ihre Sprachunterdrückung wurde entfernt durch %s.</string>
     <string name="chat_notify_connected">%s ist verbunden.</string>
     <string name="chat_notify_disconnected">%s hat den Server verlassen.</string>
     <string name="chat_notify_kick_ban_self">Sie wurden vom Server gekickt und gebannt von %1$s: %2$s.</string>

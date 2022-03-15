@@ -14,9 +14,6 @@
     <string name="chat_notify_kick_ban">%1$s: %2$s ha fet fora i ha vedat %3$s del servidor.</string>
     <string name="chat_notify_kick_self">%1$s: %2$s t\'ha fet fora del servidor.</string>
     <string name="chat_notify_kick_ban_self">%1$s: %2$s t\'ha fet fora i t\'ha vedat del servidor.</string>
-    <string name="chat_notify_undeafened_self_by_actor">%s t\'ha activat l\'audició.</string>
-    <string name="chat_notify_unmuted_self_by_actor">%s t\'ha activat la reproducció del so.</string>
-    <string name="chat_notify_unmuted_undeafened_self_by_actor">%s t\'ha activat la reproducció de so i l\'audició.</string>
     <string name="the_server">el servidor</string>
     <string name="perm_denied">Permís denegat.</string>
     <string name="deny_reason_other">Motiu: %s</string>
@@ -26,23 +23,15 @@
     <string name="chat_notify_user_recording_stopped">%s ha aturat l\'enregistrament.</string>
     <string name="chat_notify_user_recording_started">%s ha començat a enregistrar.</string>
     <string name="chat_notify_self_recording_stopped">S\'ha aturat l\'enregistrament</string>
-    <string name="chat_notify_suppressed_self">T\'han suprimit.</string>
     <string name="chat_notify_self_recording_started">S\'ha iniciat l\'enregistrament</string>
     <string name="chat_notify_connected">%s s\'ha connectat.</string>
-    <string name="chat_notify_muted_self_by_actor">%s t\'ha silenciat.</string>
-    <string name="chat_notify_muted_deafened_self_by_actor">%s t\'ha silenciat i ensordit.</string>
-    <string name="chat_notify_now_unmuted_undeafened">%s està ara sense silenciar i sense ensordir.</string>
     <string name="chat_notify_now_unmuted">%s està ara sense silenciar.</string>
     <string name="chat_notify_now_muted">%s està silenciat ara.</string>
     <string name="chat_notify_now_muted_deafened">%s està silenciat i ensordit ara.</string>
-    <string name="chat_notify_unmuted_undeafened">Sense silenciar i sense ensordir.</string>
     <string name="chat_notify_unmuted">Sense silenciar.</string>
     <string name="chat_notify_muted_deafened">Silenciat i ensordit.</string>
-    <string name="chat_notify_moved">%1$s s\'ha mogut de %2$s per part de %3$s.</string>
     <string name="audio_max_bandwidth">L\'amplada de banda màxima de la xarxa del servidor és només de %1$d kbit/s. Ajustant la qualitat del so a %2$d kbit/s (%3$d ms).</string>
     <string name="deny_reason_channel_nesting">S\'ha arribat al límit d\' imbricació de canals.</string>
     <string name="chat_notify_user_left_channel_by">%3$s ha mogut %1$s a %2$s .</string>
     <string name="chat_notify_user_joined_channel_by">%3$s ha mogut %1$s des de %2$s.</string>
-    <string name="chat_notify_unsuppressed_self_by_actor">%s ha desactivat la vostra supressió.</string>
-    <string name="chat_notify_unsuppressed_self">S\'ha desactivat la vostra supressió.</string>
 </resources>

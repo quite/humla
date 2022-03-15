@@ -1,23 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="audio_max_bandwidth">Максимальная пропускная способность сервера %1$d Кбит/с. Качество звука изменено на %2$d Кбит/с (%3$d мс).</string>
-    <string name="chat_notify_moved">%1$s перемещен(а) %3$s из %2$s.</string>
     <string name="chat_notify_muted_deafened">Звук и микрофон отключен.</string>
     <string name="chat_notify_muted">Микрофон отключен.</string>
     <string name="chat_notify_unmuted">Микрофон включен.</string>
-    <string name="chat_notify_unmuted_undeafened">Микрофон и звук включен.</string>
     <string name="chat_notify_now_muted_deafened">%s отключил(а) звук и микрофон.</string>
     <string name="chat_notify_now_muted">%s выключил(а) микрофон.</string>
     <string name="chat_notify_now_unmuted">%s включил(а) микрофон.</string>
-    <string name="chat_notify_now_unmuted_undeafened">%s включил(а) звук и микрофон.</string>
-    <string name="chat_notify_muted_deafened_self_by_actor">%s выключил(а) вам звук и микрофон.</string>
-    <string name="chat_notify_unmuted_undeafened_self_by_actor">%s включил(а) вам звук и микрофон.</string>
-    <string name="chat_notify_muted_self_by_actor">%s выключил(а) вам микрофон.</string>
-    <string name="chat_notify_unmuted_self_by_actor">%s включил(а) вам микрофон.</string>
-    <string name="chat_notify_undeafened_self_by_actor">%s включил(а) вам звук.</string>
-    <string name="chat_notify_suppressed_self">Вы были заглушены.</string>
-    <string name="chat_notify_unsuppressed_self">Оглушение снято.</string>
-    <string name="chat_notify_unsuppressed_self_by_actor">%s снял оглушение с вас.</string>
     <string name="chat_notify_connected">%s соеденен(а).</string>
     <string name="chat_notify_disconnected">%s отсоединен(а).</string>
     <string name="chat_notify_kick_ban_self">Вы были исключены и заблокированы на сервера, %1$s: %2$s.</string>
