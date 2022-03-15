@@ -21,8 +21,6 @@
     <string name="chat_notify_user_left_channel">%1$s が %2$s に移動しました。</string>
     <string name="chat_notify_user_joined_channel_by">%1$s は %2$s から %3$s で移動しました。</string>
     <string name="chat_notify_user_left_channel_by">%1$s が %3$s によって %2$s に移動しました。</string>
-    <string name="bluetooth_connected">Bluetooth が接続しました</string>
-    <string name="bluetooth_disconnected">Bluetooth が切断しました</string>
     <string name="deny_reason_channel_name">拒否されました: チャンネル名が正しくありません。</string>
     <string name="deny_reason_text_too_long">拒否されました: テキストメッセージが長すぎます。</string>
     <string name="deny_reason_no_operation_temp">拒否されました: 一時チャンネルで操作が許可されていません。</string>

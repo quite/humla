@@ -12,8 +12,6 @@
     <string name="deny_reason_no_operation_temp">Nektet: Operasjonen tillates ikke i en midlertidig kanal.</string>
     <string name="deny_reason_text_too_long">Nektet: Tekstmeldingen er for lang.</string>
     <string name="deny_reason_channel_name">Nektet: Ugyldig kanalnavn.</string>
-    <string name="bluetooth_disconnected">Blåtann frakoblet</string>
-    <string name="bluetooth_connected">Blåtann tilkoblet</string>
     <string name="chat_notify_user_left_channel_by">%1$s ble flyttet til %2$s av %3$s.</string>
     <string name="chat_notify_user_joined_channel_by">%1$s ble flyttet inn fra %2$s av %3$s.</string>
     <string name="chat_notify_user_left_channel">%1$s ble flyttet til %2$s.</string>

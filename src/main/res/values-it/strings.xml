@@ -11,8 +11,6 @@
     <string name="deny_reason_no_operation_temp">Negato: Operazione non consentita nei canali temporanei.</string>
     <string name="deny_reason_text_too_long">Negato: Messaggio di testo troppo lungo.</string>
     <string name="deny_reason_channel_name">Negato: Nome canale non valido.</string>
-    <string name="bluetooth_disconnected">Bluetooth disconnesso</string>
-    <string name="bluetooth_connected">Bluetooth connesso</string>
     <string name="chat_notify_user_left_channel_by">\"%1$s\" è stato sposato in \"%2$s\" tramite \"%3$s\".</string>
     <string name="chat_notify_user_joined_channel_by">\"%1$s\" è arrivato da \"%2$s\" tramite \"%3$s\".</string>
     <string name="server">Server</string>

@@ -21,8 +21,6 @@
     <string name="chat_notify_user_left_channel">%1$s verschoben nach %2$s.</string>
     <string name="chat_notify_user_joined_channel_by">%1$s wurde aus %2$s hinein verschoben durch %3$s.</string>
     <string name="chat_notify_user_left_channel_by">%1$s wurde verschoben nach %2$s durch %3$s.</string>
-    <string name="bluetooth_connected">Bluetooth verbunden</string>
-    <string name="bluetooth_disconnected">Bluetooth wurde getrennt</string>
     <string name="deny_reason_channel_name">Verweigert: Ungültiger Kanalname.</string>
     <string name="deny_reason_text_too_long">Verweigert: Textnachricht zu lang.</string>
     <string name="deny_reason_no_operation_temp">Verweigert: Operation nicht erlaubt in einem temporären Kanal.</string>

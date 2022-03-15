@@ -21,8 +21,6 @@
     <string name="chat_notify_user_left_channel">%1$s 移动到 %2$s。</string>
     <string name="chat_notify_user_joined_channel_by">%1$s 被 %3$s 从 %2$s 移动至此。</string>
     <string name="chat_notify_user_left_channel_by">%1$s 被 %3$s 移动至 %2$s。</string>
-    <string name="bluetooth_connected">蓝牙已连接</string>
-    <string name="bluetooth_disconnected">蓝牙已断开连接</string>
     <string name="deny_reason_channel_name">操作被拒绝：频道名无效。</string>
     <string name="deny_reason_text_too_long">操作被拒绝：文本消息过长。</string>
     <string name="deny_reason_no_operation_temp">操作被拒绝：无法在临时频道进行此操作。</string>

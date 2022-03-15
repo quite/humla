@@ -21,8 +21,6 @@
     <string name="chat_notify_user_left_channel">%1$s fue movido a %2$s.</string>
     <string name="chat_notify_user_joined_channel_by">%1$s fue movido a este canal desde %2$s por %3$s.</string>
     <string name="chat_notify_user_left_channel_by">%1$s fue movido a %2$s por %3$s.</string>
-    <string name="bluetooth_connected">Bluetooth conectado</string>
-    <string name="bluetooth_disconnected">Bluetooth desconectado</string>
     <string name="deny_reason_channel_name">Denegado: Nombre de canal inválido.</string>
     <string name="deny_reason_text_too_long">Denegado: Mensaje de texto demasiado largo.</string>
     <string name="deny_reason_no_operation_temp">Denegado: Acción no permitida en un canal temporal.</string>

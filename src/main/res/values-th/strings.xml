@@ -9,8 +9,6 @@
     <string name="deny_reason_other">เพราะ: %s</string>
     <string name="deny_reason_text_too_long">ปฏิเสธ: ข้อความยาวเกินไป</string>
     <string name="deny_reason_channel_name">ปฏิเสธ: ชื่อแชนเนลไม่ถูกต้อง.</string>
-    <string name="bluetooth_disconnected">ยกเลิกการเชื่อมต่อบลูทูธแล้ว</string>
-    <string name="bluetooth_connected">เชื่อมต่อบลูทูธแล้ว</string>
     <string name="chat_notify_user_left_channel_by">%1$s ย้ายไป %2$s โดย %3$s.</string>
     <string name="chat_notify_user_joined_channel_by">%1$s ย้ายมาจาก %2$s โดย %3$s.</string>
     <string name="chat_notify_user_left_channel">%1$s ย้ายไป %2$s.</string>

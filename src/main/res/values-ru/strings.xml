@@ -21,8 +21,6 @@
     <string name="chat_notify_user_left_channel">%1$s перемещен(а) в %2$s.</string>
     <string name="chat_notify_user_joined_channel_by">%1$s перемещен(а) %3$s из %2$s.</string>
     <string name="chat_notify_user_left_channel_by">%1$s перемещен(а) %3$s в %2$s.</string>
-    <string name="bluetooth_connected">Bluetooth соединен</string>
-    <string name="bluetooth_disconnected">Bluetooth отсоединен</string>
     <string name="deny_reason_channel_name">Отказано: Неверное имя канала.</string>
     <string name="deny_reason_text_too_long">Отказано: Текстовое сообщение слишком длинное.</string>
     <string name="deny_reason_no_operation_temp">Отказано: Операция не разрешена во временном канале.</string>

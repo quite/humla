@@ -12,8 +12,6 @@
     <string name="deny_reason_no_operation_temp">Estetty: Toiminto ei ole sallittu väliaikaisella kanavalla.</string>
     <string name="deny_reason_text_too_long">Estetty: Tekstiviesti on liian pitkä.</string>
     <string name="deny_reason_channel_name">Estetty: Vääränlainen kanavannimi.</string>
-    <string name="bluetooth_disconnected">Bluetooth yhteys katkennut</string>
-    <string name="bluetooth_connected">Bluetooth yhdistetty</string>
     <string name="chat_notify_user_left_channel_by">%1$s on siirretty kanavalle %2$s käyttäjän %3$s toimesta.</string>
     <string name="chat_notify_user_joined_channel_by">%1$s siirtyi kanavalta %2$s käyttäjän %3$s toimesta.</string>
     <string name="chat_notify_user_left_channel">%1$s siirtyi kanavalle %2$s.</string>

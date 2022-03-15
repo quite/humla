@@ -11,8 +11,6 @@
     <string name="deny_reason_no_operation_temp">Reddedildi: Geçici kanalda işleme izin verilmiyor.</string>
     <string name="deny_reason_text_too_long">Reddedildi: Metin mesajı çok uzun.</string>
     <string name="deny_reason_channel_name">Reddedildi: Geçersiz kanal adı.</string>
-    <string name="bluetooth_disconnected">Bluetooth bağlantısı kesildi</string>
-    <string name="bluetooth_connected">Bluetooth bağlandı</string>
     <string name="chat_notify_user_left_channel_by">%1$s, %3$s tarafından %2$s konumuna taşındı.</string>
     <string name="chat_notify_user_left_channel">%1$s, %2$s konumuna taşındı.</string>
     <string name="chat_notify_user_joined_channel_by">%1$s, %3$s tarafından %2$s konumundan taşındı.</string>

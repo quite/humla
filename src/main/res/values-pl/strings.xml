@@ -21,8 +21,6 @@
     <string name="chat_notify_user_left_channel">%1$s przeniesiono do %2$s.</string>
     <string name="chat_notify_user_joined_channel_by">%1$s przeniesiono z %2$s przez %3$s.</string>
     <string name="chat_notify_user_left_channel_by">%1$s przeniesiono do %2$s przez %3$s.</string>
-    <string name="bluetooth_connected">Bluetooth podłączony</string>
-    <string name="bluetooth_disconnected">Bluetooth odłączony</string>
     <string name="deny_reason_channel_name">Odmowa: nieprawidłowa nazwa kanału.</string>
     <string name="deny_reason_text_too_long">Odmowa: wiadomość tekstowa jest za długa.</string>
     <string name="deny_reason_no_operation_temp">Odmowa: operacja niedozwolona na kanale tymczasowym.</string>

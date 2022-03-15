@@ -21,8 +21,6 @@
     <string name="chat_notify_user_left_channel">%1$s s\'est déplacé dans %2$s.</string>
     <string name="chat_notify_user_joined_channel_by">%1$s s\'est déplacé de %2$s par %3$s.</string>
     <string name="chat_notify_user_left_channel_by">%1$s a été déplacé dans %2$s par %3$s.</string>
-    <string name="bluetooth_connected">Bluetooth connecté</string>
-    <string name="bluetooth_disconnected">Bluetooth déconnecté</string>
     <string name="deny_reason_channel_name">Refusé : nom de canal invalide.</string>
     <string name="deny_reason_text_too_long">Refusé : message texte trop long.</string>
     <string name="deny_reason_no_operation_temp">Refusé : opération non permise dans un canal temporaire.</string>

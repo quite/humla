@@ -20,8 +20,6 @@
     <string name="chat_notify_user_left_channel">%1$s verplaatst naar %2$s.</string>
     <string name="chat_notify_user_joined_channel_by">%1$s verplaatst van %2$s door %3$s.</string>
     <string name="chat_notify_user_left_channel_by">%1$s verplaatst van %2$s door %3$s.</string>
-    <string name="bluetooth_connected">Bluetooth verbonden</string>
-    <string name="bluetooth_disconnected">Bluetooth verbroken</string>
     <string name="deny_reason_channel_name">Geweigerd: Ongeldige kanaal naam.</string>
     <string name="deny_reason_text_too_long">Geweigerd: Tekst boodschap te lang.</string>
     <string name="deny_reason_no_operation_temp">Geweigerd: Handeling niet toegestaan in tijdelijk kanaal.</string>

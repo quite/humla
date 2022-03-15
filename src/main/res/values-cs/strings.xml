@@ -9,8 +9,6 @@
     <string name="deny_reason_no_operation_temp">Zamítnuto: Operace není v dočasném kanálu povolena.</string>
     <string name="deny_reason_text_too_long">Zamítnuto: Textová zpráva je příliš dlouhá.</string>
     <string name="deny_reason_channel_name">Zamítnuto: Neplatné jméno kanálu.</string>
-    <string name="bluetooth_disconnected">Bluetooth odpojeno</string>
-    <string name="bluetooth_connected">Bluetooth připojeno</string>
     <string name="chat_notify_user_left_channel_by">%1$s přesunut do %2$s uživatelem %3$s.</string>
     <string name="chat_notify_user_joined_channel_by">%1$s přesunut z %2$s uživatelem %3$s.</string>
     <string name="chat_notify_user_left_channel">%1$s přesunut do %2$s.</string>

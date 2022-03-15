@@ -4,8 +4,6 @@
     <string name="deny_reason_no_operation_temp">禁止：此操作在暫時頻道不能進行。</string>
     <string name="deny_reason_text_too_long">禁止：文字過長。</string>
     <string name="deny_reason_channel_name">禁止：無此頻道名稱。</string>
-    <string name="bluetooth_disconnected">藍芽斷線</string>
-    <string name="bluetooth_connected">藍芽連線</string>
     <string name="chat_notify_user_left_channel_by">%1$s 被%3$s 移到 %2$s。</string>
     <string name="chat_notify_user_joined_channel_by">%3$s 由%2$s 把 %1$s 帶入此頻道。</string>
     <string name="chat_notify_user_left_channel">%1$s 移動到 %2$s。</string>
