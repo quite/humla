@@ -1,2 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="audio_max_bandwidth">Το μέγιστο εύρος ζώνης δικτύου διακομιστή είναι μόνο %1$d kbit/s. Ρύθμιση της ποιότητας ήχου σε %2$d kbit/s (%3$d ms).</string>
+    <string name="chat_notify_muted_deafened">Φιμώθηκε και κωφώθηκε.</string>
+    <string name="chat_notify_muted">Φιμωμένος.</string>
+    <string name="chat_notify_unmuted">Ξεφιμώθηκε.</string>
+    <string name="chat_notify_now_muted_deafened">Ο %s είναι τώρα φιμωμένος και κωφωμένος.</string>
+    <string name="chat_notify_now_muted">Ο %s φιμώθηκε τώρα.</string>
+    <string name="chat_notify_now_unmuted">Ο %s ξεφιμώθηκε τώρα.</string>
+    <string name="chat_notify_connected">Ο %s συνδέθηκε.</string>
+    <string name="chat_notify_disconnected">Ο %s αποσυνδέθηκε.</string>
+    <string name="chat_notify_kick_ban_self">Σας πέταξε και σας απαγόρεψε την είσοδο στον διακομιστή ο %1$s: %2$s.</string>
+    <string name="chat_notify_kick_self">Σας πέταξε από τον διακομιστή ο %1$s: %2$s.</string>
+    <string name="chat_notify_kick_ban">Ο %3$s πετάχτηκε και του απαγορεύτηκε η είσοδος στον διακομιστή από τον %1$s: %2$s.</string>
+    <string name="chat_notify_kick">Ο %3$s πετάχτηκε από τον διακομιστή από τον %1$s: %2$s.</string>
+    <string name="chat_notify_self_recording_started">Η εγγραφή ξεκίνησε</string>
+    <string name="chat_notify_self_recording_stopped">Η εγγραφή σταμάτησε</string>
+    <string name="chat_notify_user_recording_started">Ο %s ξεκίνησε να εγγράφει.</string>
+    <string name="chat_notify_user_recording_stopped">Ο %s σταμάτησε να εγγράφει.</string>
+    <string name="chat_notify_user_joined_channel">Ο %s εισήλθε στο κανάλι.</string>
+    <string name="chat_notify_user_left_channel">Ο %1$s μετακινήθηκε στο %2$s.</string>
+    <string name="chat_notify_user_joined_channel_by">Ο %1$s μετακινήθηκε εδώ μέσα από το %2$s από τον %3$s.</string>
+    <string name="chat_notify_user_left_channel_by">Ο %1$s μετακινήθηκε στο %2$s από τον %3$s.</string>
+    <string name="deny_reason_channel_name">Απορρίφθηκε: Μη έγκυρο όνομα καναλιού.</string>
+    <string name="deny_reason_text_too_long">Απορρίφθηκε: Το μήνυμα κειμένου είναι πολύ μεγάλο.</string>
+    <string name="deny_reason_no_operation_temp">Απορρίφθηκε: Η ενέργεια απαγορεύεται σε προσωρινό κανάλι.</string>
+    <string name="deny_reason_no_certificate">Χρειάζεται ένα πιστοποιητικό για να εκτελέσετε αυτήν τη λειτουργία.</string>
+    <string name="deny_reason_invalid_username">Μη έγκυρο όνομα χρήστη.</string>
+    <string name="deny_reason_channel_full">Το κανάλι είναι γεμάτο.</string>
+    <string name="deny_reason_channel_nesting">Η ένθεση καναλιών έφτασε στο όριο.</string>
+    <string name="deny_reason_other">Λόγος: %s</string>
+    <string name="perm_denied">Δεν επιτρέπεται η πρόσβαση.</string>
+    <string name="server">Διακομιστής</string>
+    <string name="the_server">του διακομιστή</string>
+</resources>
