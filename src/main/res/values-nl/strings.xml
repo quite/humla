@@ -31,5 +31,5 @@
     <string name="perm_denied">Geen toelating.</string>
     <string name="server">Server</string>
     <string name="the_server">de server</string>
-    <string name="audio_max_bandwidth">De maximale netwerkbandbreedte van het server is slechts %1$d kbit/s. Geluidskwaliteit automatisch versteld naar %2$d kbit/s (%3$d ms).</string>
+    <string name="audio_max_bandwidth">De maximale netwerkbandbreedte van de server is slechts %1$d kbit/s. Geluidskwaliteit automatisch versteld naar %2$d kbit/s (%3$d ms).</string>
 </resources>
