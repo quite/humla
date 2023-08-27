@@ -1,2 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="audio_max_bandwidth">Bandwidth-ul maxim al serverului este doar %1$d kbit/s. Se ajustează calitatea audio la %2$d kbit/s (%3$d ms).</string>
+</resources>
