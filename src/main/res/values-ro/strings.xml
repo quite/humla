@@ -1,4 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="audio_max_bandwidth">Bandwidth-ul maxim al serverului este doar %1$d kbit/s. Se ajustează calitatea audio la %2$d kbit/s (%3$d ms).</string>
+    <string name="audio_max_bandwidth">Bandwidth-ul maxim al serverului este %1$d kbit/s. Se ajustează calitatea sunetului la %2$d kbit/s (%3$d ms).</string>
+    <string name="chat_notify_now_muted">Microfonul lui %s a fost dezactivat.</string>
+    <string name="chat_notify_now_unmuted">Microfonul lui %s a fost activat.</string>
+    <string name="chat_notify_connected">%s s-a conectat.</string>
+    <string name="chat_notify_disconnected">%s s-a deconectat.</string>
+    <string name="chat_notify_kick_ban_self">Ai fost dat afară și banat de pe server de %1$s: %2$s.</string>
+    <string name="chat_notify_kick_self">Ai fost dat afară de pe server de %1$s: %2$s.</string>
+    <string name="chat_notify_kick">%3$s a fost dat afară de pe server de %1$s: %2$s.</string>
+    <string name="chat_notify_self_recording_started">Înregistrare începută</string>
+    <string name="chat_notify_self_recording_stopped">Înregistrare oprită</string>
+    <string name="chat_notify_user_recording_started">%s a început înregistra.</string>
+    <string name="chat_notify_user_recording_stopped">%s a oprit înregistrarea.</string>
+    <string name="chat_notify_user_joined_channel">%s a intrat în canal.</string>
+    <string name="chat_notify_user_left_channel">%1$s s-a mutat în %2$s.</string>
+    <string name="chat_notify_user_joined_channel_by">%1$s a fost adus din %2$s de %3$s.</string>
+    <string name="deny_reason_channel_name">Refuzat: Numele canalului interzis.</string>
+    <string name="deny_reason_text_too_long">Refuzat: Mesajul text e prea lung.</string>
+    <string name="deny_reason_no_operation_temp">Refuzat: Acțiunea e interzisă in canal temporar.</string>
+    <string name="deny_reason_no_certificate">Ai nevoie de un certificat pentru a efectua acțiunea.</string>
+    <string name="deny_reason_invalid_username">Numele utilizatorului este interzis.</string>
+    <string name="deny_reason_channel_full">Canalul este plin.</string>
+    <string name="deny_reason_channel_nesting">Limita de introdus canale unul în altul a fost atinsă.</string>
+    <string name="deny_reason_other">Motiv: %s</string>
+    <string name="perm_denied">Interzis.</string>
+    <string name="server">Server</string>
+    <string name="the_server">serverul</string>
+    <string name="chat_notify_muted">Microfonul a fost dezactivat.</string>
+    <string name="chat_notify_muted_deafened">Sunetul și microfonul au fost dezactivate.</string>
+    <string name="chat_notify_unmuted">Microfonul a fost activat.</string>
+    <string name="chat_notify_now_muted_deafened">Sunetul și microfonul lui %s au fost dezactivate.</string>
+    <string name="chat_notify_kick_ban">%3$s a fost dat afara și banat de pe server de %1$s: %2$s.</string>
+    <string name="chat_notify_user_left_channel_by">%1$s a fost mutat în %2$s de %3$s.</string>
 </resources>
