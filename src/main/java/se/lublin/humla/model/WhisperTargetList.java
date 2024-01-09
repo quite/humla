@@ -42,7 +42,7 @@ public class WhisperTargetList {
      */
     public byte append(WhisperTarget target) {
         byte freeId = -1;
-        for (byte i = TARGET_MIN; i < TARGET_MAX; i++) {
+        for (byte i = TARGET_MIN; i <= TARGET_MAX; i++) {
             if ((mTakenIds & (1 << i)) == 0) {
                 freeId = i;
                 break;
@@ -50,13 +50,14 @@ public class WhisperTargetList {
         }
         if (freeId != -1) {
             mActiveTargets[freeId - TARGET_MIN] = target;
+            mTakenIds |= (1 << freeId);
         }
 
         return freeId;
     }
 
     public WhisperTarget get(byte id) {
-        if ((mTakenIds & (1 << id)) > 0)
+        if ((mTakenIds & (1 << id)) == 0)
             return null;
         return mActiveTargets[id - TARGET_MIN];
     }
