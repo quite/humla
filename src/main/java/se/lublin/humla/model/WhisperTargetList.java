@@ -57,21 +57,25 @@ public class WhisperTargetList {
     }
 
     public WhisperTarget get(byte id) {
+        if (id < TARGET_MIN || id > TARGET_MAX)
+            throw new IndexOutOfBoundsException();
+
         if ((mTakenIds & (1 << id)) == 0)
             return null;
+
         return mActiveTargets[id - TARGET_MIN];
     }
 
     public void free(byte slot) {
         if (slot < TARGET_MIN || slot > TARGET_MAX)
-            throw new IllegalArgumentException();
+            throw new IndexOutOfBoundsException();
 
         mTakenIds &= ~(1 << slot);
     }
 
     public int spaceRemaining() {
         int counter = 0;
-        for (byte i = TARGET_MIN; i < TARGET_MAX; i++) {
+        for (byte i = TARGET_MIN; i <= TARGET_MAX; i++) {
             if ((mTakenIds & (1 << i)) == 0) {
                 counter++;
             }
@@ -80,7 +84,6 @@ public class WhisperTargetList {
     }
 
     public void clear() {
-        // Slots 0 and 31 are non-whisper targets.
-        mTakenIds = 1 | (1 << 31);
+        mTakenIds = 0;
     }
 }
