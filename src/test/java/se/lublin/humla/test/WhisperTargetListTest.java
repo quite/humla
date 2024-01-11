@@ -33,16 +33,21 @@ public class WhisperTargetListTest extends TestCase {
     public void testWhisperTargetAddRemove() {
         // Initialisation.
         Channel root = new Channel(0, false);
+        WhisperTarget expected, actual;
         WhisperTarget[] targets = new WhisperTarget[30];
         for (int i = 0; i < 30; i++) {
             targets[i] = new WhisperTargetChannel(root, false, false, null);
         }
         WhisperTargetList list = new WhisperTargetList();
 
+        // Empty list
+        actual = list.get((byte) 1);
+        assertEquals("get on empty list", null, actual);
+
         // There should be space for 30 whisper targets.
         for (int i = 0; i < 30; i++) {
             int space = list.spaceRemaining();
-            assertEquals(30-i, space);
+            assertEquals("spaceRemaining should be 30-i", 30-i, space);
             byte id = list.append(targets[i]);
             assertEquals("id should be equal to i + 1", i+1, id);
             WhisperTarget target = list.get(id);
@@ -51,18 +56,20 @@ public class WhisperTargetListTest extends TestCase {
 
         // But not 31.
         int space = list.spaceRemaining();
-        assertEquals(0, space);
+        assertEquals("spaceRemaining of full list", 0, space);
         byte id = list.append(targets[0]);
         assertEquals("id should be -1 when no space left", -1, id);
 
         // Freeing one target
         list.free((byte) 5);
+        actual = list.get((byte) 5);
+        assertEquals("get after free in same slot", null, actual);
         space = list.spaceRemaining();
         assertEquals("space should be 1 after freeing one slot", 1, space);
-        WhisperTarget expected = new WhisperTargetChannel(root, false, false, null);
+        expected = new WhisperTargetChannel(root, false, false, null);
         id = list.append(expected);
         assertEquals("append should have filled slot 5", 5, id);
-        WhisperTarget actual = list.get((byte) 5);
+        actual = list.get((byte) 5);
         assertEquals("slot 5 should contain our target", expected, actual);
 
         list.clear();
