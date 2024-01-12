@@ -23,7 +23,7 @@ buildscript {
         google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.0.4'
+        classpath 'com.android.tools.build:gradle:8.1.0'
     }
 }
 apply plugin: 'com.android.library'
@@ -58,12 +58,19 @@ allprojects {
 }
 
 android {
+    namespace 'se.lublin.humla'
+
     compileSdkVersion 29
     //ndkVersion '23.1.7779620'
     //buildToolsVersion '29.0.3'
 
     sourceSets.main.jniLibs.srcDir 'src/main/libs/'
     sourceSets.main.jni.srcDirs = [] // Disable NDK build support until it supports multiple modules.
+
+    // Need to enable this when defaultConfig below contains some custom BuildConfig
+    buildFeatures {
+        buildConfig true
+    }
 
     defaultConfig {
         testApplicationId "se.lublin.humla.test"
