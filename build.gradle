@@ -23,7 +23,7 @@ buildscript {
         google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:8.1.0'
+        classpath 'com.android.tools.build:gradle:8.1.4'
     }
 }
 apply plugin: 'com.android.library'
@@ -98,15 +98,12 @@ android {
         compileTask -> compileTask.dependsOn ndkBuild
     }
 
-    lintOptions {
-        quiet false
-
-        // spongycastle-related
-        disable "InvalidPackage"
-
-        disable "MissingTranslation"
-
-        ignoreWarnings false
+    lint {
         abortOnError true
+        // InvalidPackage is spongycastle-related
+        disable 'InvalidPackage', 'MissingTranslation'
+        explainIssues true
+        ignoreWarnings false
+        quiet false
     }
 }
