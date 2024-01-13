@@ -61,7 +61,7 @@ android {
     namespace 'se.lublin.humla'
 
     compileSdkVersion 29
-    //ndkVersion '23.1.7779620'
+    ndkVersion '25.1.8937393'
     //buildToolsVersion '29.0.3'
 
     sourceSets.main.jniLibs.srcDir 'src/main/libs/'
