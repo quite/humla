@@ -23,7 +23,7 @@ buildscript {
         google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.0.4'
+        classpath 'com.android.tools.build:gradle:8.1.4'
     }
 }
 apply plugin: 'com.android.library'
@@ -58,18 +58,25 @@ allprojects {
 }
 
 android {
-    compileSdkVersion 29
-    //ndkVersion '23.1.7779620'
+    namespace 'se.lublin.humla'
+
+    compileSdk 34
+    ndkVersion '25.1.8937393'
     //buildToolsVersion '29.0.3'
 
     sourceSets.main.jniLibs.srcDir 'src/main/libs/'
     sourceSets.main.jni.srcDirs = [] // Disable NDK build support until it supports multiple modules.
 
+    // Need to enable this when defaultConfig below contains some custom BuildConfig
+    buildFeatures {
+        buildConfig true
+    }
+
     defaultConfig {
         testApplicationId "se.lublin.humla.test"
         testInstrumentationRunner "android.test.InstrumentationTestRunner"
         minSdkVersion 14
-        targetSdkVersion 29
+        targetSdk 34
 
 //        ndk {
 //            abiFilters "armeabi", "armeabi-v7a", "x86"
@@ -91,15 +98,12 @@ android {
         compileTask -> compileTask.dependsOn ndkBuild
     }
 
-    lintOptions {
-        quiet false
-
-        // spongycastle-related
-        disable "InvalidPackage"
-
-        disable "MissingTranslation"
-
-        ignoreWarnings false
+    lint {
         abortOnError true
+        // InvalidPackage is spongycastle-related
+        disable 'InvalidPackage', 'MissingTranslation'
+        explainIssues true
+        ignoreWarnings false
+        quiet false
     }
 }
