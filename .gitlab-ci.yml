@@ -1,0 +1,37 @@
+image: docker.io/quite/android-sdk-ndk:7
+
+variables:
+  # get those pesky submodules
+  GIT_SUBMODULE_STRATEGY: recursive
+
+before_script:
+  - export GRADLE_USER_HOME=$(pwd)/.gradle
+  - chmod +x ./gradlew
+
+cache:
+  key: ${CI_PROJECT_ID}
+  paths:
+  - .gradle/
+
+stages:
+  - build
+
+# lintDebug:
+#   stage: build
+#   script:
+#     - ./gradlew -Pci --console=plain -PbuildDir=lint :app:lintDebug
+
+testDebug:
+  stage: build
+  script:
+    # ANDROID_SDK_ROOT is already set in the android-sdk-ndk container image.
+    - pushd libs/humla-spongycastle
+    - ../../gradlew jar
+    - popd
+    - ./gradlew -Pci --console=plain testDebug
+
+# coverageTests:
+#   stage: test
+#   script:
+#     - ./gradlew -Pci --console=plain jacocoTestReport coveralls
+
