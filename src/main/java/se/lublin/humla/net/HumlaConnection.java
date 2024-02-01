@@ -578,10 +578,11 @@ public class HumlaConnection implements HumlaTCP.TCPConnectionListener, HumlaUDP
                     "available data length " + data.length + "!");
         }
         if (mServerVersion == 0x10202) applyLegacyCodecWorkaround(data);
-        if (!force && (shouldForceTCP() || !mUsingUDP))
+        if (!force && (shouldForceTCP() || !mUsingUDP) && mTCP != null) {
             mTCP.sendMessage(data, length, HumlaTCPMessageType.UDPTunnel);
-        else if (!shouldForceTCP())
+        } else if (!shouldForceTCP() && mUDP != null) {
             mUDP.sendMessage(data, length);
+        }
     }
 
     /**
@@ -680,9 +681,11 @@ public class HumlaConnection implements HumlaTCP.TCPConnectionListener, HumlaUDP
 
     @Override
     public void resyncCryptState() {
-        // Send an empty cryptstate message to resync.
-        Mumble.CryptSetup.Builder csb = Mumble.CryptSetup.newBuilder();
-        mTCP.sendMessage(csb.build(), HumlaTCPMessageType.CryptSetup);
+        if (mTCP != null) {
+            // Send an empty cryptstate message to resync.
+            Mumble.CryptSetup.Builder csb = Mumble.CryptSetup.newBuilder();
+            mTCP.sendMessage(csb.build(), HumlaTCPMessageType.CryptSetup);
+        }
     }
 
     /**

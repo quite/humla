@@ -207,7 +207,9 @@ public class HumlaUDP implements Runnable {
     public void disconnect() {
         mConnected = false;
         // Closing a socket will trigger an IOException on the consumer thread.
-        mUDPSocket.close();
+        if (mUDPSocket != null) {
+            mUDPSocket.close();
+        }
     }
 
     /**
