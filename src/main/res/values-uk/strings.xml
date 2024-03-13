@@ -1,2 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="chat_notify_muted_deafened">Звук та мікрофон вимкнені.</string>
+    <string name="chat_notify_muted">Мікрофон вимкнено.</string>
+    <string name="chat_notify_unmuted">Мікрофон увімкнено.</string>
+    <string name="chat_notify_now_muted">%s вимкнув мікрофон.</string>
+    <string name="chat_notify_now_unmuted">%s увімкнув мікрофон.</string>
+    <string name="chat_notify_connected">%s підключився.</string>
+    <string name="chat_notify_disconnected">%s відключився.</string>
+    <string name="audio_max_bandwidth">Максимальна пропускна здатність серверної мережі лише %1$d кбіт/с. Налаштовую якість звуку на %2$d кбіт/с (%3$d мс).</string>
+    <string name="chat_notify_now_muted_deafened">%s вимкнув звук та мікрофон.</string>
+</resources>
