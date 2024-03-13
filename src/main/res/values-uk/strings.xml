@@ -9,4 +9,27 @@
     <string name="chat_notify_disconnected">%s відключився.</string>
     <string name="audio_max_bandwidth">Максимальна пропускна здатність серверної мережі лише %1$d кбіт/с. Налаштовую якість звуку на %2$d кбіт/с (%3$d мс).</string>
     <string name="chat_notify_now_muted_deafened">%s вимкнув звук та мікрофон.</string>
+    <string name="chat_notify_user_joined_channel">%s увійшов у канал.</string>
+    <string name="chat_notify_user_joined_channel_by">%1$s переміщений %3$s із %2$s.</string>
+    <string name="chat_notify_user_left_channel">%1$s переміщений в %2$s.</string>
+    <string name="chat_notify_user_left_channel_by">%1$s переміщений %3$s в %2$s.</string>
+    <string name="deny_reason_channel_name">Відмовлено: Неправильна назва каналу.</string>
+    <string name="deny_reason_text_too_long">Відмовлено: Текстове повідомлення занадто довге.</string>
+    <string name="chat_notify_kick_ban_self">Вас вигнав і заблокував на сервері %1$s:%2$s.</string>
+    <string name="chat_notify_kick_self">Вас вигнав із сервера %1$s: %2$s.</string>
+    <string name="chat_notify_kick_ban">%3$s вигнаний і заблокований на сервері %1$s: %2$s.</string>
+    <string name="chat_notify_kick">%3$s вигнаний із сервера %1$s: %2$s.</string>
+    <string name="chat_notify_self_recording_started">Початок запису</string>
+    <string name="chat_notify_self_recording_stopped">Запис зупинено</string>
+    <string name="chat_notify_user_recording_started">%s почав запис.</string>
+    <string name="chat_notify_user_recording_stopped">%s зупинив запис.</string>
+    <string name="deny_reason_no_operation_temp">Відмовлено: Операція не дозволена в тимчасовому каналі.</string>
+    <string name="deny_reason_no_certificate">Вам потрібен сертифікат для виконання цієї операції.</string>
+    <string name="deny_reason_invalid_username">Неправильне ім\'я користувача.</string>
+    <string name="deny_reason_channel_full">Канал заповнений.</string>
+    <string name="perm_denied">Відмовлено в доступі.</string>
+    <string name="deny_reason_channel_nesting">Досягнуто ліміту вкладеності каналу.</string>
+    <string name="deny_reason_other">Причина: %s</string>
+    <string name="server">Сервер</string>
+    <string name="the_server">сервер</string>
 </resources>
