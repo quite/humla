@@ -1,4 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="chat_notify_muted">Tystad.</string>
+    <string name="deny_reason_text_too_long">Nekad: Textmeddelande för långt.</string>
+    <string name="audio_max_bandwidth">Maximal bandbredd för servernätet är bara %1$d kbit/s. Justerar ljudkvaliten till %2$d kbit/s (%3$d ms).</string>
+    <string name="chat_notify_now_muted">%s är nu tystad.</string>
+    <string name="chat_notify_self_recording_stopped">Inspelning stoppad</string>
+    <string name="chat_notify_user_recording_stopped">%s slutade spela in.</string>
+    <string name="deny_reason_channel_full">Kanalen är full.</string>
+    <string name="perm_denied">Åtkomst nekad.</string>
+    <string name="chat_notify_muted_deafened">Tystad och dövad.</string>
+    <string name="chat_notify_unmuted">Ej tystad.</string>
+    <string name="chat_notify_now_muted_deafened">%s är nu tystad och dövad.</string>
+    <string name="chat_notify_now_unmuted">%s är inte längre tystad.</string>
+    <string name="chat_notify_connected">%s anslöt.</string>
+    <string name="chat_notify_disconnected">%s kopplade ner.</string>
+    <string name="chat_notify_kick_ban_self">Du sparkades ut och bannades från servern av %1$s: %2$s.</string>
+    <string name="chat_notify_kick_self">Du sparkades ut från servern av %1$s: %2$s.</string>
+    <string name="chat_notify_kick_ban">%3$s sparkades ut och bannades från servern av %1$s: %2$s.</string>
+    <string name="chat_notify_kick">%3$s sparkades ut från servern av %1$s: %2$s.</string>
+    <string name="chat_notify_user_recording_started">%s började spela in.</string>
+    <string name="chat_notify_user_joined_channel">%s kom in i kanalen.</string>
+    <string name="chat_notify_user_left_channel">%1$s flyttade till %2$s.</string>
+    <string name="chat_notify_user_left_channel_by">%1$s flyttades till %2$s av %3$s.</string>
+    <string name="chat_notify_user_joined_channel_by">%1$s flyttades hit från %2$s av %3$s.</string>
+    <string name="deny_reason_channel_name">Nekad: Ogiltigt kanalnamn.</string>
+    <string name="deny_reason_no_operation_temp">Nekad: Åtgärden tillåts inte i temporär kanal.</string>
+    <string name="deny_reason_no_certificate">Du behöver ett certifikat för att utföra den här åtgärden.</string>
+    <string name="deny_reason_invalid_username">Ogiltigt användarnamn.</string>
+    <string name="deny_reason_channel_nesting">Gränsen för antalet underkanaler har nåtts.</string>
+    <string name="deny_reason_other">Anledning: %s</string>
+    <string name="server">Server</string>
+    <string name="the_server">servern</string>
+    <string name="chat_notify_self_recording_started">Inspelning startad</string>
 </resources>
