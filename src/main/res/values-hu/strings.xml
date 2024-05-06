@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="perm_denied">Engedély megtagadva.</string>
+    <string name="chat_notify_muted_deafened">Némítva és süketítve.</string>
+    <string name="chat_notify_muted">Némítva.</string>
+    <string name="chat_notify_unmuted">Némítás visszavonva.</string>
+    <string name="chat_notify_kick_ban_self">%1$s kidobta és kitiltotta önt a szerverről: %2$s.</string>
+    <string name="chat_notify_kick_ban">%1$s kidobta és kitiltotta a szerverről %3$s felhasználót: %2$s.</string>
+    <string name="chat_notify_self_recording_started">Rögzítés elkezdődött</string>
+    <string name="chat_notify_self_recording_stopped">Felvétel leállítva</string>
+    <string name="chat_notify_user_recording_started">%s kezdte a felvételt.</string>
+    <string name="chat_notify_user_recording_stopped">%s leállította a felvételt.</string>
+    <string name="chat_notify_user_joined_channel">%s belépett a csatornába.</string>
 </resources>
