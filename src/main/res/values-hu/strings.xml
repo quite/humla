@@ -4,11 +4,19 @@
     <string name="chat_notify_muted_deafened">Némítva és süketítve.</string>
     <string name="chat_notify_muted">Némítva.</string>
     <string name="chat_notify_unmuted">Némítás visszavonva.</string>
-    <string name="chat_notify_kick_ban_self">%1$s kidobta és kitiltotta önt a szerverről: %2$s.</string>
+    <string name="chat_notify_kick_ban_self">%1$s kidobott és kitiltott a szerverről: %2$s.</string>
     <string name="chat_notify_kick_ban">%1$s kidobta és kitiltotta a szerverről %3$s felhasználót: %2$s.</string>
     <string name="chat_notify_self_recording_started">Rögzítés elkezdődött</string>
-    <string name="chat_notify_self_recording_stopped">Felvétel leállítva</string>
-    <string name="chat_notify_user_recording_started">%s kezdte a felvételt.</string>
+    <string name="chat_notify_self_recording_stopped">Rögzítés leállítva</string>
+    <string name="chat_notify_user_recording_started">%s elindította a felvételt.</string>
     <string name="chat_notify_user_recording_stopped">%s leállította a felvételt.</string>
     <string name="chat_notify_user_joined_channel">%s belépett a csatornába.</string>
+    <string name="audio_max_bandwidth">A maximális sávszélesség a szerveren %1$d kbit/s. A hangminőséget ennek megfelelően állítsd be erre: %2$d kbit/s (%3$d ms).</string>
+    <string name="chat_notify_now_muted_deafened">%s most némítva és süketítve.</string>
+    <string name="chat_notify_now_muted">%s némítva.</string>
+    <string name="chat_notify_now_unmuted">%s némítás feloldva.</string>
+    <string name="chat_notify_connected">%s kapcsolódott.</string>
+    <string name="chat_notify_disconnected">%s szétkapcsolt.</string>
+    <string name="chat_notify_kick_self">Ki lettél rúgva a szerverről %1$s: %2$s.</string>
+    <string name="chat_notify_user_left_channel">%1$s átmozgatva ide %2$s.</string>
 </resources>
