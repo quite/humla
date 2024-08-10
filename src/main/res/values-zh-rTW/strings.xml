@@ -21,4 +21,15 @@
     <string name="chat_notify_muted">不發聲。</string>
     <string name="chat_notify_muted_deafened">停止語音收發。</string>
     <string name="audio_max_bandwidth">伺服器的最大網路頻寬只有 %1$d kbit/s。調整語音品質為 %2$d kbit/s (%3$d ms)。</string>
+    <string name="chat_notify_kick_ban_self">你被 %1$s 從伺服器踢出並封鎖：%2$s。</string>
+    <string name="deny_reason_other">原因：%s</string>
+    <string name="chat_notify_kick_self">你被 %1$s 從伺服器踢出：%2$s。</string>
+    <string name="chat_notify_kick_ban">%3$s 被 %1$s 從伺服器踢出並封鎖：%2$s。</string>
+    <string name="chat_notify_kick">%3$s 被 %1$s 從伺服器踢出：%2$s。</string>
+    <string name="deny_reason_invalid_username">無效的使用者名稱。</string>
+    <string name="deny_reason_channel_full">頻道已滿。</string>
+    <string name="deny_reason_channel_nesting">已達到頻道嵌套限制。</string>
+    <string name="perm_denied">權限被拒絕。</string>
+    <string name="server">伺服器</string>
+    <string name="the_server">伺服器</string>
 </resources>
