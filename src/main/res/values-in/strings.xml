@@ -1,2 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="deny_reason_text_too_long">Ditolak: pesan teks terlalu panjang.</string>
+    <string name="deny_reason_no_operation_temp">Ditolak: Operasi tidak diizinkan di channel sementara.</string>
+    <string name="deny_reason_channel_nesting">Batas nesting channel sudah tercapai.</string>
+    <string name="chat_notify_muted_deafened">Ter-mute dan ter-deafen.</string>
+    <string name="chat_notify_now_muted">%s telah ter-mute.</string>
+    <string name="chat_notify_now_muted_deafened">%s telah ter-mute dan ter-deafen.</string>
+    <string name="chat_notify_disconnected">%s terputus.</string>
+    <string name="chat_notify_kick_ban_self">Anda telah di-kick dan di-ban dari server oleh %1$s: %2$s.</string>
+    <string name="chat_notify_kick_ban">%3$s telah di-kick dan di-ban dari server oleh %1$s: %2$s.</string>
+    <string name="chat_notify_kick">%3$s telah di-kick dari server oleh %1$s: %2$s.</string>
+    <string name="chat_notify_self_recording_started">Rekaman dimulai</string>
+    <string name="chat_notify_user_recording_started">%s memulai rekaman.</string>
+    <string name="chat_notify_user_recording_stopped">%s menghentikan rekaman.</string>
+    <string name="chat_notify_user_joined_channel">%s masuk ke channel.</string>
+    <string name="chat_notify_user_joined_channel_by">%1$s telah dipindahkan kesini dari %2$s oleh %3$s.</string>
+    <string name="chat_notify_user_left_channel_by">%1$s telah dipindahkan ke %2$s oleh %3$s.</string>
+    <string name="deny_reason_channel_name">Ditolak: nama channel tidak valid.</string>
+    <string name="deny_reason_no_certificate">Anda memerlukan sertifikat keamanan untuk dapat melakukan operasi ini.</string>
+    <string name="deny_reason_invalid_username">Username tidak valid.</string>
+    <string name="deny_reason_channel_full">Channel penuh.</string>
+    <string name="deny_reason_other">Alasan: %s</string>
+    <string name="server">Server</string>
+    <string name="perm_denied">Izin ditolak.</string>
+    <string name="chat_notify_now_unmuted">%s telah ter-unmute.</string>
+    <string name="audio_max_bandwidth">Bandwidth maksimum jaringan server hanya %1$d kbit/s. Mengubah kualitas audio menjadi %2$d kbit/s (%3$d ms).</string>
+    <string name="the_server">server</string>
+    <string name="chat_notify_muted">Ter-mute.</string>
+    <string name="chat_notify_unmuted">Ter-unmute.</string>
+    <string name="chat_notify_connected">%s tersambung.</string>
+    <string name="chat_notify_kick_self">Anda telah di-kick dari server oleh %1$s: %2$s.</string>
+    <string name="chat_notify_self_recording_stopped">Rekaman dihentikan</string>
+    <string name="chat_notify_user_left_channel">%1$s telah dipindah ke %2$s.</string>
+</resources>
