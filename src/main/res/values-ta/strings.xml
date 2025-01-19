@@ -1,2 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="chat_notify_user_recording_stopped">%s பதிவு செய்வதை நிறுத்தின.</string>
+    <string name="chat_notify_user_joined_channel">%s சேனலில் நுழைந்தன.</string>
+    <string name="chat_notify_user_left_channel">%1$s %2$s க்கு நகர்ந்தன.</string>
+    <string name="chat_notify_user_joined_channel_by">%1$s %2$s இலிருந்து %3$s ஆல் நகர்ந்தன.</string>
+    <string name="chat_notify_user_left_channel_by">%1$s %2$s க்கு %3$s க்கு நகர்ந்தன.</string>
+    <string name="deny_reason_channel_name">மறுக்கப்பட்டது: தவறான சேனல் பெயர்.</string>
+    <string name="audio_max_bandwidth">அதிகபட்ச சேவையக பிணையம் அலைவரிசை %1$d kbit/s மட்டுமே. ஆடியோ தரத்தை %2$d kbit/s ( %3$d MS) க்கு சரிசெய்தல்.</string>
+    <string name="chat_notify_muted_deafened">முடக்கிய மற்றும் காது கேளாதது.</string>
+    <string name="chat_notify_muted">முடக்கிய.</string>
+    <string name="chat_notify_unmuted">அன்ச்டட்.</string>
+    <string name="chat_notify_now_muted_deafened">%s இப்போது முடக்கப்பட்டு காது கேளாதவை.</string>
+    <string name="chat_notify_now_muted">%s இப்போது முடக்கப்பட்டுள்ளது.</string>
+    <string name="chat_notify_now_unmuted">%s இப்போது அசைக்காது.</string>
+    <string name="chat_notify_connected">%s இணைக்கப்பட்டுள்ளன.</string>
+    <string name="chat_notify_disconnected">%துண்டிக்கப்பட்டது.</string>
+    <string name="chat_notify_kick_ban_self">சேவையகத்திலிருந்து %1$s: %2$s ஆல் நீங்கள் உதைக்கப்பட்டு தடை செய்யப்பட்டீர்கள்.</string>
+    <string name="chat_notify_kick_self">நீங்கள் சேவையகத்திலிருந்து %1$s: %2$s ஆல் உதைக்கப்பட்டீர்கள்.</string>
+    <string name="chat_notify_kick_ban">%3$s உதைக்கப்பட்டு சேவையகத்திலிருந்து %1$s: %2$s ஆல் தடை செய்யப்பட்டது.</string>
+    <string name="chat_notify_kick">%3$s சேவையகத்திலிருந்து %1$s: %2$s ஆல் உதைக்கப்பட்டது.</string>
+    <string name="chat_notify_self_recording_started">பதிவு தொடங்கியது</string>
+    <string name="chat_notify_self_recording_stopped">பதிவு நிறுத்தப்பட்டது</string>
+    <string name="chat_notify_user_recording_started">%s பதிவு செய்யத் தொடங்கின.</string>
+    <string name="deny_reason_text_too_long">மறுக்கப்பட்டது: உரை செய்தி மிக நீளமானது.</string>
+    <string name="deny_reason_no_operation_temp">மறுக்கப்பட்டது: தற்காலிக சேனலில் செயல்பாடு அனுமதிக்கப்படவில்லை.</string>
+    <string name="deny_reason_no_certificate">இந்த செயல்பாட்டைச் செய்ய உங்களுக்கு சான்றிதழ் தேவை.</string>
+    <string name="deny_reason_invalid_username">தவறான பயனர்பெயர்.</string>
+    <string name="deny_reason_channel_full">சேனல் நிரம்பியுள்ளது.</string>
+    <string name="deny_reason_channel_nesting">சேனல் கூடு வரம்பை எட்டியது.</string>
+    <string name="deny_reason_other">காரணம்: %s</string>
+    <string name="perm_denied">இசைவு மறுக்கப்பட்டது.</string>
+    <string name="server">சேவையகம்</string>
+    <string name="the_server">சேவையகம்</string>
+</resources>
