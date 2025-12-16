@@ -35,6 +35,7 @@ LOCAL_SRC_FILES     := cb_search.c      exc_10_32_table.c   exc_8_128_table.c   
 LOCAL_CFLAGS           := -D__EMX__ -DUSE_KISS_FFT -DFIXED_POINT -DEXPORT=''
 LOCAL_CPP_FEATURES := exceptions
 LOCAL_LDLIBS := -llog
+LOCAL_LDFLAGS += "-Wl,-z,max-page-size=16384"
 include $(BUILD_SHARED_LIBRARY)
 
 include $(CLEAR_VARS)
@@ -47,6 +48,7 @@ LOCAL_C_INCLUDES    := $(ROOT)/celt-0.11.0-src/libcelt/
 LOCAL_CFLAGS        := -I$(ROOT)/celt-0.11.0-build -DHAVE_CONFIG_H -fvisibility=hidden
 LOCAL_CPP_FEATURES := exceptions
 LOCAL_LDLIBS := -llog
+LOCAL_LDFLAGS += "-Wl,-z,max-page-size=16384"
 include $(BUILD_SHARED_LIBRARY)
 
 include $(CLEAR_VARS)
@@ -59,6 +61,7 @@ LOCAL_C_INCLUDES    := $(ROOT)/celt-0.7.0-src/libcelt/
 LOCAL_CFLAGS        := -I$(ROOT)/celt-0.7.0-build -DHAVE_CONFIG_H -fvisibility=hidden
 LOCAL_CPP_FEATURES := exceptions
 LOCAL_LDLIBS := -llog
+LOCAL_LDFLAGS += "-Wl,-z,max-page-size=16384"
 include $(BUILD_SHARED_LIBRARY)
 
 include $(CLEAR_VARS)
@@ -85,4 +88,5 @@ LOCAL_SRC_FILES     := $(CELT_SOURCES) $(SILK_SOURCES) $(OPUS_SOURCES) $(ROOT)/j
 LOCAL_CFLAGS        := -DOPUS_BUILD -DVAR_ARRAYS -DFIXED_POINT
 LOCAL_CPP_FEATURES  := exceptions
 LOCAL_LDLIBS        := -llog
+LOCAL_LDFLAGS += "-Wl,-z,max-page-size=16384"
 include $(BUILD_SHARED_LIBRARY)
