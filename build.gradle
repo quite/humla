@@ -58,10 +58,10 @@ allprojects {
 }
 
 android {
-    namespace 'se.lublin.humla'
+    namespace = 'se.lublin.humla'
 
     compileSdk = 36
-    ndkVersion '25.1.8937393'
+    ndkVersion = '25.1.8937393'
     //buildToolsVersion '29.0.3'
 
     sourceSets.main.jniLibs.srcDir 'src/main/libs/'
@@ -69,7 +69,7 @@ android {
 
     // Need to enable this when defaultConfig below contains some custom BuildConfig
     buildFeatures {
-        buildConfig true
+        buildConfig = true
     }
 
     defaultConfig {
@@ -99,11 +99,11 @@ android {
     }
 
     lint {
-        abortOnError true
+        abortOnError = true
         // InvalidPackage is spongycastle-related
         disable 'InvalidPackage', 'MissingTranslation'
-        explainIssues true
-        ignoreWarnings false
-        quiet false
+        explainIssues = true
+        ignoreWarnings = false
+        quiet = false
     }
 }
