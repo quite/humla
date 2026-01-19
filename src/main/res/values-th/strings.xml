@@ -4,7 +4,7 @@
     <string name="deny_reason_channel_full">แชนเนลเต็ม.</string>
     <string name="deny_reason_invalid_username">ชื่อผู้ใช้ไม่ถูกต้อง.</string>
     <string name="deny_reason_no_certificate">คุณต้องมีใบรับรองเพื่อทำการ.</string>
-    <string name="deny_reason_no_operation_temp">ปฏิเสธ: การดำเนินการไม่ได้รับอนุญาตในช่องทางชั่วคราว.</string>
+    <string name="deny_reason_no_operation_temp">ปฏิเสธ: ไม่มีสิทธิ์ในแชนเนลชั่วคราว</string>
     <string name="the_server">เซิฟเวอร์</string>
     <string name="deny_reason_other">เพราะ: %s</string>
     <string name="deny_reason_text_too_long">ปฏิเสธ: ข้อความยาวเกินไป</string>
