@@ -160,11 +160,15 @@ public class HumlaService extends Service implements IHumlaService, IHumlaSessio
     /**
      * Listen for connectivity changes in the reconnection state, and reconnect accordingly.
      */
-    private BroadcastReceiver mConnectivityReceiver = new BroadcastReceiver() {
+    private final BroadcastReceiver mConnectivityReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
             if (!mReconnecting) {
-                unregisterReceiver(this);
+                try {
+                    unregisterReceiver(this);
+                } catch (IllegalArgumentException e) {
+                    Log.e(TAG, "Error unregistering connectivity receiver: " + e.getMessage());
+                }
                 return;
             }
 
@@ -177,7 +181,7 @@ public class HumlaService extends Service implements IHumlaService, IHumlaSessio
         }
     };
 
-    private AudioHandler.AudioEncodeListener mAudioInputListener =
+    private final AudioHandler.AudioEncodeListener mAudioInputListener =
             new AudioHandler.AudioEncodeListener() {
                 @Override
                 public void onAudioEncoded(byte[] data, int length) {
@@ -278,8 +282,12 @@ public class HumlaService extends Service implements IHumlaService, IHumlaSessio
 
     @Override
     public void onDestroy() {
-        unregisterReceiver(mBluetoothReceiver);
         super.onDestroy();
+        try {
+            unregisterReceiver(mBluetoothReceiver);
+        } catch (IllegalArgumentException e) {
+            Log.e(TAG, "Error unregistering bluetooth receiver: " + e.getMessage());
+        }
     }
 
     public IBinder onBind(Intent intent) {
@@ -473,14 +481,14 @@ public class HumlaService extends Service implements IHumlaService, IHumlaSessio
                     registerReceiver(mConnectivityReceiver,
                             new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION));
                 } catch (IllegalArgumentException e) {
-                    e.printStackTrace();
+                    Log.e(TAG, "Error registering connectivity receiver: " + e.getMessage());
                 }
             }
         } else {
             try {
                 unregisterReceiver(mConnectivityReceiver);
             } catch (IllegalArgumentException e) {
-                e.printStackTrace();
+                Log.e(TAG, "Error unregistering connectivity receiver: " + e.getMessage());
             }
         }
     }
