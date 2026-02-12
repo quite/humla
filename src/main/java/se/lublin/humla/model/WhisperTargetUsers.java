@@ -17,19 +17,64 @@
 
 package se.lublin.humla.model;
 
+import java.util.List;
 import se.lublin.humla.protobuf.Mumble;
 
 /**
  * Created by andrew on 28/04/16.
+ *
+ * Represents a WhisperTarget that targets a specific list of user session IDs.
+ * <p>
+ * This allows whispering directly to selected users rather than to a channel or group.
+ * It is useful in cases where individual control over recipients is required.
+ * </p>
+ *
+ * Example usage:
+ * <pre>
+ *     List&lt;Integer&gt; sessions = Arrays.asList(12, 15, 23);
+ *     WhisperTarget target = new WhisperTargetUsers(sessions);
+ *     VoiceTarget.Target protobufTarget = target.createTarget();
+ * </pre>
+ *
+ * @author Alex
  */
 public class WhisperTargetUsers implements WhisperTarget {
-    @Override
-    public Mumble.VoiceTarget.Target createTarget() {
-        throw new UnsupportedOperationException(); // TODO
+
+    /**
+     * List of Mumble session IDs for target users.
+     */
+    private final List<Integer> sessionIds;
+
+    /**
+     * Constructs a whisper target with the given list of session IDs.
+     *
+     * @param sessionIds the list of session IDs to whisper to
+     */
+    public WhisperTargetUsers(List<Integer> sessionIds) {
+        this.sessionIds = sessionIds;
     }
 
+    /**
+     * Creates the protobuf voice target used by the server to route audio to the specified users.
+     *
+     * @return a protobuf {@link Mumble.VoiceTarget.Target} object configured with the session IDs
+     */
+    @Override
+    public Mumble.VoiceTarget.Target createTarget() {
+        Mumble.VoiceTarget.Target.Builder builder = Mumble.VoiceTarget.Target.newBuilder();
+        for (int sessionId : sessionIds) {
+            builder.addSession(sessionId);
+        }
+        return builder.build();
+    }
+
+    /**
+     * Returns a string representation for this whisper target, typically for UI display.
+     *
+     * @return a string describing the target (e.g., "Users: [12, 15, 23]")
+     */
     @Override
     public String getName() {
-        throw new UnsupportedOperationException(); // TODO
+        return "Users: " + sessionIds.toString();
     }
 }
