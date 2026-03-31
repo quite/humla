@@ -8,7 +8,7 @@
     <string name="chat_notify_now_muted">%s jest teraz wyciszony.</string>
     <string name="chat_notify_now_unmuted">%s nie jest teraz wyciszony.</string>
     <string name="chat_notify_connected">%s podłączony.</string>
-    <string name="chat_notify_disconnected">%s odłączony.</string>
+    <string name="chat_notify_disconnected">%s rozłączony.</string>
     <string name="chat_notify_kick_ban_self">Zostałeś wyrzucony i zbanowany z serwera przez %1$s: %2$s.</string>
     <string name="chat_notify_kick_self">Zostałeś wyrzucony z serwera przez %1$s: %2$s.</string>
     <string name="chat_notify_kick_ban">%3$s został wyrzucony i zbanowany z serwera przez %1$s: %2$s.</string>
