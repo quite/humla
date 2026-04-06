@@ -19,6 +19,7 @@ package se.lublin.humla.audio;
 
 import android.media.AudioFormat;
 import android.media.AudioRecord;
+import android.media.audiofx.AcousticEchoCanceler;
 import android.util.Log;
 
 import se.lublin.humla.exception.AudioInitializationException;
@@ -36,14 +37,18 @@ public class AudioInput implements Runnable {
     // AudioRecord state
     private AudioInputListener mListener;
     private AudioRecord mAudioRecord;
+    private final String mEchoCancellationMethod;
+    private AcousticEchoCanceler aec;
     private final int mFrameSize;
 
     private Thread mRecordThread;
     private boolean mRecording;
 
-    public AudioInput(AudioInputListener listener, int audioSource, int targetSampleRate)
+    public AudioInput(AudioInputListener listener, int audioSource, int targetSampleRate,
+                      String echoCancellationMethod)
             throws NativeAudioException, AudioInitializationException {
         mListener = listener;
+        this.mEchoCancellationMethod = echoCancellationMethod;
 
         // Attempt to construct an AudioRecord with the target sample rate first.
         // If it fails, keep producing AudioRecord instances until we find one that initializes
@@ -53,6 +58,9 @@ public class AudioInput implements Runnable {
             int sampleRate = i == 0 ? targetSampleRate : SAMPLE_RATES[i - 1];
             try {
                 mAudioRecord = setupAudioRecord(sampleRate, audioSource);
+                if (enableEchoCancellation()) {
+                    Log.w(TAG, "echo cancellation enabled: " + mEchoCancellationMethod);
+                }
                 break;
             } catch (AudioInitializationException e) {
                 // Continue iteration, probing for a supported sample rate.
@@ -90,6 +98,30 @@ public class AudioInput implements Runnable {
         return audioRecord;
     }
 
+    private boolean enableEchoCancellation() {
+        if (mEchoCancellationMethod.equals("system") /* android.media.audiofx.AcousticEchoCanceler */) {
+            if (!AcousticEchoCanceler.isAvailable()) {
+                Log.e(TAG, "could not enable system AEC: not available");
+                return false;
+            }
+            if (aec != null) {
+                aec.release();
+            }
+            aec = AcousticEchoCanceler.create(mAudioRecord.getAudioSessionId());
+            if (aec == null) {
+                Log.e(TAG, "could not enable system AEC: create failed");
+                return false;
+            }
+            aec.setEnabled(true);
+            return true;
+        } else if (mEchoCancellationMethod.equals("none")) {
+            Log.w(TAG, "echocancellation not enabled by user");
+        } else {
+            Log.w(TAG, "ignoring unknown echocancellation method: " + mEchoCancellationMethod);
+        }
+        return false;
+    }
+
     /**
      * Starts the recording thread.
      * Not thread-safe.
@@ -124,6 +156,10 @@ public class AudioInput implements Runnable {
     public void shutdown() {
         stopRecording();
         if(mAudioRecord != null) {
+            if (aec != null) {
+                aec.release();
+                aec = null;
+            }
             mAudioRecord.release();
             mAudioRecord = null;
         }

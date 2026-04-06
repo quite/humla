@@ -19,6 +19,7 @@ package se.lublin.humla.protocol;
 
 import android.content.Context;
 import android.media.AudioManager;
+import android.media.MediaRecorder;
 import android.util.Log;
 
 import se.lublin.humla.R;
@@ -85,6 +86,7 @@ public class AudioHandler extends HumlaNetworkListener implements AudioInput.Aud
     private boolean mBluetoothOn;
     private boolean mHalfDuplex;
     private boolean mPreprocessorEnabled;
+    private String mEchoCancellationMethod;
     /** The last observed talking state. False if muted, or the input mode is not active. */
     private boolean mTalking;
 
@@ -95,12 +97,12 @@ public class AudioHandler extends HumlaNetworkListener implements AudioInput.Aud
                         int sampleRate, int targetBitrate, int targetFramesPerPacket,
                         IInputMode inputMode, byte targetId, float amplitudeBoost,
                         boolean bluetoothEnabled, boolean halfDuplexEnabled,
-                        boolean preprocessorEnabled, AudioEncodeListener encodeListener,
+                        boolean preprocessorEnabled, String echoCancellationMethod,
+                        AudioEncodeListener encodeListener,
                         AudioOutput.AudioOutputListener outputListener) throws AudioInitializationException, NativeAudioException {
         mContext = context;
         mLogger = logger;
         mAudioStream = audioStream;
-        mAudioSource = audioSource;
         mSampleRate = sampleRate;
         mBitrate = targetBitrate;
         mFramesPerPacket = targetFramesPerPacket;
@@ -109,6 +111,7 @@ public class AudioHandler extends HumlaNetworkListener implements AudioInput.Aud
         mBluetoothOn = bluetoothEnabled;
         mHalfDuplex = halfDuplexEnabled;
         mPreprocessorEnabled = preprocessorEnabled;
+        mEchoCancellationMethod = echoCancellationMethod;
         mEncodeListener = encodeListener;
         mOutputListener = outputListener;
         mTalking = false;
@@ -117,7 +120,16 @@ public class AudioHandler extends HumlaNetworkListener implements AudioInput.Aud
         mAudioManager = (AudioManager) context.getSystemService(Context.AUDIO_SERVICE);
         mEncoderLock = new Object();
 
-        mInput = new AudioInput(this, mAudioSource, mSampleRate);
+        int actualSource = audioSource;
+        if (echoCancellationMethod.equals("system") /* android.media.audiofx.AcousticEchoCanceler */) {
+            // Enforce MODE_IN_COMMUNICATION for AudioManager, some AECs won't function without this.
+            AudioManager audioManager = (AudioManager) mContext.getSystemService(Context.AUDIO_SERVICE);
+            audioManager.setMode(AudioManager.MODE_IN_COMMUNICATION);
+            actualSource = MediaRecorder.AudioSource.VOICE_COMMUNICATION;
+        }
+        mAudioSource = actualSource;
+
+        mInput = new AudioInput(this, mAudioSource, mSampleRate, mEchoCancellationMethod);
         mOutput = new AudioOutput(mOutputListener);
     }
 
@@ -512,6 +524,7 @@ public class AudioHandler extends HumlaNetworkListener implements AudioInput.Aud
         private boolean mBluetoothEnabled;
         private boolean mHalfDuplexEnabled;
         private boolean mPreprocessorEnabled;
+        private String mEchoCancellationMethod;
         private IInputMode mInputMode;
         private AudioEncodeListener mEncodeListener;
         private AudioOutput.AudioOutputListener mTalkingListener;
@@ -571,6 +584,11 @@ public class AudioHandler extends HumlaNetworkListener implements AudioInput.Aud
             return this;
         }
 
+        public Builder setEchoCancellationMethod(String echoCancellationMethod) {
+            mEchoCancellationMethod = echoCancellationMethod;
+            return this;
+        }
+
         public Builder setEncodeListener(AudioEncodeListener encodeListener) {
             mEncodeListener = encodeListener;
             return this;
@@ -594,7 +612,7 @@ public class AudioHandler extends HumlaNetworkListener implements AudioInput.Aud
             AudioHandler handler = new AudioHandler(mContext, mLogger, mAudioStream, mAudioSource,
                     mInputSampleRate, mTargetBitrate, mTargetFramesPerPacket, mInputMode, targetId,
                     mAmplitudeBoost, mBluetoothEnabled, mHalfDuplexEnabled,
-                    mPreprocessorEnabled, mEncodeListener, mTalkingListener);
+                    mPreprocessorEnabled, mEchoCancellationMethod, mEncodeListener, mTalkingListener);
             handler.initialize(self, maxBandwidth, codec);
             return handler;
         }
