@@ -1,3 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="server">Aqeddac</string>
+    <string name="chat_notify_connected">%s d uqqin.</string>
+    <string name="chat_notify_disconnected">%s ur yeqqin ara.</string>
+    <string name="perm_denied">Tettwagi tsiregt.</string>
+    <string name="the_server">aqeddac</string>
+    <string name="deny_reason_channel_full">Abadu yeččur.</string>
+    <string name="chat_notify_self_recording_started">Yebda usekles</string>
+    <string name="chat_notify_self_recording_stopped">Yeḥbes usekles</string>
+    <string name="deny_reason_invalid_username">Isem n useqdac d arameɣtu.</string>
+    <string name="deny_reason_other">Taɣẓint: %s</string>
 </resources>
