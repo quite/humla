@@ -24,7 +24,7 @@
     <string name="chat_notify_self_recording_started">S\'ha iniciat l\'enregistrament</string>
     <string name="chat_notify_connected">%s s\'ha connectat.</string>
     <string name="chat_notify_now_unmuted">%s està ara sense silenciar.</string>
-    <string name="chat_notify_now_muted">%s està silenciat ara.</string>
+    <string name="chat_notify_now_muted">%s ara està silenciat.</string>
     <string name="chat_notify_now_muted_deafened">%s està silenciat i ensordit ara.</string>
     <string name="chat_notify_unmuted">Sense silenciar.</string>
     <string name="chat_notify_muted_deafened">Silenciat i ensordit.</string>
