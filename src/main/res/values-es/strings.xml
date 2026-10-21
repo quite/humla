@@ -4,8 +4,8 @@
     <string name="chat_notify_muted_deafened">Mudo y sordo.</string>
     <string name="chat_notify_muted">Mudo.</string>
     <string name="chat_notify_unmuted">Con voz.</string>
-    <string name="chat_notify_now_muted_deafened">%s está ahora enmudecido y ensordecido.</string>
-    <string name="chat_notify_now_muted">%s está ahora enmudecido.</string>
+    <string name="chat_notify_now_muted_deafened">%s está enmudecido y ensordecido.</string>
+    <string name="chat_notify_now_muted">%s está enmudecido.</string>
     <string name="chat_notify_now_unmuted">%s ahora tiene voz.</string>
     <string name="chat_notify_connected">%s se ha conectado.</string>
     <string name="chat_notify_disconnected">%s se ha desconectado.</string>
@@ -14,11 +14,11 @@
     <string name="chat_notify_kick_ban">%3$s fue expulsado y prohibido del servidor por %1$s: %2$s.</string>
     <string name="chat_notify_kick">%3$s ha sido expulsado del servidor por %1$s: %2$s.</string>
     <string name="chat_notify_self_recording_started">Grabación iniciada</string>
-    <string name="chat_notify_self_recording_stopped">Grabación parada</string>
+    <string name="chat_notify_self_recording_stopped">Grabación detenida</string>
     <string name="chat_notify_user_recording_started">%s ha empezado a grabar.</string>
     <string name="chat_notify_user_recording_stopped">%s ha parado de grabar.</string>
     <string name="chat_notify_user_joined_channel">%s entró al canal.</string>
-    <string name="chat_notify_user_left_channel">%1$s fue movido a %2$s.</string>
+    <string name="chat_notify_user_left_channel">%1$s se movió a %2$s.</string>
     <string name="chat_notify_user_joined_channel_by">%1$s fue movido a este canal desde %2$s por %3$s.</string>
     <string name="chat_notify_user_left_channel_by">%1$s fue movido a %2$s por %3$s.</string>
     <string name="deny_reason_channel_name">Denegado: Nombre de canal inválido.</string>
